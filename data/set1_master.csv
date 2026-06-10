@@ -1,0 +1,10 @@
+Set_Number,Start_Code_Point,End_Code_Point,Script_Name,Author,Status,Description
+1,U+EE00,U+EE0F,Franklin Phonetic Alphabet,Benjamin Franklin,Allocated,16-hex historical incubator for phonetic alphabet reform.
+1,U+EE10,U+EFFF,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
+1,U+F500,U+F7FF,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
+1,U+F820,U+F87F,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
+1,U+F2A00,U+F4DFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 15 Grand Corridor - Tier 1 high-capacity allocation.
+1,U+F5100,U+F7FFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 15 Grand Corridor - Tier 2 high-capacity allocation.
+1,U+F8200,U+FDFFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 15 Grand Corridor - Tier 3 high-capacity allocation.
+1,U+FFE00,U+FFEFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 15 Terminal padding allocation block.
+1,U+102000,U+10FFEF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 Massive Community Syllabary and Logography Reserve.
