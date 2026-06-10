@@ -1,0 +1,5 @@
+Set_Number,Start_Code_Point,End_Code_Point,Project_Name,Owner,Status,Description
+2,U+E000,U+F8FF,OPEN_SANDBOX,NONE,Waiting for Submissions,Parallel BMP Private Use Area layer. Available for app-specific tokens.
+2,U+F0000,U+FFFFF,OPEN_SANDBOX,NONE,Waiting for Submissions,Parallel Plane 15 SPUA-A layer. Available for isolated testing.
+2,U+100000,U+10FFFF,OPEN_SANDBOX,NONE,Waiting for Submissions,Parallel Plane 16 SPUA-B layer. Available for isolated testing.
+3,U+E000,U+F8FF,OPEN_SANDBOX,NONE,Waiting for Submissions,Parallel BMP Private Use Area layer. Incremental JIT expansion layer.
