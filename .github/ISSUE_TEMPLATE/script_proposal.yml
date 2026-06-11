@@ -1,0 +1,87 @@
+name: Script Allocation Proposal
+about: Formal submission for an official RNUR Set 1 or Set 2 coordinate block.
+title: "[PROPOSAL]: "
+labels: ["submission", "review-required"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🔤 RNUR Script Allocation Form
+        Thank you for submitting your writing system to the registry! Please complete this form as accurately as possible. 
+        
+        *Note to international conlangers: You may fill out this form in French or any other language.*
+
+  - type: input
+    id: script_name
+    attributes:
+      label: Formal Script Name
+      placeholder: "e.g., Xaini, Lumera, Lumeric"
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Author / Creator
+      placeholder: "Your Reddit username, GitHub handle, or alias"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target_layer
+    attributes:
+      label: Target Layer
+      description: "Select whether this is for a permanent global mapping or a localized sandbox environment."
+      options:
+        - "Set 1 (Global Consensus Layer - Permanent)"
+        - "Set 2+ (Parallel Sandbox Layer - Experimental/App-Specific)"
+    validations:
+      required: true
+
+  - type: input
+    id: glyph_count
+    attributes:
+      label: Total Glyph Count
+      placeholder: "e.g., 58 characters"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: direction
+    attributes:
+      label: Writing Direction
+      options:
+        - "Left-to-Right (LTR)"
+        - "Right-to-Left (RTL)"
+        - "Vertical (Top-to-Bottom)"
+        - "Other / Complex Layout"
+    validations:
+      required: true
+
+  - type: textarea
+    id: properties
+    attributes:
+      label: Character Properties Matrix
+      description: "Define how your character groupings function (like uppercase vs lowercase ranges, numbers, or diacritics)."
+      placeholder: |
+        - Uppercase Letter Blocks: 
+        - Lowercase Letter Blocks: 
+        - Numeric System Base: 
+        - Punctuation / Special Tokens:
+    validations:
+      required: false
+
+  - type: textarea
+    id: visual_reference
+    attributes:
+      label: Visual Reference / Companion Font
+      description: "Please provide a link to an image grid, a font file (.ttf/.otf), a glyph sheet, or drag-and-drop screenshots here."
+      placeholder: "Paste URLs or upload images directly into this field."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context & Usage
+      description: "Briefly explain the background of this script or the conlang it represents."
