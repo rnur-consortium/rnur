@@ -1,0 +1,52 @@
+name: Bug Report / Collision Alert
+description: Report data issues, coordinate registry collisions, or validator script crashes.
+title: "[BUG/COLLISION]: "
+labels: ["bug", "triaged"]
+body:
+  - type: markdown
+    attributes:
+      value: "### 🛑 Report a Registry Conflict or Tooling Failure"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the Problem
+      description: "A clear and concise description of what the script bug or coordinate conflict is."
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location of the Issue
+      placeholder: "e.g., tools/validator.py, data/set1_master.csv, Range U+EE10"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: "How can we trigger this validator crash or verify this allocation mismatch?"
+      value: |
+        1. Run command: 
+        2. Input parameters: 
+        3. See error output:
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: "What should have happened instead?"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: environment
+    attributes:
+      label: Environment Context
+      options:
+        - label: "I am running the validator locally using Python 3.x"
+        - label: "This issue affects the automated GitHub Actions runner workflow"
