@@ -3,7 +3,7 @@ Set_Number,Start_Code_Point,End_Code_Point,Script_Name,Author,Status,Description
 1,U+EE10,U+EE5F,Loopiform,Filipe Dos Reis,Allocated,72-character systematic phonetic script featuring duodecimal numerals and logographic punctuation.
 1,U+EE60,U+EE8F,Foldian,u/Willing_Squirrel_741,Allocated,32-character neography with 1 associated diacritic mark.
 1,U+EE90,U+EFFF,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
-1,U+F500,U+F7FF,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
+1,U+F4F0,U+F7FF,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
 1,U+F820,U+F87F,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
 1,U+F2A00,U+F4DFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 15 Grand Corridor - Tier 1 high-capacity allocation.
 1,U+F5100,U+F7FFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 15 Grand Corridor - Tier 2 high-capacity allocation.
