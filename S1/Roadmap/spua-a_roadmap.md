@@ -476,59 +476,67 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>F69xx</b></td>
       <td colspan="16" align="center">??? (F6900–F69FF)</td>
     </tr>
+    <tr>
+      <td align="center"><b>F6Axx</b></td>
+      <td colspan="8" align="center">??? (F6A00–F6A7F)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Bopomofo Extended-I (F6A80–F6AAF)</td>
+      <td colspan="5" bgcolor="#FFD2D2" align="center">🟥 Kodo Symbols (F6AB0–F6AFF)</td>
+    </tr>
 <tr>
       <td align="center"><b>F6Axx</b></td>
       <td colspan="8" align="center">??? (F6A00–F6A7F)</td>
-      <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Bopomofo Extended-I (F6A80–F6ABF)</td>
-      <td colspan="4" align="center">??? (F6AC0–F6AFF)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Bopomofo Extended-I (F6A80–F6AAF)</td>
+      <td colspan="5" bgcolor="#FFD2D2" align="center">🟥 Kodo Symbols (F6AB0–F6AFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F6Bxx</b></td>
-      <td colspan="16" align="center">??? (F6B00–F6BFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Kamakawi (F6B00–F6BFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F6Cxx</b></td>
-      <td colspan="16" align="center">??? (F6C00–F6CFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Kamakawi (F6C00–F6CFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F6Dxx</b></td>
-      <td colspan="16" align="center">??? (F6D00–F6DFF)</td>
-    </tr>
-    <tr>
+      <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Lakota (F6D00–F6D3F)</td>
+      <td colspan="6" bgcolor="#FFD2D2" align="center">🟥 Nawa (F6D40–F6D9F)</td>
+      <td colspan="6" align="center">??? (F6DA0–F6DFF)</td>
+      <tr>
       <td align="center"><b>F6Exx</b></td>
-      <td colspan="16" align="center">??? (F6E00–F6EFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Unified Canadian Syllabics Extended-I (F6E00–F6EFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F6Fxx</b></td>
-      <td colspan="16" align="center">??? (F6F00–F6FFF)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟥 Unified Canadian Syllabics Extended-I (F6F00–F6F7F)</td>
+      <td colspan="8" align="center">??? (F6F80–F6FFF)</td>
     </tr>
-    <tr>
+<tr>
       <td align="center"><b>F70xx</b></td>
-      <td colspan="16" align="center">??? (F7000–F70FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Aymara Pictograms (F7000–F70FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F71xx</b></td>
-      <td colspan="16" align="center">??? (F7100–F71FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Aymara Pictograms (F7100–F71FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F72xx</b></td>
-      <td colspan="16" align="center">??? (F7200–F72FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Aymara Pictograms (F7200–F72FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F73xx</b></td>
-      <td colspan="16" align="center">??? (F7300–F73FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Aymara Pictograms (F7300–F73FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F74xx</b></td>
-      <td colspan="16" align="center">??? (F7400–F74FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Paucartambo (F7400–F74FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F75xx</b></td>
-      <td colspan="16" align="center">??? (F7500–F75FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Paucartambo (F7500–F75FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F76xx</b></td>
-      <td colspan="16" align="center">??? (F7600–F76FF)</td>
+      <td colspan="16" bgcolor="#CCCCCC" align="center">⬛ ¿Antarctica Pix? (F7600–F76FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F77xx</b></td>
@@ -1151,3 +1159,13 @@ Because the `???` territory is provisionally staked inside an unmapped zone of t
 * **Upstream Authority:** UCSUR and SPUCE reserve absolute historical priority over PUA layout structures.
 * **The Eviction Clause:** If an active script project is provisionally assigned to a specific block within the `???` territory by RNUR, and UCSUR or SPUCE subsequently ratifies/encodes a different, conflicting script into those exact code points, the RNUR script will undergo an automatic **Set 2 Eviction**.
 * **Set 2 Relocation Routing:** To preserve complete upstream alignment and prevent dirty runtime clashing or font rendering script pollution, the overridden internal script will be cleanly compiled out of Set 1 and reassigned to **RNUR Set 2** (Plane 16 or designated fallback overflow tables).
+
+  [!NOTE]
+**Status Report: Antarctica Pix** (U+F7600–U+F76FF)
+The allocation designated for Antarctica Pix is marked with a black square (⬛) as **Unconfirmed by UCSUR** and styled as ¿Antarctica Pix?. Current typographic telemetry suggests this block may represent one of two potential implementations:
+
+* A dedicated pixel font engineered by *Kreative Korp* (Rebecca Bettencourt herself!).
+
+* A structural placeholder allocation explicitly reserved to support such a font.
+
+Because definitive architectural documentation is currently missing, it is isolated under the unconfirmed tracking protocol until its origin can be formally verified.
