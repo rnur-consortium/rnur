@@ -6,6 +6,8 @@ This matrix maps out allocations visually across the 16-column boundaries of the
 * 🟩 = **UCSUR-Only Allocations** (Green)
 * 🟥 = **SPUCE Project Allocations** (Red)
 * 🟨 = **SPUCE Project Allocations (Reserved for SPUCE Admin and FontStruct user @erictom333)** (Yellow)
+* 🔴 = **SPUCE Project Allocations (Reserved for @NataliaKenigFan826)** (Red Circle)
+* 🟣 = **SPUCE Project Allocations (Reserved for @AshtonTameirao25)** (Purple Circle)
 * 🟧 = **RNUR Set 1 Allocations** (Orange)
 * ⬛ = **Unconfirmed by UCSUR** (Black) → *Formatted as ¿Script Name?*
 
@@ -482,12 +484,6 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Bopomofo Extended-I (F6A80–F6AAF)</td>
       <td colspan="5" bgcolor="#FFD2D2" align="center">🟥 Kodo Symbols (F6AB0–F6AFF)</td>
     </tr>
-<tr>
-      <td align="center"><b>F6Axx</b></td>
-      <td colspan="8" align="center">??? (F6A00–F6A7F)</td>
-      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Bopomofo Extended-I (F6A80–F6AAF)</td>
-      <td colspan="5" bgcolor="#FFD2D2" align="center">🟥 Kodo Symbols (F6AB0–F6AFF)</td>
-    </tr>
     <tr>
       <td align="center"><b>F6Bxx</b></td>
       <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Kamakawi (F6B00–F6BFF)</td>
@@ -566,13 +562,15 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>F7Dxx</b></td>
       <td colspan="16" align="center">??? (F7D00–F7DFF)</td>
     </tr>
-    <tr>
+<tr>
       <td align="center"><b>F7Exx</b></td>
       <td colspan="16" align="center">??? (F7E00–F7EFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F7Fxx</b></td>
-      <td colspan="16" align="center">??? (F7F00–F7FFF)</td>
+      <td colspan="6" align="center">??? (F7F00–F7F5F)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟥 Muric (F7F60–F7FDF)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Plutonian (F7FE0–F7FFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F80xx</b></td>
@@ -585,47 +583,52 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="4" align="center">🟥 New Akha (F8100–F813F)</td>
       <td colspan="4" align="center">🟥 Akkhara Muni (F8140–F817F)</td>
       <td colspan="3" align="center">🟥 New Maori (F8180–F81AF)</td>
-      <td colspan="5" align="center">??? (F81B0–F81FF)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Maui (F81B0–F81CF)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Fontok (F81D0–F81FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F82xx</b></td>
-      <td colspan="16" align="center">??? (F8200–F82FF)</td>
+      <td colspan="1" bgcolor="#FFD2D2" align="center">🟥 Fontok (F8200–F820F)</td>
+      <td colspan="6" bgcolor="#FFD2D2" align="center">🟥 Elektrum (F8210–F826F)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Pranish (F8270–F828F)</td>
+      <td colspan="7" align="center">??? (F8290–F82FF)</td>
     </tr>
-    <tr>
+<tr>
       <td align="center"><b>F83xx</b></td>
-      <td colspan="16" align="center">??? (F8300–F83FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Sylabica Extended-I (F8300–F83FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F84xx</b></td>
-      <td colspan="16" align="center">??? (F8400–F84FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Sylabica Extended-I (F8400–F84FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F85xx</b></td>
-      <td colspan="16" align="center">??? (F8500–F85FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Niji Syllables (F8500–F85FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F86xx</b></td>
-      <td colspan="16" align="center">??? (F8600–F86FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Niji Syllables (F8600–F86FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F87xx</b></td>
-      <td colspan="16" align="center">??? (F8700–F87FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Niji Syllables (F8700–F87FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F88xx</b></td>
-      <td colspan="16" align="center">??? (F8800–F88FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Niji Syllables (F8800–F88FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F89xx</b></td>
-      <td colspan="16" align="center">??? (F8900–F89FF)</td>
+      <td colspan="11" bgcolor="#FFD2D2" align="center">🟥 Niji Syllables (F8900–F89AF)</td>
+      <td colspan="5" bgcolor="#FFD2D2" align="center">🟥 Gem Language Ideographs (F89B0–F89FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F8Axx</b></td>
-      <td colspan="16" align="center">??? (F8A00–F8AFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Gem Language Ideographs (F8A00–F8AFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F8Bxx</b></td>
-      <td colspan="16" align="center">??? (F8B00–F8BFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Gem Language Ideographs (F8B00–F8BFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F8Cxx</b></td>
@@ -647,25 +650,29 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>F90xx</b></td>
       <td colspan="16" align="center">??? (F9000–F90FF)</td>
     </tr>
-    <tr>
+<tr>
       <td align="center"><b>F91xx</b></td>
-      <td colspan="16" align="center">??? (F9100–F91FF)</td>
+      <td colspan="8" align="center">??? (F9100–F917F)</td>
+      <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Aliphbepf (F9180–F91BF)</td>
+      <td colspan="4" align="center">??? (F91C0–F91FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F92xx</b></td>
-      <td colspan="16" align="center">??? (F9200–F92FF)</td>
+      <td colspan="5" bgcolor="#FFD2D2" align="center">🟥 Jurgenschmidt (F9200–F924F)</td>
+      <td colspan="11" align="center">??? (F9250–F92FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F93xx</b></td>
-      <td colspan="16" align="center">??? (F9300–F93FF)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🔴 Zhiung Logograms (F9300–F931F)</td>
+      <td colspan="14" bgcolor="#FFD2D2" align="center">🔴 Zhiung Logograms Supplement (F9320–F93FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F94xx</b></td>
-      <td colspan="16" align="center">??? (F9400–F94FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🔴 Zhiung Logograms Supplement (F9400–F94FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F95xx</b></td>
-      <td colspan="16" align="center">??? (F9500–F95FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🔴 Zhiung Logograms Supplement (F9500–F95FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F96xx</b></td>
@@ -685,11 +692,11 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>F9Axx</b></td>
-      <td colspan="16" align="center">??? (F9A00–F9AFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🔴 Tulu Zoom (F9A00–F9AFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F9Bxx</b></td>
-      <td colspan="16" align="center">??? (F9B00–F9BFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🔴 Tulu Zoom (F9B00–F9BFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F9Cxx</b></td>
@@ -720,12 +727,13 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="16" align="center">??? (FA200–FA2FF)</td>
     </tr>
     <tr>
+    <tr>
       <td align="center"><b>FA3xx</b></td>
-      <td colspan="16" align="center">??? (FA300–FA3FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟣 Putnam Pictograms (FA300–FA3FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FA4xx</b></td>
-      <td colspan="16" align="center">??? (FA400–FA4FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟣 Putnam Pictograms (FA400–FA4FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FA5xx</b></td>
@@ -759,29 +767,34 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>FACxx</b></td>
       <td colspan="16" align="center">??? (FAC00–FACFF)</td>
     </tr>
-    <tr>
+<tr>
       <td align="center"><b>FADxx</b></td>
-      <td colspan="16" align="center">??? (FAD00–FADFF)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟣 Guppinese (FAD00–FAD7F)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟣 Deemanese Pictograms (FAD80–FADFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FAExx</b></td>
-      <td colspan="16" align="center">??? (FAE00–FAEFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟣 Deemanese Pictograms (FAE00–FAEFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FAFxx</b></td>
-      <td colspan="16" align="center">??? (FAF00–FAFFF)</td>
+      <td colspan="10" bgcolor="#FFD2D2" align="center">🟣 Gobian Cursive (FAF00–FAF9F)</td>
+      <td colspan="6" bgcolor="#FFD2D2" align="center">🟣 Layout Sandbox Space (FAFA0–FAFFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB0xx</b></td>
-      <td colspan="16" align="center">??? (FB000–FB0FF)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟣 Guppinese Latin Extensions (FB000–FB07F)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟣 Layout Sandbox Space (FB080–FB0FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB1xx</b></td>
-      <td colspan="16" align="center">??? (FB100–FB1FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟣 Layout Sandbox Space (FB100–FB1FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB2xx</b></td>
-      <td colspan="16" align="center">??? (FB200–FB2FF)</td>
+      <td colspan="4" bgcolor="#FFD2D2" align="center">🟣 Bubble Guppies Symbols (FB200–FB23F)</td>
+      <td colspan="6" bgcolor="#FFD2D2" align="center">🟣 Guppinese Presentation Forms (FB240–FB29F)</td>
+      <td colspan="6" bgcolor="#FFD2D2" align="center">🟣 Layout Sandbox Space (FB2A0–FB2FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB3xx</b></td>
