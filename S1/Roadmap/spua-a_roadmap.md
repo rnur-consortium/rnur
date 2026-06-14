@@ -1052,8 +1052,61 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Marian Sexagesimal Numerals (FF2C0–FF2FF)</td>
     </tr>
     <tr>
-      <td align="center"><b>FF3xx<br>➔<br>FFFxx</b></td>
-      <td colspan="16" align="center"><i>Empty / Unallocated Space (FF300–FFFFF) — SPUCE Shift Zone</i></td>
+      <td align="center"><b>FF3xx</b></td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Block Elements Extended-I (FF300–FF3FF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>FF4xx</b></td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Box Drawing Extended-I (FF400–FF4FF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>FF5xx</b></td>
+      <td colspan="12" bgcolor="#FFD2D2" align="center">🟥 Box Drawing Extended-I (FF500–FF5BF)</td>
+      <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Arrows Extended-I (FF5C0–FF5FF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>FF6xx</b></td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Hex Byte Pictures (FF600–FF6FF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>FF7xx</b></td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Control Pictures Extended-II (FF700–FF7FF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>FF8xx</b></td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Control Pictures Extended-II (FF800–FF8FF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>FF9xx</b></td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Control Pictures Extended-II (FF900–FF9FF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>FFAxx</b></td>
+      <td colspan="12" bgcolor="#FFD2D2" align="center">🟥 Astronomical Symbols (FFA00–FFABF)</td>
+      <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Chess Symbols Extended-I (FFAC0–FFAFF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>FFBxx</b></td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Chess Symbols Extended-I (FFB00–FFBFF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>FFCxx</b></td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Arrows Extended-II (FFC00–FFC2F)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Rayalaka Color Symbols (FFC30–FFC4F)</td>
+      <td colspan="11" bgcolor="#FFD2D2" align="center">🟥 Symbols for Legacy Computing Extended-I (FFC50–FFCFF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>FFDxx</b></td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Symbols for Legacy Computing Extended-I (FFD00–FFDFF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>FFExx</b></td>
+      <td colspan="16" align="center">??? (FFE00–FFEFF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>FFFxx</b></td>
+      <td colspan="15" bgcolor="#FFD2D2" align="center">🟥 Fragments (FFF00–FFFEF)</td>
+      <td colspan="1" bgcolor="#FFD2D2" align="center">🟥 Plane 15 Specials (FFFF0–FFFFF)</td>
     </tr>
   </tbody>
 </table>
@@ -1068,8 +1121,8 @@ To ensure predictable layout boundaries for secondary forks and peer registry co
 
 | Registry State | Visual Notation | Global Technical Implementation & Developer Impact |
 | :--- | :--- | :--- |
-| **Truly Unassigned** | *Empty / Unallocated Space* | **Permanent RNUR Set 1 Sandbox Territory.** This space is permanently explicitly preserved as open, neutral territory within the global Set 1 framework. Because no defensive fences are built or temporary scripts mapped here, it serves as a permanent sanctuary for external custom font forks or uncoordinated local scripts. <br><br>**Primary Examples:** Large structural blocks inside the BMP PUA (such as **`U+EE00–U+EFFF`**), alongside unallocated gaps in Plane 15 (rows `FF0xx` onward) and Plane 16. |
-| **Reserved Space** | `???` | **Provisional RNUR Set 1 Lease Territory.** This space functions as a defensive block structurally locked down by RNUR Set 1 to prevent internal overlap while awaiting upstream specification. It remains an open encoding vacuum from a network perspective, operating under a provisional lease paradigm until official upstream authorities (**UCSUR** or **SPUCE**) declare a structural allocation within these ranges. |
+| **Truly Unassigned** | *Empty / Unallocated Space* | **Permanent RNUR Set 1 Sandbox Territory.** This space is permanently explicitly preserved as open, neutral territory within the global Set 1 framework. Because no defensive fences are built or temporary scripts mapped here, it serves as a permanent sanctuary for external custom font forks or uncoordinated local scripts. <br><br>**Primary Examples:** Large structural blocks inside the BMP PUA (such as **`U+EE00–U+EFFF`**), alongside unallocated sandbox gaps in Plane 15 (rows **`F4Exx`** onward) and Plane 16. |
+| **Reserved Space** | `???` | **Provisional RNUR Set 1 Lease Territory.** This space functions as a defensive block structurally locked down by RNUR Set 1 to prevent internal overlap while awaiting upstream specification. It remains an open encoding vacuum from a network perspective, operating under a provisional lease paradigm until official upstream authorities (**UCSUR** or **SPUCE**) declare a structural allocation within these ranges (e.g., **`F3400–F4DFF`** and **`FFE00–FFEFF`**). |
 | **SPUCE Special Admin Zone** | 🟨 | **Dedicated SPUCE Project Sandbox (Reserved for SPUCE Admin and FontStruct user @erictom333).** This block handles dedicated layout space provisionally reserved under yellow designation. These ranges (`FE0xx` through `FEFxx`) are quarantined away from general Set 1 allocation grids specifically to support structural prototyping under direct SPUCE admin supervision and local FontStruct asset deployments by user @erictom333. |
 
 ### 2. Registry Conflict Documentation: The SPUCE Real-World Allocation Error
@@ -1080,7 +1133,7 @@ It has been identified that external SPUCE real-world extension mapping (histori
 
 ### 3. Micro-Level Breakdown: Why the `???` Range is "Provisional RNUR / Unencoded (U)CSUR/SPUCE"
 
-The fragmented and extended ranges spanning **`F1CA0–F1EFF`**, **`F26B0–F26FF`**, **`F28E0–F28FF`**, **`F2960–F29FF`**, **`F3380–F4DFF`**, **`F5080–F7FFF`**, and **`F81B0–FDFFF`** are classified collectively under the `???` territory due to three core structural boundaries:
+The fragmented and extended ranges spanning **`F1CA0–F1EFF`**, **`F26B0–F26FF`**, **`F28E0–F28FF`**, **`F2960–F29FF`**, **`F3380–F4DFF`**, **`FFE00–FFEFF`**, **`F5080–F7FFF`**, and **`F81B0–FDFFF`** are classified collectively under the `???` territory due to three core structural boundaries:
 
 * **Provisional RNUR Ownership:** This real estate functions explicitly as **RNUR Set 1 space for now**. It is actively tracked and defended by the registry to anchor incoming community scripts, operating under a temporary lease paradigm.
 * **Upstream Vacuum:** While under RNUR stewardship, this space remains an open layout vacuum from the perspective of peer networks. It lacks an abstract character repertoire or formal upstream tracking, remaining designated as available real estate until **UCSUR** or **SPUCE** steps forward to claim an allocation within its boundaries.
