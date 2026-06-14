@@ -1,4 +1,4 @@
-# Global RNUR Set 1 Framework: Plane 15 Visual Roadmap Grid (Rows F00–FFF)
+# Set 1 Plane 15 Visual Roadmap Grid (Rows F00–FFF)
 
 This matrix maps out allocations visually across the 16-column boundaries of the Supplemental Private Use Area-A (Plane 15). Under the global registry architecture, **RNUR Set 1** governance encompasses all three valid Unicode PUA zones: the **BMP PUA** (`U+E000–U+F8FF`), **Plane 15** (`U+F0000–U+FFFFF`), and **Plane 16** (`U+100000–U+10FFFF`). This file explicitly charts the Plane 15 sector.
 
