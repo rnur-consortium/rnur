@@ -8,6 +8,8 @@ This matrix maps out allocations visually across the 16-column boundaries of the
 * 🟨 = **SPUCE Project Allocations (Reserved for SPUCE Admin and FontStruct user @erictom333)** (Yellow)
 * 🔴 = **SPUCE Project Allocations (Reserved for @NataliaKenigFan826)** (Red Circle)
 * 🟣 = **SPUCE Project Allocations (Reserved for @AshtonTameirao25)** (Purple Circle)
+* 🟢 = **SPUCE Project Allocations (Reserved for Oneiria, a.k.a. @Greenstar967)** (Green Circle)
+* 🟦 = **SPUCE Project Allocations (Reserved for @merrybot_v2)** (Blue)
 * 🟧 = **RNUR Set 1 Allocations** (Orange)
 * ⬛ = **Unconfirmed by UCSUR** (Black) → *Formatted as ¿Script Name?*
 
@@ -248,7 +250,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>F31xx</b></td>
       <td colspan="16" align="center">🟥 Phonetic Extensions-II (F3100–F31FF)</td>
     </tr>
-<tr>
+    <tr>
       <td align="center"><b>F33xx</b></td>
       <td colspan="8" align="center">🟥 Latin Medievalist Extensions (F3300–F337F)</td>
       <td colspan="8" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3380–F33FF)</td>
@@ -324,7 +326,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     <tr>
       <td align="center"><b>F45xx</b></td>
       <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F4500–F45FF)</td>
-<tr>
+    <tr>
       <td align="center"><b>F45xx</b></td>
       <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F4500–F45FF)</td>
     </tr>
@@ -374,7 +376,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="5" align="center">🟥 Mifo-Circassian (F5030–F507F)</td>
       <td colspan="8" align="center">??? (F5080–F50FF)</td>
     </tr>
-<tr>
+    <tr>
       <td align="center"><b>F51xx</b></td>
       <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Georgian Extended-II (F5100–F51FF)</td>
     </tr>
@@ -436,7 +438,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>F5Fxx</b></td>
       <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Pigpen (F5F00–F5FFF)</td>
     </tr>
-<tr>
+    <tr>
       <td align="center"><b>F60xx</b></td>
       <td colspan="12" bgcolor="#FFD2D2" align="center">🟥 Pigpen (F6000–F60BF)</td>
       <td colspan="4" align="center">??? (F60C0–F60FF)</td>
@@ -506,7 +508,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="8" bgcolor="#FFD2D2" align="center">🟥 Unified Canadian Syllabics Extended-I (F6F00–F6F7F)</td>
       <td colspan="8" align="center">??? (F6F80–F6FFF)</td>
     </tr>
-<tr>
+    <tr>
       <td align="center"><b>F70xx</b></td>
       <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Aymara Pictograms (F7000–F70FF)</td>
     </tr>
@@ -562,7 +564,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>F7Dxx</b></td>
       <td colspan="16" align="center">??? (F7D00–F7DFF)</td>
     </tr>
-<tr>
+    <tr>
       <td align="center"><b>F7Exx</b></td>
       <td colspan="16" align="center">??? (F7E00–F7EFF)</td>
     </tr>
@@ -593,7 +595,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Pranish (F8270–F828F)</td>
       <td colspan="7" align="center">??? (F8290–F82FF)</td>
     </tr>
-<tr>
+    <tr>
       <td align="center"><b>F83xx</b></td>
       <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Sylabica Extended-I (F8300–F83FF)</td>
     </tr>
@@ -650,7 +652,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>F90xx</b></td>
       <td colspan="16" align="center">??? (F9000–F90FF)</td>
     </tr>
-<tr>
+    <tr>
       <td align="center"><b>F91xx</b></td>
       <td colspan="8" align="center">??? (F9100–F917F)</td>
       <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Aliphbepf (F9180–F91BF)</td>
@@ -767,7 +769,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>FACxx</b></td>
       <td colspan="16" align="center">??? (FAC00–FACFF)</td>
     </tr>
-<tr>
+    <tr>
       <td align="center"><b>FADxx</b></td>
       <td colspan="8" bgcolor="#FFD2D2" align="center">🟣 Guppinese (FAD00–FAD7F)</td>
       <td colspan="8" bgcolor="#FFD2D2" align="center">🟣 Deemanese Pictograms (FAD80–FADFF)</td>
@@ -798,95 +800,124 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>FB3xx</b></td>
-      <td colspan="16" align="center">??? (FB300–FB3FF)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟢 Djenpa (FB300–FB37F)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟢 Layout Sandbox Space (FB380–FB3FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB4xx</b></td>
-      <td colspan="16" align="center">??? (FB400–FB4FF)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟢 Vinhorai (FB400–FB47F)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟢 Sirboan (FB480–FB4FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB5xx</b></td>
-      <td colspan="16" align="center">??? (FB500–FB5FF)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟢 Xiphosee (FB500–FB57F)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟢 Minirasse (FB580–FB5FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB6xx</b></td>
-      <td colspan="16" align="center">??? (FB600–FB6FF)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟢 Anemoian (FB600–FB67F)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟢 Nihilezhxa (FB680–FB6FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB7xx</b></td>
-      <td colspan="16" align="center">??? (FB700–FB7FF)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟢 Aa-Infinitio (FB700–FB77F)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟢 Kaioloko (FB780–FB7FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB8xx</b></td>
-      <td colspan="16" align="center">??? (FB800–FB8FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟢 Layout Sandbox Space (FB800–FB8FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB9xx</b></td>
-      <td colspan="16" align="center">??? (FB900–FB9FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟢 Layout Sandbox Space (FB900–FB9FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FBAxx</b></td>
-      <td colspan="16" align="center">??? (FBA00–FBAFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟢 Layout Sandbox Space (FBA00–FBAFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FBBxx</b></td>
-      <td colspan="16" align="center">??? (FBB00–FBBFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟢 Layout Sandbox Space (FBB00–FBBFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FBCxx</b></td>
-      <td colspan="16" align="center">??? (FBC00–FBCFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟢 Layout Sandbox Space (FBC00–FBCFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FBDxx</b></td>
-      <td colspan="16" align="center">??? (FBD00–FBDFF)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟢 Xiphosee Cursive (FBD00–FBD7F)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟢 Layout Sandbox Space (FBD80–FBDFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FBExx</b></td>
-      <td colspan="16" align="center">??? (FBE00–FBEFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟢 Layout Sandbox Space (FBE00–FBEFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FBFxx</b></td>
-      <td colspan="16" align="center">??? (FBF00–FBFFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟢 Layout Sandbox Space (FBF00–FBFFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FC0xx</b></td>
-      <td colspan="16" align="center">??? (FC000–FC0FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟢 Layout Sandbox Space (FC000–FC0FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FC1xx</b></td>
-      <td colspan="16" align="center">??? (FC100–FC1FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟢 Layout Sandbox Space (FC100–FC1FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FC2xx</b></td>
-      <td colspan="16" align="center">??? (FC200–FC2FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟢 Layout Sandbox Space (FC200–FC2FF)</td>
     </tr>
     <tr>
+    <tr>
       <td align="center"><b>FC3xx</b></td>
-      <td colspan="16" align="center">??? (FC300–FC3FF)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 The Calling (FC300–FC31F)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 UUFO (FC320–FC34F)</td>
+      <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Kaotican (FC350–FC38F)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Mirror Text (FC390–FC3BF)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Auroran (FC3C0–FC3EF)</td>
+      <td colspan="1" bgcolor="#FFD2D2" align="center">🟥 Aquamarine (FC3F0–FC3FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FC4xx</b></td>
-      <td colspan="16" align="center">??? (FC400–FC4FF)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Aquamarine (FC400–FC41F)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Q-Block (FC420–FC44F)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Supersolar (FC450–FC47F)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Voltik (FC480–FC4AF)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Bloom (FC4B0–FC4DF)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Spheric (FC4E0–FC4FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FC5xx</b></td>
-      <td colspan="16" align="center">??? (FC500–FC5FF)</td>
+      <td colspan="1" bgcolor="#FFD2D2" align="center">🟥 Spheric (FC500–FC50F)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 EL (FC510–FC53F)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Infinitum (FC540–FC56F)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Coloraturan (FC570–FC59F)</td>
+      <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Tahano Veno (FC5A0–FC5DF)</td>
+      <td colspan="2" align="center">??? (FC5E0–FC5FF)</td>
     </tr>
-    <tr>
+      <tr>
       <td align="center"><b>FC6xx</b></td>
-      <td colspan="16" align="center">??? (FC600–FC6FF)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Hylian Syllabary-1 (FC600–FC62F)</td>
+      <td colspan="6" bgcolor="#FFD2D2" align="center">🟥 Hylian Syllabary-2 (FC630–FC68F)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Hylian-1 (FC690–FC6AF)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Hylian-2 (FC6B0–FC6CF)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Hylian-3 (FC6D0–FC6EF)</td>
+      <td colspan="1" bgcolor="#FFD2D2" align="center">🟥 Gerudo Extended (FC6F0–FC6FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FC7xx</b></td>
-      <td colspan="16" align="center">??? (FC700–FC7FF)</td>
+      <td colspan="3" bgcolor="#FFD2D2" align="center">🟥 Sheikah (FC700–FC72F)</td>
+      <td colspan="13" align="center">??? (FC730–FC7FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FC8xx</b></td>
-      <td colspan="16" align="center">??? (FC800–FC8FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Cyrillic Mathematical Alphanumeric Symbols (FC800–FC8FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FC9xx</b></td>
-      <td colspan="16" align="center">??? (FC900–FC9FF)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Cyrillic Mathematical Alphanumeric Symbols (FC900–FC91F)</td>
+      <td colspan="14" align="center">??? (FC920–FC9FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FCAxx</b></td>
@@ -974,23 +1005,32 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>FDFxx</b></td>
-      <td colspan="16" align="center">??? (FDF00–FDFFF)</td>
-    </tr>
-<tr>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟦 Layout Sandbox Space (FDF00–FDFFF)</td>
+    <tr>
       <td align="center"><b>FE0xx</b></td>
-      <td colspan="16" bgcolor="#FFFFCC" align="center">🟨 Layout Sandbox Space (FE000–FE0FF)</td>
+      <td colspan="2" bgcolor="#FFFFCC" align="center">🟨 Raichi-1 (FE000–FE01F)</td>
+      <td colspan="1" bgcolor="#FFFFCC" align="center">🟨 Reichi-2 (FE020–FE02F)</td>
+      <td colspan="4" bgcolor="#FFFFCC" align="center">🟨 Orange Sheet Ideographs (FE030–FE06F)</td>
+      <td colspan="2" bgcolor="#FFFFCC" align="center">🟨 A20 (FE070–FE08F)</td>
+      <td colspan="4" bgcolor="#FFFFCC" align="center">🟨 Aereian (FE090–FE0CF)</td>
+      <td colspan="3" bgcolor="#FFFFCC" align="center">🟨 A56 (FE0D0–FE0FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FE1xx</b></td>
-      <td colspan="16" bgcolor="#FFFFCC" align="center">🟨 Layout Sandbox Space (FE100–FE1FF)</td>
+      <td colspan="1" bgcolor="#FFFFCC" align="center">🟨 A56 (FE100–FE10F)</td>
+      <td colspan="5" bgcolor="#FFFFCC" align="center">🟨 Pargy (FE110–FE15F)</td>
+      <td colspan="2" bgcolor="#FFFFCC" align="center">🟨 Early Gerudo (FE160–FE17F)</td>
+      <td colspan="2" bgcolor="#FFFFCC" align="center">🟨 Tone Letters Extended-I (FE180–FE19F)</td>
+      <td colspan="2" bgcolor="#FFFFCC" align="center">🟨 Diacritics Extended-I (FE1A0–FE1BF)</td>
+      <td colspan="4" bgcolor="#FFFFCC" align="center">🟨 Layout Sandbox Space (FE1C0–FE1FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FE2xx</b></td>
-      <td colspan="16" bgcolor="#FFFFCC" align="center">🟨 Layout Sandbox Space (FE200–FE2FF)</td>
+      <td colspan="16" bgcolor="#FFFFCC" align="center">🟨 Yoshiese Ideographs (FE200–FE2FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FE3xx</b></td>
-      <td colspan="16" bgcolor="#FFFFCC" align="center">🟨 Layout Sandbox Space (FE300–FE3FF)</td>
+      <td colspan="16" bgcolor="#FFFFCC" align="center">🟨 Yoshiese Ideographs (FE300–FE3FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FE4xx</b></td>
@@ -1014,11 +1054,15 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>FE8xx</b></td>
-      <td colspan="16" bgcolor="#FFFFCC" align="center">🟨 Layout Sandbox Space (FE800–FE8FF)</td>
+      <td colspan="8" bgcolor="#FFFFCC" align="center">🟨 Legend of Zelda Symbols (FE800–FE87F)</td>
+      <td colspan="4" bgcolor="#FFFFCC" align="center">🟨 Super Smash Bros Series Symbols (FE880–FE8BF)</td>
+      <td colspan="4" bgcolor="#FFFFCC" align="center">🟨 Fantendo Smash Bros Series Symbols (FE8C0–FE8FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FE9xx</b></td>
-      <td colspan="16" bgcolor="#FFFFCC" align="center">🟨 Layout Sandbox Space (FE900–FE9FF)</td>
+      <td colspan="8" bgcolor="#FFFFCC" align="center">🟨 Mathematical Symbols Extended-I (FE900–FE97F)</td>
+      <td colspan="4" bgcolor="#FFFFCC" align="center">🟨 Symbols and Punctuation Extended-II (FE980–FE9BF)</td>
+      <td colspan="4" bgcolor="#FFFFCC" align="center">🟨 Number Forms Extended-II (FE9C0–FE9FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FEAxx</b></td>
@@ -1030,7 +1074,10 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>FECxx</b></td>
-      <td colspan="16" bgcolor="#FFFFCC" align="center">🟨 Layout Sandbox Space (FEC00–FECFF)</td>
+      <td colspan="1" bgcolor="#FFFFCC" align="center">🟨 Gothic Extended-I (FEC00–FEC0F)</td>
+      <td colspan="3" bgcolor="#FFFFCC" align="center">🟨 Arabic Extended-I (FEC10–FEC3F)</td>
+      <td colspan="6" bgcolor="#FFFFCC" align="center">🟨 Layout Sandbox Space (FEC40–FEC9F)</td>
+      <td colspan="6" bgcolor="#FFFFCC" align="center">🟨 Cyrillic Extended-III (FECA0–FECFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FEDxx</b></td>
@@ -1038,14 +1085,6 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="2" bgcolor="#FFFFCC" align="center">🟨 Layout Sandbox Space (FED60–FED7F)</td>
       <td colspan="3" bgcolor="#FFFFCC" align="center">🟨 Script Gerudo (FED80–FEDAF)</td>
       <td colspan="5" bgcolor="#FFFFCC" align="center">🟨 Script Gerudo Presentation Forms (FEDB0–FEDFF)</td>
-    </tr>
-    <tr>
-      <td align="center"><b>FEExx</b></td>
-      <td colspan="16" bgcolor="#FFFFCC" align="center">🟨 Layout Sandbox Space (FEE00–FEEFF)</td>
-    </tr>
-    <tr>
-      <td align="center"><b>FEFxx</b></td>
-      <td colspan="16" bgcolor="#FFFFCC" align="center">🟨 Layout Sandbox Space (FEF00–FEFFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FEExx</b></td>
@@ -1058,7 +1097,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="5" bgcolor="#FFFFCC" align="center">🟨 African Transitional (FEF40–FEF8F)</td>
       <td colspan="7" bgcolor="#FFFFCC" align="center">🟨 Layout Sandbox Space (FEF90–FEFFF)</td>
     </tr>
-<tr>
+    <tr>
       <td align="center"><b>FF0xx</b></td>
       <td colspan="6" bgcolor="#FFD2D2" align="center">🟥 Vexillology Symbols (FF000–FF05F)</td>
       <td colspan="10" bgcolor="#FFD2D2" align="center">🟥 Miscellaneous Technical Extended-I (FF060–FF0FF)</td>
@@ -1074,7 +1113,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="1" bgcolor="#FFD2D2" align="center">🟥 Dozenal Numerals (FF280–FF28F)</td>
       <td colspan="1" bgcolor="#FFD2D2" align="center">🟥 Camp Dozenal Numerals (FF290–FF29F)</td>
       <td colspan="1" bgcolor="#FFD2D2" align="center">🟥 Bibi-binary Numerals (FF2A0–FF2AF)</td>
-      <td colspan="1" align="center"><i>Empty (FF2B0–FF2BF)</i></td>
+      <td colspan="1" align="center">??? (FF2B0–FF2BF)</td>
       <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Marian Sexagesimal Numerals (FF2C0–FF2FF)</td>
     </tr>
     <tr>
@@ -1127,7 +1166,8 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>FFExx</b></td>
-      <td colspan="16" align="center">??? (FFE00–FFEFF)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Adobe Compatibility Forms (FFE00–FFE1F)</td>
+      <td colspan="14" bgcolor="#FFD2D2" align="center">🟥 Apple Compatibility Forms (FFE20–FFEFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FFFxx</b></td>
