@@ -1183,29 +1183,27 @@ This matrix maps out allocations visually across the 16-column boundaries of the
 
 ### 1. The Global Spectrum: Permanent vs. Provisional Territory Across PUA Spaces
 
-To ensure predictable layout boundaries for secondary forks and peer registry coordination, all standard Unicode PUA sectors (BMP PUA, Plane 15, and Plane 16) are mapped under two structural states of RNUR Set 1 stewardship:
+To ensure predictable layout boundaries for secondary forks and peer registry coordination, all standard Unicode PUA sectors (BMP PUA, Plane 15, and Plane 16) are mapped under structural states of RNUR Set 1 stewardship:
 
 | Registry State | Visual Notation | Global Technical Implementation & Developer Impact |
 | :--- | :--- | :--- |
 | **Truly Unassigned** | *Empty / Unallocated Space* | **Permanent RNUR Set 1 Sandbox Territory.** This space is permanently explicitly preserved as open, neutral territory within the global Set 1 framework. Because no defensive fences are built or temporary scripts mapped here, it serves as a permanent sanctuary for external custom font forks or uncoordinated local scripts. <br><br>**Primary Examples:** Large structural blocks inside the BMP PUA (such as **`U+EE00–U+EFFF`**), alongside unallocated sandbox gaps in Plane 15 (rows **`F4Exx`** onward) and Plane 16. |
-| **Reserved Space** | `???` | **Provisional RNUR Set 1 Lease Territory.** This space functions as a defensive block structurally locked down by RNUR Set 1 to prevent internal overlap while awaiting upstream specification. It remains an open encoding vacuum from a network perspective, operating under a provisional lease paradigm until official upstream authorities (**UCSUR** or **SPUCE**) declare a structural allocation within these ranges (e.g., **`F3400–F4DFF`** and **`FFE00–FFEFF`**). |
+| **Reserved Space** | `???` | **Provisional RNUR Set 1 Lease Territory.** This space functions as a defensive block structurally locked down by RNUR Set 1 to prevent internal overlap while awaiting upstream specification. It remains an open encoding vacuum from a network perspective, operating under a provisional lease paradigm until official upstream authorities (**UCSUR** or **SPUCE**) declare a structural allocation within these ranges. |
 | **SPUCE Special Admin Zone** | 🟨 | **Dedicated SPUCE Project Sandbox (Reserved for SPUCE Admin and FontStruct user @erictom333).** This block handles dedicated layout space provisionally reserved under yellow designation. These ranges (`FE0xx` through `FEFxx`) are quarantined away from general Set 1 allocation grids specifically to support structural prototyping under direct SPUCE admin supervision and local FontStruct asset deployments by user @erictom333. |
+| **SPUCE Reserved Zone (@NataliaKenigFan826)** | 🔴 | **Dedicated SPUCE Project Contributor Reserve.** This block isolates designated layout tracks reserved under the red circle identifier for project contributor @NataliaKenigFan826, serving as a structured sandbox zone for custom script staging and local engineering tasks. |
+| **SPUCE Reserved Zone (@AshtonTameirao25)** | 🟣 | **Dedicated SPUCE Project Contributor Reserve.** This block isolates designated layout tracks reserved under the purple circle identifier for project contributor @AshtonTameirao25, serving as a structured sandbox zone for custom script staging and local engineering tasks. |
+| **SPUCE Reserved Zone (@Greenstar967)** | 🟢 | **Dedicated SPUCE Project Contributor Reserve.** This block isolates designated layout tracks reserved under the green circle identifier for project contributor Oneiria (@Greenstar967), serving as a structured sandbox zone for custom script staging and local engineering tasks. |
+| **SPUCE Reserved Zone (@merrybot_v2)** | 🟦 | **Dedicated SPUCE Project Contributor Reserve.** This block isolates designated layout tracks reserved under the blue square identifier for project contributor @merrybot_v2, serving as a structured sandbox zone for custom script staging and local engineering tasks. |
 
-### 2. Registry Conflict Documentation: The SPUCE Real-World Allocation Error
+### 2. Micro-Level Breakdown: Why the `???` Range is "Provisional RNUR / Unencoded (U)CSUR/SPUCE"
 
-It has been identified that external SPUCE real-world extension mapping (historically noted in the `F2000–F29FF` zone) was developed based on a cursory review of the UCSUR primary script index, neglecting the official UCSUR **Roadmap**. This oversight led to the accidental overlap of SPUCE allocations with established or provisionally reserved UCSUR script territory.
-
-**Resolution:** To maintain registry integrity and prevent font rendering collisions, RNUR Set 1 has enforced a **Forced Shift Protocol**. The SPUCE real-world extensions (CanIPA, Phonetic Extensions-II, Latin Medievalist, and Halfwidth and Fullwidth Forms Extended-I) are officially dislocated from the `F2000–F29FF` block and re-mapped to start at **`U+F2A00`**. This ensures the stability of core UCSUR conlang foundations while preserving the SPUCE datasets in open, non-colliding territory.
-
-### 3. Micro-Level Breakdown: Why the `???` Range is "Provisional RNUR / Unencoded (U)CSUR/SPUCE"
-
-The fragmented and extended ranges spanning **`F1CA0–F1EFF`**, **`F26B0–F26FF`**, **`F28E0–F28FF`**, **`F2960–F29FF`**, **`F3380–F4DFF`**, **`FFE00–FFEFF`**, **`F5080–F7FFF`**, and **`F81B0–FDFFF`** are classified collectively under the `???` territory due to three core structural boundaries:
+The fragmented and extended ranges spanning **`F1CA0–F1EFF`**, **`F26B0–F26FF`**, **`F28E0–F28FF`**, **`F2960–F29FF`**, **`F5080–F50FF`**, **`F5EE0–F5EFF`**, **`F60C0–F60FF`**, **`F6400–F6A7F`**, **`F6DA0–F6DFF`**, **`F7700–F7F5F`**, **`F8290–F82FF`**, **`F8C00–F917F`**, **`F91C0–F91FF`**, **`F9250–F92FF`**, **`F9600–F99FF`**, **`F9C00–FA2FF`**, **`FA500–FACFF`**, **`FC5E0–FC5FF`**, **`FC730–FC7FF`**, **`FC920–FDEFF`**, and **`FF2B0–FF2BF`** are classified collectively under the `???` territory due to three core structural boundaries:
 
 * **Provisional RNUR Ownership:** This real estate functions explicitly as **RNUR Set 1 space for now**. It is actively tracked and defended by the registry to anchor incoming community scripts, operating under a temporary lease paradigm.
 * **Upstream Vacuum:** While under RNUR stewardship, this space remains an open layout vacuum from the perspective of peer networks. It lacks an abstract character repertoire or formal upstream tracking, remaining designated as available real estate until **UCSUR** or **SPUCE** steps forward to claim an allocation within its boundaries.
 * **Allocation vs. Encoding Boundaries:** Macro-allocation handles defensive zoning (securing real estate borders on the layout grid). Micro-encoding handles the internal asset engineering (character logic inside those borders). The `???` marker denotes a completed macro-allocation that is waiting for an upcoming script specification to undergo character translation.
 
-### 4. Upstream Collision & Set 2 Eviction Protocol
+### 3. Upstream Collision & Set 2 Eviction Protocol
 
 Because the `???` territory is provisionally staked inside an unmapped zone of the upstream architecture, the following conflict-resolution hierarchy applies to all scripts assigned here by RNUR before official ratification:
 
