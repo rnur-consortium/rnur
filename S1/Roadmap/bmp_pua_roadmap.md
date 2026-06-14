@@ -34,163 +34,163 @@ This matrix maps out allocations visually across the 16-column boundaries of the
   <tbody>
     <tr>
       <td align="center"><b>E0xx</b></td>
-      <td colspan="8" align="center">🟪 Tengwar</td>
-      <td colspan="8" align="center">🟪 Cirth</td>
+      <td colspan="8" align="center">🟪 Tengwar (E000-E07F)</td>
+      <td colspan="8" align="center">🟪 Cirth (E080-E0FF)</td>
     </tr>
     <tr>
       <td align="center"><b>E1xx</b></td>
-      <td colspan="5" align="center">🟪 Engsvanyáli</td>
-      <td colspan="6" align="center">🟪 Kinya</td>
-      <td colspan="2" align="center">🟪 Ilianore</td>
-      <td colspan="3" align="center">🟪 Syai</td>
+      <td colspan="5" align="center">🟪 Engsvanyáli (E100-E14F)</td>
+      <td colspan="6" align="center">🟪 Kinya (E150-E1AF)</td>
+      <td colspan="2" align="center">🟪 Ilianore (E1B0-E1CF)</td>
+      <td colspan="3" align="center">🟪 Syai (E1D0-E1FF)</td>
     </tr>
     <tr>
       <td align="center"><b>E2xx</b></td>
-      <td colspan="7" align="center">🟪 Verdurian</td>
-      <td colspan="2" align="center">🟪 aUI</td>
-      <td colspan="3" align="center">🟪 Amman-Iar</td>
-      <td colspan="1" align="center">🟪 Streich</td>
-      <td colspan="3" align="center">🟪 Xaîni</td>
+      <td colspan="7" align="center">🟪 Verdurian (E200-E26F)</td>
+      <td colspan="2" align="center">🟪 aUI (E270-E28F)</td>
+      <td colspan="3" align="center">🟪 Amman-Iar (E290-E2BF)</td>
+      <td colspan="1" align="center">🟪 Streich (E2C0-E2CF)</td>
+      <td colspan="3" align="center">🟪 Xaîni (E2D0-E2FF)</td>
     </tr>
     <tr>
       <td align="center"><b>E3xx</b></td>
-      <td colspan="4" align="center">🟪 Mizarian</td>
-      <td colspan="2" align="center">🟪 Zírí:nka</td>
-      <td colspan="2" align="center">🟪 Sarkai</td>
-      <td colspan="3" align="center">🟪 Thelwik</td>
-      <td colspan="5" align="center">🟪 Olaetyan</td>
+      <td colspan="4" align="center">🟪 Mizarian (E300-E33F)</td>
+      <td colspan="2" align="center">🟪 Zírí:nka (E340-E35F)</td>
+      <td colspan="2" align="center">🟪 Sarkai (E360-E37F)</td>
+      <td colspan="3" align="center">🟪 Thelwik (E380-E3AF)</td>
+      <td colspan="5" align="center">🟪 Olaetyan (E3B0-E3FF)</td>
     </tr>
     <tr>
       <td align="center"><b>E4xx</b></td>
-      <td colspan="3" align="center">🟪 Nísklôz</td>
-      <td colspan="2" align="center">🟪 Kazat ?Akkorou</td>
-      <td colspan="2" align="center">🟪 Kazvarad</td>
-      <td colspan="2" align="center">🟪 Zarkhánd</td>
-      <td colspan="3" align="center">🟪 Røzhxh</td>
-      <td colspan="3" align="center">🟪 Serivelna</td>
-      <td colspan="1" align="center">🟪 Kelwathi</td>
+      <td colspan="3" align="center">🟪 Nísklôz (E400-E42F)</td>
+      <td colspan="2" align="center">🟪 Kazat ?Akkorou (E430-E44F)</td>
+      <td colspan="2" align="center">🟪 Kazvarad (E450-E46F)</td>
+      <td colspan="2" align="center">🟪 Zarkhánd (E470-E48F)</td>
+      <td colspan="3" align="center">🟪 Røzhxh (E490-E4BF)</td>
+      <td colspan="3" align="center">🟪 Serivelna (E4C0-E4EF)</td>
+      <td colspan="1" align="center">🟪 Kelwathi (E4F0-E4FF)</td>
     </tr>
     <tr>
       <td align="center"><b>E5xx</b></td>
-      <td colspan="2" align="center">🟪 Saklor</td>
-      <td colspan="3" align="center">🟪 Rynnan</td>
-      <td colspan="3" align="center">🟪 Alzetjan</td>
-      <td colspan="2" align="center">🟪 Telarasso</td>
-      <td colspan="2" align="center">🟪 Ssûraki</td>
-      <td colspan="2" align="center">🟪 Gargoyle</td>
-      <td colspan="2" align="center">🟪 Ophidian</td>
+      <td colspan="2" align="center">🟪 Saklor (E500-E51F)</td>
+      <td colspan="3" align="center">🟪 Rynnan (E520-E54F)</td>
+      <td colspan="3" align="center">🟪 Alzetjan (E550-E57F)</td>
+      <td colspan="2" align="center">🟪 Telarasso (E580-E59F)</td>
+      <td colspan="2" align="center">🟪 Ssûraki (E5A0-E5BF)</td>
+      <td colspan="2" align="center">🟪 Gargoyle (E5C0-E5DF)</td>
+      <td colspan="2" align="center">🟪 Ophidian (E5E0-E5FF)</td>
     </tr>
     <tr>
       <td align="center"><b>E6xx</b></td>
-      <td colspan="3" align="center">🟪 Ferengi</td>
-      <td colspan="2" align="center">🟪 Seussian Latin Extensions</td>
-      <td colspan="3" align="center">🟩 <b>Sylabica</b></td>
-      <td colspan="5" align="center">🟪 Ewellic</td>
-      <td colspan="2" align="center">🟩 <b>Amlin</b></td>
-      <td colspan="1" align="center">🟩 <b>Unifon Extended</b></td>
+      <td colspan="3" align="center">🟪 Ferengi (E600-E62F)</td>
+      <td colspan="2" align="center">🟪 Seussian Latin Extensions (E630-E64F)</td>
+      <td colspan="3" align="center">🟩 Sylabica (E650-E67F)</td>
+      <td colspan="5" align="center">🟪 Ewellic (E680-E6CF)</td>
+      <td colspan="2" align="center">🟩 Amlin (E6D0-E6EF)</td>
+      <td colspan="1" align="center">🟩 Unifon Extended (E6F0-E6FF)</td>
     </tr>
     <tr>
       <td align="center"><b>E7xx</b></td>
-      <td colspan="4" align="center">🟩 <b>Unifon Extended</b></td>
-      <td colspan="3" align="center">🟪 Unifon</td>
-      <td colspan="1" align="center">🟪 Solresol</td>
-      <td colspan="8" align="center">🟪 Visible Speech</td>
+      <td colspan="4" align="center">🟩 Unifon Extended (E700-E73F)</td>
+      <td colspan="3" align="center">🟪 Unifon (E740-E76F)</td>
+      <td colspan="1" align="center">🟪 Solresol (E770-E77F)</td>
+      <td colspan="8" align="center">🟪 Visible Speech (E780-E7FF)</td>
     </tr>
     <tr>
       <td align="center"><b>E8xx</b></td>
-      <td colspan="3" align="center">🟪 Monofon</td>
-      <td colspan="6" align="center">🟩 <b>D'ni</b></td>
-      <td colspan="5" align="center">🟩 <b>Aurebesh</b></td>
-      <td colspan="2" align="center">🟩 <b>Tonal</b></td>
+      <td colspan="3" align="center">🟪 Monofon (E800-E82F)</td>
+      <td colspan="6" align="center">🟩 D'ni (E830-E88F)</td>
+      <td colspan="5" align="center">🟩 Aurebesh (E890-E8DF)</td>
+      <td colspan="2" align="center">🟩 Tonal (E8E0-E8FF)</td>
     </tr>
     <tr>
       <td align="center"><b>E9xx</b></td>
-      <td colspan="8" align="center">🟩 <b>Glaitha-A</b></td>
-      <td colspan="8" align="center">🟩 <b>Glaitha-B</b></td>
+      <td colspan="8" align="center">🟩 Glaitha-A (E900-E97F)</td>
+      <td colspan="8" align="center">🟩 Glaitha-B (E980-E9FF)</td>
     </tr>
     <tr>
       <td align="center"><b>EAxx</b></td>
-      <td colspan="10" align="center">🟩 <b>Lhenazi</b></td>
-      <td colspan="6" align="center">🟩 <b>Wanya</b></td>
+      <td colspan="10" align="center">🟩 Lhenazi (EA00-EA9F)</td>
+      <td colspan="6" align="center">🟩 Wanya (EAA0-EAFF)</td>
     </tr>
     <tr>
       <td align="center"><b>EBxx</b></td>
-      <td colspan="4" align="center">🟩 <b>Orokin</b></td>
-      <td colspan="2" align="center">🟩 <b>Standard Galactic</b></td>
-      <td colspan="4" align="center">🟩 <b>Braille Extended</b></td>
-      <td colspan="4" align="center">🟩 <b>Cistercian Numerals</b></td>
-      <td colspan="1" align="center">🟩 <b>Lapointe Hexadecimal Numerals</b></td>
-      <td colspan="1" align="center">🟩 <b>Martin Hexadecimal Numerals</b></td>
+      <td colspan="4" align="center">🟩 Orokin (aka Tennobet) (EB00-EB3F)</td>
+      <td colspan="2" align="center">🟩 Standard Galactic (EB40-EB5F)</td>
+      <td colspan="4" align="center">🟩 Braille Extended (EB60-EB9F)</td>
+      <td colspan="4" align="center">🟩 Cistercian Numerals (EBA0-EBDF)</td>
+      <td colspan="1" align="center">🟩 Lapointe Hexadecimal Numerals (EBE0-EBEF)</td>
+      <td colspan="1" align="center">🟩 Martin Hexadecimal Numerals (EBF0-EBFF)</td>
     </tr>
     <tr>
       <td align="center"><b>ECxx</b></td>
-      <td colspan="3" align="center">🟩 <b>Cylenian</b></td>
-      <td colspan="4" align="center">🟩 <b>Syrrin</b></td>
-      <td colspan="8" align="center">🟩 <b>Graflect</b></td>
-      <td colspan="1" align="center">🟩 <b>Whitaker Hexadecimal Numerals</b></td>
+      <td colspan="3" align="center">🟩 Cylenian (EC00-EC2F)</td>
+      <td colspan="4" align="center">🟩 Syrrin (EC30-EC6F)</td>
+      <td colspan="8" align="center">🟩 Graflect (EC70-ECEF)</td>
+      <td colspan="1" align="center">🟩 Whitaker Hexadecimal Numerals (ECF0-ECFF)</td>
     </tr>
     <tr>
       <td align="center"><b>EDxx</b></td>
-      <td colspan="4" align="center">🟩 <b>Deini</b></td>
-      <td colspan="4" align="center">🟩 <b>Niji</b></td>
-      <td colspan="4" align="center">🟩 <b>Iranic</b></td>
-      <td colspan="2" align="center">🟩 <b>Tassarunese</b></td>
-      <td colspan="1" align="center">🟩 <b>Zese</b></td>
-      <td colspan="1" align="center">🟩 <b>Grawlixes</b></td>
+      <td colspan="4" align="center">🟩 Deini (ED00-ED3F)</td>
+      <td colspan="4" align="center">🟩 Niji (ED40-ED7F)</td>
+      <td colspan="4" align="center">🟩 Iranic (ED80-EDBF)</td>
+      <td colspan="2" align="center">🟩 Tassarunese (EDC0-EDDF)</td>
+      <td colspan="1" align="center">🟩 Zese (EDE0-EDEF)</td>
+      <td colspan="1" align="center">🟩 Grawlixes (EDF0-EDFF)</td>
     </tr>
     <tr>
       <td align="center"><b>EExx</b></td>
-      <td colspan="1" align="center">🟧 <b>Benjamin Franklin's Phonetic Additions</b></td>
-      <td colspan="5" align="center">🟧 <b>Loopiform</b></td>
-      <td colspan="3" align="center">🟧 <b>Foldian</b></td>
-      <td colspan="7" align="center"></td>
+      <td colspan="1" align="center">🟧 Benjamin Franklin's Phonetic Additions (EE00-EE0F)</td>
+      <td colspan="5" align="center">🟧 Loopiform (EE10-EE5F)</td>
+      <td colspan="3" align="center">🟧 Foldian (EE60-EE8F)</td>
+      <td colspan="7" align="center">(EE90-EEFF)</td>
     </tr>
     <tr>
       <td align="center"><b>EFxx</b></td>
-      <td colspan="16" align="center"></td>
+      <td colspan="16" align="center">(EF00-EFFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F0xx</b></td>
-      <td colspan="16" align="center">🟥 Stylistic Variant Forms</td>
+      <td colspan="16" align="center">🟥 Stylistic Variant Forms (F000-F0FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F1xx</b></td>
-      <td colspan="16" align="center">🟥 Phonetic Extensions-I</td>
+      <td colspan="16" align="center">🟥 Phonetic Extensions-I (F100-F1FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F2xx</b></td>
-      <td colspan="16" align="center">🟥 Latin Extended-I</td>
+      <td colspan="16" align="center">🟥 Latin Extended-I (F200-F2FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F3xx</b></td>
-      <td colspan="8" align="center">🟥 Greek Extended-I</td>
-      <td colspan="8" align="center">🟥 Cyrillic Extended-I</td>
+      <td colspan="8" align="center">🟥 Greek Extended-I (F300-F37F)</td>
+      <td colspan="8" align="center">🟥 Cyrillic Extended-I (F380-F3FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F4xx</b></td>
-      <td colspan="12" align="center">🟥 Symbols and Punctuation Extended-I</td>
-      <td colspan="3" align="center">🟩 <b>Ath</b></td>
-      <td colspan="1" align="center"></td>
+      <td colspan="12" align="center">🟥 Symbols and Punctuation Extended-I (F400-F4BF)</td>
+      <td colspan="3" align="center">🟩 Ath (F4C0-F4EF)</td>
+      <td colspan="1" align="center">(F4F0-F4FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F5xx</b></td>
-      <td colspan="16" align="center"></td>
+      <td colspan="16" align="center">(F500-F5FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F6xx</b></td>
-      <td colspan="16" align="center"></td>
+      <td colspan="16" align="center">(F600-F6FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F7xx</b></td>
-      <td colspan="16" align="center"></td>
+      <td colspan="16" align="center">(F700-F7FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F8xx</b></td>
-      <td colspan="2" align="center">🟥 Corporate Symbols</td>
-      <td colspan="6" align="center"></td>
-      <td colspan="2" align="center">🟥 Font Specifics</td>
-      <td colspan="3" align="center">🟪 Aiha</td>
-      <td colspan="3" align="center">🟪 Klingon</td>
+      <td colspan="2" align="center">🟥 Corporate Symbols (F800-F81F)</td>
+      <td colspan="6" align="center">(F820-F87F)</td>
+      <td colspan="2" align="center">🟥 Font Specifics (F880-F89F)</td>
+      <td colspan="3" align="center">🟪 Aiha (F8A0-F8CF)</td>
+      <td colspan="3" align="center">🟪 Klingon (F8D0-F8FF)</td>
     </tr>
   </tbody>
 </table>
