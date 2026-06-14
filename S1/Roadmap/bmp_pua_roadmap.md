@@ -1,6 +1,6 @@
 # Set 1 BMP PUA Visual Roadmap Grid (Rows E0–F8)
 
-This matrix maps out the allocations visually across the 16-column boundaries of the Basic Multilingual Plane (BMP) Private Use Area in Set 1.
+This matrix maps out allocations visually across the 16-column boundaries of the BMP PUA. Under the global registry architecture, **RNUR Set 1** governance encompasses all three valid Unicode PUA zones: the **BMP PUA** (`U+E000–U+F8FF`), **Plane 15** (`U+F0000–U+FFFFF`), and **Plane 16** (`U+100000–U+10FFFF`). This file explicitly charts the BMP PUA sector.
 
 * 🟪 = **Core CSUR / Shared Allocations** (Purple)
 * 🟩 = **UCSUR-Only Allocations** (Green)
