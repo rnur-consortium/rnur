@@ -4,7 +4,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
 
 * 🟪 = **Core CSUR / Shared Allocations** (Purple)
 * 🟩 = **UCSUR-Only Allocations** (Green)
-* 🟥 = **SPUCE Project Allocations (Shifted / Extended)** (Red)
+* 🟥 = **SPUCE Project Allocations** (Red)
 * 🟨 = **SPUCE Project Allocations (Reserved for SPUCE Admin and FontStruct user @erictom333)** (Yellow)
 * 🟧 = **RNUR Set 1 Allocations** (Orange)
 * ⬛ = **Unconfirmed by UCSUR** (Black) → *Formatted as ¿Script Name?*
