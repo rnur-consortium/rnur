@@ -246,118 +246,117 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>F31xx</b></td>
       <td colspan="16" align="center">🟥 Phonetic Extensions-II (F3100–F31FF)</td>
     </tr>
-    <tr>
-      <td align="center"><b>F32xx</b></td>
-      <td colspan="16" align="center">🟥 Latin Medievalist Extensions (F3200–F32FF)</td>
-    </tr>
-    <tr>
+<tr>
       <td align="center"><b>F33xx</b></td>
       <td colspan="8" align="center">🟥 Latin Medievalist Extensions (F3300–F337F)</td>
-      <td colspan="8" align="center">??? (F3380–F33FF)</td>
+      <td colspan="8" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3380–F33FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F34xx</b></td>
-      <td colspan="16" align="center">??? (F3400–F34FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3400–F34FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F35xx</b></td>
-      <td colspan="16" align="center">??? (F3500–F35FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3500–F35FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F36xx</b></td>
-      <td colspan="16" align="center">??? (F3600–F36FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3600–F36FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F37xx</b></td>
-      <td colspan="16" align="center">??? (F3700–F37FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3700–F37FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F38xx</b></td>
-      <td colspan="16" align="center">??? (F3800–F83FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3800–F38FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F39xx</b></td>
-      <td colspan="16" align="center">??? (F3900–F39FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3900–F39FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F3Axx</b></td>
-      <td colspan="16" align="center">??? (F3A00–F3AFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3A00–F3AFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F3Bxx</b></td>
-      <td colspan="16" align="center">??? (F3B00–F3BFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3B00–F3BFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F3Cxx</b></td>
-      <td colspan="16" align="center">??? (F3C00–F3CFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3C00–F3CFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F3Dxx</b></td>
-      <td colspan="16" align="center">??? (F3D00–F3DFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3D00–F3DFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F3Exx</b></td>
-      <td colspan="16" align="center">??? (F3E00–F3EFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3E00–F3EFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F3Fxx</b></td>
-      <td colspan="16" align="center">??? (F3F00–F3FFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F3F00–F3FFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F40xx</b></td>
-      <td colspan="16" align="center">??? (F4000–F40FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F4000–F40FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F41xx</b></td>
-      <td colspan="16" align="center">??? (F4100–F41FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F4100–F41FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F42xx</b></td>
-      <td colspan="16" align="center">??? (F4200–F42FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F4200–F42FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F43xx</b></td>
-      <td colspan="16" align="center">??? (F4300–F43FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F4300–F43FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F44xx</b></td>
-      <td colspan="16" align="center">??? (F4400–F44FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F4400–F44FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F45xx</b></td>
-      <td colspan="16" align="center">??? (F4500–F45FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F4500–F45FF)</td>
+<tr>
+      <td align="center"><b>F45xx</b></td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extensions-II (F4500–F45FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F46xx</b></td>
-      <td colspan="16" align="center">??? (F4600–F46FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Phonetic Extensions-III (F4600–F46FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F47xx</b></td>
-      <td colspan="16" align="center">??? (F4700–F47FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Phonetic Extensions-III (F4700–F47FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F48xx</b></td>
-      <td colspan="16" align="center">??? (F4800–F48FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Phonetic Extensions-III (F4800–F48FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F49xx</b></td>
-      <td colspan="16" align="center">??? (F4900–F49FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Phonetic Extensions-III (F4900–F49FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F4Axx</b></td>
-      <td colspan="16" align="center">??? (F4A00–F4AFF)</td>
+      <td colspan="16" bgcolor="#FFFFCC" align="center">🟥 Greek Extended-II (F4A00–F4AFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F4Bxx</b></td>
-      <td colspan="16" align="center">??? (F4B00–F4BFF)</td>
+      <td colspan="16" bgcolor="#FFFFCC" align="center">🟥 Greek Extended-II (F4B00–F4BFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F4Cxx</b></td>
-      <td colspan="16" align="center">??? (F4C00–F4CFF)</td>
+      <td colspan="16" bgcolor="#E6F2FF" align="center">🟥 Cyrillic Extended-II (F4C00–F4CFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F4Dxx</b></td>
-      <td colspan="16" align="center">??? (F4D00–F4DFF)</td>
+      <td colspan="16" bgcolor="#E6F2FF" align="center">🟥 Cyrillic Extended-II (F4D00–F4DFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F4Exx</b></td>
@@ -373,81 +372,85 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="5" align="center">🟥 Mifo-Circassian (F5030–F507F)</td>
       <td colspan="8" align="center">??? (F5080–F50FF)</td>
     </tr>
-    <tr>
+<tr>
       <td align="center"><b>F51xx</b></td>
-      <td colspan="16" align="center">??? (F5100–F51FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Georgian Extended-II (F5100–F51FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F52xx</b></td>
-      <td colspan="16" align="center">??? (F5200–F52FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extended-III (F5200–F52FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F53xx</b></td>
-      <td colspan="16" align="center">??? (F5300–F53FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extended-III (F5300–F53FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F54xx</b></td>
-      <td colspan="16" align="center">??? (F5400–F54FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Latin Extended-III (F5400–F54FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F55xx</b></td>
-      <td colspan="16" align="center">??? (F5500–F55FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Greek Extended-III (F5500–F55FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F56xx</b></td>
-      <td colspan="16" align="center">??? (F5600–F56FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Greek Extended-III (F5600–F56FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F57xx</b></td>
-      <td colspan="16" align="center">??? (F5700–F57FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Greek Extended-III (F5700–F57FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F58xx</b></td>
-      <td colspan="16" align="center">??? (F5800–F58FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Ancient Monograms (F5800–F58FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F59xx</b></td>
-      <td colspan="16" align="center">??? (F5900–F59FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Old Danube Writing (F5900–F59FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F5Axx</b></td>
-      <td colspan="16" align="center">??? (F5A00–F5AFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Old Danube Writing (F5A00–F5AFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F5Bxx</b></td>
-      <td colspan="16" align="center">??? (F5B00–F5BFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Old Danube Writing (F5B00–F5BFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F5Cxx</b></td>
-      <td colspan="16" align="center">??? (F5C00–F5CFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Old Danube Writing (F5C00–F5CFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F5Dxx</b></td>
-      <td colspan="16" align="center">??? (F5D00–F5DFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Voynich (F5D00–F5DFF)</td>
     </tr>
-    <tr>
       <td align="center"><b>F5Exx</b></td>
-      <td colspan="16" align="center">??? (F5E00–F5EFF)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Voynich (F5E00–F5E1F)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Cistercian Cipher (F5E20–F5E3F)</td>
+      <td colspan="10" bgcolor="#FFD2D2" align="center">🟥 Tironian Notes (F5E40–F5EDF)</td>
+      <td colspan="2" align="center">??? (F5EE0–F5EFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F5Fxx</b></td>
-      <td colspan="16" align="center">??? (F5F00–F5FFF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Pigpen (F5F00–F5FFF)</td>
     </tr>
-    <tr>
+<tr>
       <td align="center"><b>F60xx</b></td>
-      <td colspan="16" align="center">??? (F6000–F60FF)</td>
+      <td colspan="12" bgcolor="#FFD2D2" align="center">🟥 Pigpen (F6000–F60BF)</td>
+      <td colspan="4" align="center">??? (F60C0–F60FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F61xx</b></td>
-      <td colspan="16" align="center">??? (F6100–F61FF)</td>
+      <td colspan="6" bgcolor="#FFD2D2" align="center">🟥 Visible Speech Extended-I (F6100–F615F)</td>
+      <td colspan="10" bgcolor="#FFD2D2" align="center">🟥 Pigpen Extended-I (F6160–F61FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F62xx</b></td>
-      <td colspan="16" align="center">??? (F6200–F62FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Pigpen Extended-I (F6200–F62FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F63xx</b></td>
-      <td colspan="16" align="center">??? (F6300–F63FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Runic Extended-I (F6300–F63FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F64xx</b></td>
@@ -473,9 +476,11 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>F69xx</b></td>
       <td colspan="16" align="center">??? (F6900–F69FF)</td>
     </tr>
-    <tr>
+<tr>
       <td align="center"><b>F6Axx</b></td>
-      <td colspan="16" align="center">??? (F6A00–F6AFF)</td>
+      <td colspan="8" align="center">??? (F6A00–F6A7F)</td>
+      <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Bopomofo Extended-I (F6A80–F6ABF)</td>
+      <td colspan="4" align="center">??? (F6AC0–F6AFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F6Bxx</b></td>
