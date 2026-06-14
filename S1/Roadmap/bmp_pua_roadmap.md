@@ -170,25 +170,27 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>F4xx</b></td>
       <td colspan="12" align="center">🟥 Symbols and Punctuation Extended-I (F400-F4BF)</td>
       <td colspan="3" align="center">🟩 Ath (F4C0-F4EF)</td>
-      <td colspan="1" align="center">(F4F0-F4FF)</td>
+      <td colspan="1" align="center">🟥 Number Forms Extended-I (F4F0-F4FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F5xx</b></td>
       <td colspan="16" align="center">(F500-F5FF)</td>
     </tr>
-    <tr>
+<tr>
       <td align="center"><b>F6xx</b></td>
       <td colspan="16" align="center">(F600-F6FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F7xx</b></td>
-      <td colspan="16" align="center">(F700-F7FF)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Hebrew Extended-I (F700-F71F)</td>
+      <td colspan="10" bgcolor="#FFD2D2" align="center">🟥 Faundish (F720-F7BF)</td>
+      <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Kana Extended-I (F7C0-F7FF)</td>
     </tr>
-    <tr>
+<tr>
       <td align="center"><b>F8xx</b></td>
-      <td colspan="2" align="center">🟥 Corporate Symbols (F800-F81F)</td>
-      <td colspan="6" align="center">(F820-F87F)</td>
-      <td colspan="2" align="center">🟥 Font Specifics (F880-F89F)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Corporate Symbols (F800-F81F)</td>
+      <td colspan="6" bgcolor="#FFD2D2" align="center">🟥 Miscellaneous Symbols and Arrows Extended-I (F820-F87F)</td>
+      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Font Specifics (F880-F89F)</td>
       <td colspan="3" align="center">🟪 Aiha (F8A0-F8CF)</td>
       <td colspan="3" align="center">🟪 Klingon (F8D0-F8FF)</td>
     </tr>
