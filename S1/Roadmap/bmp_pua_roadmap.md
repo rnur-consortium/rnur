@@ -5,7 +5,7 @@ This matrix maps out the allocations visually across the 16-column boundaries of
 * 🟪 = **Core CSUR / Shared Allocations** (Purple)
 * 🟩 = **UCSUR-Only Allocations** (Green)
 * 🟥 = **SPUCE Project Allocations** (Red)
-* 🟧 = **Custom Allocations** (Orange)
+* 🟧 = **RNUR Set 1 Allocations** (Orange)
 
 ---
 
@@ -143,11 +143,11 @@ This matrix maps out the allocations visually across the 16-column boundaries of
       <td colspan="1" align="center">🟧 <b>Benjamin Franklin's Phonetic Additions</b></td>
       <td colspan="5" align="center">🟧 <b>Loopiform</b></td>
       <td colspan="3" align="center">🟧 <b>Foldian</b></td>
-      <td colspan="7" align="center"><i>Reserved for hacks and corporate use</i></td>
+      <td colspan="7" align="center"></td>
     </tr>
     <tr>
       <td align="center"><b>EFxx</b></td>
-      <td colspan="16" align="center"><i>Reserved for hacks and corporate use</i></td>
+      <td colspan="16" align="center"></td>
     </tr>
     <tr>
       <td align="center"><b>F0xx</b></td>
@@ -170,24 +170,24 @@ This matrix maps out the allocations visually across the 16-column boundaries of
       <td align="center"><b>F4xx</b></td>
       <td colspan="12" align="center">🟥 Symbols and Punctuation Extended-I</td>
       <td colspan="3" align="center">🟩 <b>Ath</b></td>
-      <td colspan="1" align="center"><i>Reserved for hacks and corporate use</i></td>
+      <td colspan="1" align="center"></td>
     </tr>
     <tr>
       <td align="center"><b>F5xx</b></td>
-      <td colspan="16" align="center"><i>Reserved for hacks and corporate use</i></td>
+      <td colspan="16" align="center"></td>
     </tr>
     <tr>
       <td align="center"><b>F6xx</b></td>
-      <td colspan="16" align="center"><i>Reserved for hacks and corporate use</i></td>
+      <td colspan="16" align="center"></td>
     </tr>
     <tr>
       <td align="center"><b>F7xx</b></td>
-      <td colspan="16" align="center"><i>Reserved for hacks and corporate use</i></td>
+      <td colspan="16" align="center"></td>
     </tr>
     <tr>
       <td align="center"><b>F8xx</b></td>
       <td colspan="2" align="center">🟥 Corporate Symbols</td>
-      <td colspan="6" align="center"><i>Reserved for hacks and corporate use</i></td>
+      <td colspan="6" align="center"></td>
       <td colspan="2" align="center">🟥 Font Specifics</td>
       <td colspan="3" align="center">🟪 Aiha</td>
       <td colspan="3" align="center">🟪 Klingon</td>
