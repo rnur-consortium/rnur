@@ -378,7 +378,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>F51xx</b></td>
-      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Georgian Extended-II (F5100–F51FF)</td>
+      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Georgian Extended-I (F5100–F51FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F52xx</b></td>
