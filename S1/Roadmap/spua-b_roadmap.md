@@ -43,9 +43,19 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>1002xx</b></td>
       <td colspan="16" align="center">🟥 Latin Extended-IV (100200–1002FF)</td>
     </tr>
-        <tr>
+    <tr>
       <td align="center"><b>1003xx</b></td>
       <td colspan="8" align="center">🟥 Latin Extended-IV (100300–10037F)</td>
       <td colspan="1" align="center">🟥 Greek Extended-IV (100380–10038F)</td>
       <td colspan="7" align="center">🟥 Itinyrin (100390–1003FF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>1004xx</b></td>
+      <td colspan="16" align="center">🟥 Cyrillic Extended-IV (100400–1004FF)</td>
+    </tr>
+    <tr>
+      <td align="center"><b>1005xx</b></td>
+      <td colspan="8" align="center">🟥 Cyrillic Extended-IV (100500–10057F)</td>
+      <td colspan="4" align="center">(100580–1005BF)</td>
+      <td colspan="4" align="center">🟥 Hebrew Extended-II (1005C0–1005FF)</td>
     </tr>
