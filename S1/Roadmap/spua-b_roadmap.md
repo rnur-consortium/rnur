@@ -59,3 +59,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="4" align="center">(100580–1005BF)</td>
       <td colspan="4" align="center">🟥 Hebrew Extended-II (1005C0–1005FF)</td>
     </tr>
+    <tr>
+      <td align="center"><b>1006xx</b></td>
+      <td colspan="16" align="center">🟥 Arabic Extended-III (100600–1006FF)</td>
+    </tr>
