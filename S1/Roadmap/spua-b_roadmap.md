@@ -588,24 +588,23 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>108Fxx</b></td>
       <td colspan="4" align="center">🟥 Berryz Koubou Symbols (108F00–108F3F)</td>
       <td colspan="6" align="center">(108F40–108F9F)</td>
-      <td colspan="6" align="center">🟥 Braille Extended-I (108FA0–108FFF)</td>
+      <td colspan="6" align="center">(108FA0–108FFF)</td>
     </tr>
     <tr>
       <td align="center"><b>1090xx</b></td>
-      <td colspan="16" align="center">🟥 Braille Extended-I (109000–1090FF)</td>
+      <td colspan="16" align="center">(109000–1090FF)</td>
     </tr>
     <tr>
       <td align="center"><b>1091xx</b></td>
-      <td colspan="16" align="center">🟥 Braille Extended-I (109100–1091FF)</td>
+      <td colspan="16" align="center">(109100–1091FF)</td>
     </tr>
     <tr>
       <td align="center"><b>1092xx</b></td>
-      <td colspan="16" align="center">🟥 Braille Extended-I (109200–1092FF)</td>
+      <td colspan="16" align="center">(109200–1092FF)</td>
     </tr>
     <tr>
       <td align="center"><b>1093xx</b></td>
-      <td colspan="6" align="center">🟥 Braille Extended-I (109300–10935F)</td>
-      <td colspan="2" align="center">(109360–10937F)</td>
+      <td colspan="8" align="center">(109300–10937F)</td>
       <td colspan="8" align="center">🟥 Zhizhue Color Pictograms (109380–1093FF)</td>
     </tr>
     <tr>
