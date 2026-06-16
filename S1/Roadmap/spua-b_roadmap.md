@@ -1009,7 +1009,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>10EFxx</b></td>
-      <td colspan="10" align="center">(10EF00–10EFA5)</td>
+      <td colspan="10" align="center">(10EF00–10EF9F)</td>
       <td colspan="3" align="center">🟥 Aiha Presentation Forms (10EFA0–10EFCF)</td>
       <td colspan="3" align="center">(10EFD0–10EFFF)</td>
     </tr>
