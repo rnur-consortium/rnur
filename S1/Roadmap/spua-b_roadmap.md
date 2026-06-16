@@ -622,7 +622,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     <tr>
       <td align="center"><b>1097xx</b></td>
       <td colspan="8" align="center">🟥 QWER Symbols (109700–10977F)</td>
-      <td colspan="6" align="center">(10977A–1097DF)</td>
+      <td colspan="6" align="center">(109780–1097DF)</td>
       <td colspan="2" align="center">🟥 TBH (1097E0–1097FF)</td>
     </tr>
     <tr>
