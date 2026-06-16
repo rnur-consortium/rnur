@@ -178,7 +178,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>F5xx</b></td>
       <td colspan="16" align="center">(F500-F5FF)</td>
     </tr>
-<tr>
+    <tr>
       <td align="center"><b>F6xx</b></td>
       <td colspan="16" align="center">(F600-F6FF)</td>
     </tr>
@@ -188,10 +188,10 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="10" bgcolor="#FFD2D2" align="center">🟥 Faundish (F720-F7BF)</td>
       <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Kana Extended-I (F7C0-F7FF)</td>
     </tr>
-<tr>
+    <tr>
       <td align="center"><b>F8xx</b></td>
       <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Corporate Symbols (F800-F81F)</td>
-      <td colspan="6" bgcolor="#FFD2D2" align="center">🟥 Miscellaneous Symbols and Arrows Extended-I (F820-F87F)</td>
+      <td colspan="6" bgcolor="#FFD2D2" align="center">(F820-F87F)</td>
       <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Font Specifics (F880-F89F)</td>
       <td colspan="3" align="center">🟪 Aiha (F8A0-F8CF)</td>
       <td colspan="3" align="center">🟪 Klingon (F8D0-F8FF)</td>
