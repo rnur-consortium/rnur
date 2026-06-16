@@ -18,35 +18,33 @@ The Reddit Neographical Unicode Registry (RNUR) mitigates these architectural co
 
 ## 2. The Coordinate-Pair Matrix Model
 
-Instead of assigning a character to a singular scalar code point, RNUR abstracts the encoding layer using a relational tuple:
+Instead of assigning a character to a singular scalar code point, RNUR abstracts the encoding layer using a relational coordinate tuple:
 
 **Location = (S, C)**
 
 Where:
+* **S** represents the **Set Layer** ($S \in \mathbb{Z}^+$), a positive integer space partitioning distinct environment registry layers.
+* **C** represents the valid hexadecimal **Unicode PUA Code Point** ($C \in \text{PUA}$).
 
-*   S represents the **Set Layer** (S ∈ Z⁺), an arbitrary integerspace partitioning environment layers.
-
-*   C represents the valid hexadecimal **Unicode PUA Code Point** (C ∈ PUA).
-
-```
+```text
 Set 3 (Sandbox)    [ U+E000 ] [ U+E001 ] [ U+E002 ] ... Local Dev Environment
-           │
-Set 2 (Sandbox)    [ U+E000 ] [ U+E001 ] [ U+E002 ] ... Application Specific
-           │
+                       │
+Set 2 (Sandbox)    [ U+E000 ] [ U+E001 ] [ U+E002 ] ... Application-Specific
+                       │
 Set 1 (Global)     [ U+EE00 ] [ U+EE10 ] [ U+EE11 ] ... Global Permanent Mappings
-                        └─┬────┘   └─┬─────────────────┘
-                 Franklin Range     Xaini / Community
+                       └─┬────┘   └─┬─────────────────┘
+                 Franklin Range   Xaini / Community
 ```
 
 ### 2.1 Set Layer Classification
 
 #### Set 1: The Global Consensus Layer
 
-Set 1 is globally unique, permanent, and strictly immutable once allocated. Characters assigned to Set 1 are guaranteed never to collide with other scripts within the same layer. It accommodates finalized community writing systems, active conlangs, and historical orthographic expansions.
+Set 1 is globally unique, permanent, and strictly immutable once allocated. Characters assigned to Set 1 are architecturally guaranteed never to collide with other scripts within the same layer. It accommodates finalized community writing systems, stable constructed languages, and historical orthographic expansions.
 
 #### Set 2+ : The Parallel Sandbox Layers
 
-Sets 2 and above operate as isolated environments. These layers allow font developers and software engines to mirror standard PUA spaces locally or within specific app ecosystems without threatening the structural integrity of the Global Consensus Layer.
+Sets 2 and beyond operate as completely isolated virtual environments. These layers allow font engineers, layout pre-processors, and application engines to mirror standard PUA spaces locally or within specific software ecosystems without threatening the structural integrity or clean string-parsing of the Global Consensus Layer.
 
 ## 3. Allocation Maps & Segment Strategy
 
