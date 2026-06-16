@@ -445,7 +445,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>F61xx</b></td>
-      <td colspan="6" bgcolor="#FFD2D2" align="center">(F6100–F615F)</td>
+      <td colspan="6" bgcolor="#FFD2D2" align="center">??? (F6100–F615F)</td>
       <td colspan="10" bgcolor="#FFD2D2" align="center">🟥 Pigpen Extended-I (F6160–F61FF)</td>
     </tr>
     <tr>
