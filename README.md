@@ -36,6 +36,7 @@ RNUR mirrors formal Unicode Consortium submission standards to ensure high-quali
 ```text
 ├── .github/                # Issue templates and workflows
 ├── core/                   # Registry specification documentation
+├── UNIDATA/                # Unicode data
 ├── data/
 │   ├── set1_master.csv     # The definitive master mapping for Set 1
 │   └── set2_sandbox.csv    # Registered sandbox identifiers
