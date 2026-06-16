@@ -139,3 +139,25 @@ RNUR works as an incubator, tracking the long-term utility of contemporary scrip
 *   **The Preservation Principle:** Once a coordinate pair (1, C) is assigned to a script within Set 1, that block is locked permanently. No script can ever overwrite it, even if the script falls into inactivity, serving as a historical record.
 
 *   **The Graduation Exception:** If a community script receives massive real-world adoption and successfully passes formal approval by the ISO/IEC 10646 and the Unicode Consortium, its native Unicode blocks will take precedence. However, its original RNUR coordinate mapping remains statically preserved in the data tables to maintain backwards compatibility for legacy font implementations.
+
+## 6. Release Cadence & Versioning Protocol
+
+The RNUR specification operates on a flexible, time-gated progression model, balanced by a strict structural circuit-breaker mechanism to safeguard text-rendering stability.
+
+### 6.1 Major Release Cadence
+The registry updates its foundational architecture dynamically rather than on a rigid calendar date. A new major version becomes eligible for deployment **anytime after a minimum duration of one full year has elapsed** since the official release of the preceding major version. 
+
+* **Current Cycle (Launched 2026):** `RNUR v1.0` (Base Abstraction Layer & Initial Consensus Claims)
+* **Next Target Cycle (2027+):** `RNUR v2.0` (Eligible for release anytime after `v1.0` has been live for $\ge 1$ year)
+
+### 6.2 The Flaw-Gate Postponement Rule
+To prevent breaking changes, syntax flaws, or telemetry collisions from cascading into future registry layers, **no major version may release while an active flaw exists in the current branch.** If a structural flaw or regression is detected in an active version:
+
+1. **Major Gating:** The upcoming annual major version is immediately frozen and postponed, even if the one-year minimum threshold has already passed.
+2. **Minor Target Routing:** The engineering focus shifts exclusively to delivering a minor patch release (`[Current Major].[Minor Patch Count]`).
+3. **Unfreezing Asset Line:** The next major version is unlocked for release only after the minor version successfully patches, validates, and stabilizes the flaw layer.
+
+```text
+[Current v1.0] ──(Flaw Detected)──> [v2.0 Frozen / Postponed]
+       │                                  ▲
+       └───> [Deploy Patch v1.1] ─────────┘ (Validation Clear: v2.0 Unlocked for Release)
