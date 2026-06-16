@@ -50,31 +50,81 @@ Sets 2 and above operate as isolated environments. These layers allow font devel
 
 ## 3. Allocation Maps & Segment Strategy
 
-To preserve memory space within Plane 0 (the Basic Multilingual Plane) while ensuring maximum accessibility, RNUR partitions blocks using a tier-based clustering mechanism based on character payload sizing.
+To preserve memory space within Plane 0 (the Basic Multilingual Plane) while ensuring maximum accessibility and clean runtime font parsing, RNUR partitions blocks using a tier-based clustering mechanism based on character payload sizing. Structural layout behaviors are strictly governed by Set boundaries.
 
 ### 3.1 Plane 0 (BMP) Light Alphabetic Blocks
 
-Reserved exclusively for low-payload, stable alphabets (such as simple featural, phonetic, or segmented writing systems).
+Reserved exclusively for low-payload, stable alphabets (such as simple featural, phonetic, or segmented writing systems) under Set 1 allocations.
 
-*   U+EE00 to U+EE0F: Reserved for historical incubator systems (e.g., Benjamin Franklin's 1768 phonetic reform).
-
-*   U+EE10 to U+EFFF: Open allocation territory for community scripts.
-
-*   U+F500 to U+F7FF & U+F820 to U+F87F: Overflow micro-blocks.
+* **U+EE00–U+EFFF**: OPEN_SLOT — Overflow micro-blocks / Open tracking slot.
+* **U+F500–U+F6FF**: OPEN_SLOT — Overflow micro-blocks / Open tracking slot.
+* **U+F820–U+F87F**: OPEN_SLOT — Overflow micro-blocks / Open tracking slot.
 
 ### 3.2 Plane 15 (SPUA-A) The Grand Corridor
 
 Designed for medium-to-large writing systems that rely heavily on complex OpenType features, extensive layout engines, or continuous ligature structures.
 
-*   U+F2A00 to U+F4DFF (Tier 1)
-
-*   U+F5100 to U+F7FFF (Tier 2)
-
-*   U+F8200 to U+FDFFF (Tier 3)
+* **U+F2A00–U+F4DFF**: Tier 1 Layout Matrix (Complex script engines, universal phonetic expansions).
+* **U+F5100–U+F7FFF**: Tier 2 Layout Matrix (Historical expansions, custom layout geometry tracking).
+* **U+F8200–U+FDFFF**: Tier 3 Layout Matrix (Syllabary blocks, continuous logography foundations).
 
 ### 3.3 Plane 16 (SPUA-B) The Mass Core Reserve
 
-*   U+102000 to U+10FFEF: Dedicated storage layer for massive community logographies, complex syllabaries, or highly detailed historic scripts requiring wide address spaces.
+Dedicated storage layer for massive community logographies, complex syllabaries, or highly detailed scripts requiring wide address spaces.
+
+* **U+102000–U+10FFEF**: Core tracking matrix for wide-address community scripts and system symbols.
+
+---
+
+### 3.4 Set 1 Open Real Estate & Tracking Matrix
+
+The following blocks represent unallocated space (`OPEN_SLOT`) and defensively zoned space (`PROVISIONAL_RNUR_OPEN_SLOT`) within the active Set 1 framework. 
+
+#### Plane 15 (SPUA-A) Provisional Open Slots
+* `U+F1CA0`–`U+F1EFF` | `U+F26B0`–`U+F26FF` | `U+F28E0`–`U+F28FF` | `U+F2960`–`U+F29FF`
+* `U+F5080`–`U+F50FF` | `U+F5EE0`–`U+F5EFF` | `U+F6100`–`U+F615F` | `U+F6400`–`U+F6A7F`
+* `U+F6DA0`–`U+F6DFF` | `U+F6F80`–`U+F6FFF` | `U+F7700`–`U+F7F5F` | `U+F8290`–`U+F82FF`
+* `U+F8C00`–`U+F917F` | `U+F91C0`–`U+F91FF` | `U+F9250`–`U+F92FF` | `U+F9600`–`U+F99FF`
+* `U+F9C00`–`U+FA2FF` | `U+FA500`–`U+FACFF` | `U+FC5E0`–`U+FC5FF` | `U+FC730`–`U+FC7FF`
+* `U+FC920`–`U+FDEFF` | `U+FF2B0`–`U+FF2BF`
+
+> **Note on Provisional Eviction:** All ranges designated as `PROVISIONAL_RNUR_OPEN_SLOT` are held via defensive zoning under an active upstream vacuum. These are subject to the absolute Upstream Authority hierarchy and the Eviction Clause. If conflicting native allocations emerge upstream, these slots face automatic clean relocation routing to Set 2+ execution layers to prevent string parsing pollution.
+
+#### Plane 16 (SPUA-B) Structural Open Slots
+* `U+100580`–`U+1005BF` | `U+100700`–`U+10109F` | `U+101100`–`U+1011FF` | `U+101380`–`U+1013DF`
+* `U+101500`–`U+101FFF` | `U+102300`–`U+1024CF` | `U+102500`–`U+1026FF` | `U+102E00`–`U+102FFF`
+* `U+103100`–`U+1071FF` | `U+107440`–`U+1074FF` | `U+108030`–`U+10806F` | `U+1081B0`–`U+1082FF`
+* `U+108330`–`U+1083FF` | `U+1084B0`–`U+1085FF` | `U+108850`–`U+1088BF` | `U+108B80`–`U+108BBF`
+* `U+108D00`–`U+108EFF` | `U+108F40`–`U+10937F` | `U+109640`–`U+1096FF` | `U+109780`–`U+1097DF`
+* `U+10A0B0`–`U+10A0FF` | `U+10A1C0`–`U+10A1FF` | `U+10A6B0`–`U+10A6DF` | `U+10A700`–`U+10AE9F`
+* `U+10B000`–`U+10CFFF` | `U+10D0A0`–`U+10D2FF` | `U+10D400`–`U+10DFFF` | `U+10E200`–`U+10E35F`
+* `U+10E470`–`U+10E4EF` | `U+10E5A0`–`U+10E5DF` | `U+10E630`–`U+10E64F` | `U+10E6D0`–`U+10E7FF`
+* `U+10E8A0`–`U+10E9FF` | `U+10EAA0`–`U+10EB9F` | `U+10EBE0`–`U+10EF9F` | `U+10EFD0`–`U+10F91F`
+* `U+10F920`–`U+10FAFF` | `U+10FF00`–`U+10FFBF`
+
+---
+
+### 3.5 Empty Character Space Allocations
+
+To prevent clashing layout telemetry within rendering engines, dedicated structural placeholders are assigned as empty characters strictly under **Set 1** specifications. No active scripts or symbols are mapped to these coordinates:
+
+* **BMP Sector:** `U+EED0`–`U+EEFF`
+* **Plane 15 Sector (SPUA-A Hints/Specials):** `U+FFF00`–`U+FFFFF`
+* **Plane 16 Sector (SPUA-B Hints/Specials):** `U+10FFC0`–`U+10FFFF` *(Consisting of Source Hints `10FFC0-10FFCF`, Transcoding Hints `10FFD0-10FFEF`, and Specials `10FFF0-10FFFF`)*
+
+---
+
+### 3.6 Sets 2+ Architecture & Global Routing
+
+Unlike the structured block constraints mapped out in Set 1, **Sets 2 and beyond (Sets 2+)** possess total, unrestricted access across all unmapped PUA space bounds. 
+
+Sets 2+ are completely exempt from structural block categories, provisional tracking rules, and empty character limitations. The explicit allocation bounds for Sets 2+ encompass the entire baseline PUA blocks:
+
+* **BMP PUA Sector:** `U+E000`–`U+F8FF`
+* **Plane 15 Sector (SPUA-A):** `U+F0000`–`U+FFFFF`
+* **Plane 16 Sector (SPUA-B):** `U+100000`–`U+10FFFF`
+
+This unrestricted total allocation model allows Sets 2+ to accommodate broad-spectrum fallback routing, high-density character transcoding, and custom font mapping overflows without polluting active Set 1 layout tracks.
 
 ## 4. Character Property Protocol
 
