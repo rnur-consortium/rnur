@@ -5,11 +5,11 @@ This matrix maps out allocations visually across the 16-column boundaries of the
 * 🟪 = **Core CSUR / Shared Allocations** (Purple)
 * 🟩 = **UCSUR-Only Allocations** (Green)
 * 🟥 = **SPUCE Project Allocations** (Red)
-* 🟨 = **SPUCE Project Allocations (Reserved for SPUCE Admin and FontStruct user @erictom333)** (Yellow)
-* 🔴 = **SPUCE Project Allocations (Reserved for @NataliaKenigFan826)** (Red Circle)
-* 🟣 = **SPUCE Project Allocations (Reserved for @AshtonTameirao25)** (Purple Circle)
-* 🟢 = **SPUCE Project Allocations (Reserved for Oneiria, a.k.a. @Greenstar967)** (Green Circle)
-* 🟦 = **SPUCE Project Allocations (Reserved for @merrybot_v2)** (Blue)
+* * 🟨 = **SPUCE Project Allocations (Reserved for SPUCE Admin and FontStruct user @erictom333)** (Yellow)
+* * 🔴 = **SPUCE Project Allocations (Reserved for @NataliaKenigFan826)** (Red Circle)
+* * 🟣 = **SPUCE Project Allocations (Reserved for @AshtonTameirao25)** (Purple Circle)
+* * 🟢 = **SPUCE Project Allocations (Reserved for Oneiria, a.k.a. @Greenstar967)** (Green Circle)
+* * 🟦 = **SPUCE Project Allocations (Reserved for @merrybot_v2)** (Blue)
 * 🟧 = **RNUR Set 1 Allocations** (Orange)
 * ⬛ = **Unconfirmed by UCSUR** (Black) → *Formatted as ¿Script Name?*
 
