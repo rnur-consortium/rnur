@@ -587,8 +587,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     <tr>
       <td align="center"><b>108Fxx</b></td>
       <td colspan="4" align="center">🟥 Berryz Koubou Symbols (108F00–108F3F)</td>
-      <td colspan="6" align="center">(108F40–108F9F)</td>
-      <td colspan="6" align="center">(108FA0–108FFF)</td>
+      <td colspan="12" align="center">(108F40–108FFF)</td>
     </tr>
     <tr>
       <td align="center"><b>1090xx</b></td>
