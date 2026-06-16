@@ -2,11 +2,46 @@ Set_Number,Start_Code_Point,End_Code_Point,Script_Name,Author,Status,Description
 1,U+EE00,U+EE0F,Franklin Phonetic Alphabet,Benjamin Franklin,Allocated,16-hex historical incubator for phonetic alphabet reform.
 1,U+EE10,U+EE5F,Loopiform,Filipe Dos Reis,Allocated,72-character systematic phonetic script featuring duodecimal numerals and logographic punctuation.
 1,U+EE60,U+EE8F,Foldian,u/Willing_Squirrel_741,Allocated,32-character neography with 1 associated diacritic mark.
-1,U+EE90,U+EFFF,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
-1,U+F4F0,U+F7FF,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
+1,U+EE90,U+EEDF,Sulat Hiligaynon,Julius Dalum,Allocated,Phonemic script for Hiligaynon language.
+1,U+EEE0,U+EF2F,Western Script,Julius Dalum,Allocated,Phonemic script for loanwords and western linguistics.
+1,U+EF30,U+EFFF,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
+1,U+F500,U+F6FF,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
 1,U+F820,U+F87F,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
-1,U+F2A00,U+F4DFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 15 Grand Corridor - Tier 1 high-capacity allocation.
-1,U+F5100,U+F7FFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 15 Grand Corridor - Tier 2 high-capacity allocation.
-1,U+F8200,U+FDFFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 15 Grand Corridor - Tier 3 high-capacity allocation.
-1,U+FFE00,U+FFEFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 15 Terminal padding allocation block.
-1,U+102000,U+10FFEF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 Massive Community Syllabary and Logography Reserve.
+1,U+100580,U+1005BF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+100700,U+10109F,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+101100,U+1011FF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+101380,U+1013DF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+101500,U+101FFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+102300,U+1024CF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+102500,U+1026FF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+102E00,U+102FFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+103100,U+1071FF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+107440,U+1074FF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+108030,U+10806F,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+1081B0,U+1082FF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+108330,U+1083FF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+1084B0,U+1085FF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+108850,U+1088BF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+108B80,U+108BBF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+108D00,U+108EFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+108F40,U+10937F,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+109640,U+1096FF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+109780,U+1097DF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10A0B0,U+10A0FF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10A1C0,U+10A1FF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10A6B0,U+10A6DF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10A700,U+10AE9F,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10B000,U+10CFFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10D0A0,U+10D2FF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10D400,U+10DFFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10E200,U+10E35F,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10E470,U+10E4EF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10E5A0,U+10E5DF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10E630,U+10E64F,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10E6D0,U+10E7FF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10E8A0,U+10E9FF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10EAA0,U+10EB9F,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10EBE0,U+10EF9F,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10EFD0,U+10F91F,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10F920,U+10FAFF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
+1,U+10FF00,U+10FFBF,OPEN_SLOT,NONE,Waiting for Submissions,Plane 16 allocation structural space tracking slot.
