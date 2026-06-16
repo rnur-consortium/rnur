@@ -58,25 +58,21 @@ Reserved exclusively for low-payload, stable alphabets (such as simple featural,
 * **U+F500–U+F6FF**: OPEN_SLOT — Overflow micro-blocks / Open tracking slot.
 * **U+F820–U+F87F**: OPEN_SLOT — Overflow micro-blocks / Open tracking slot.
 
-### 3.2 Plane 15 (SPUA-A) The Grand Corridor
+---
 
-Designed for medium-to-large writing systems that rely heavily on complex OpenType features, extensive layout engines, or continuous ligature structures.
+### 3.2 Empty Character Space Allocations
 
-* **U+F2A00–U+F4DFF**: Tier 1 Layout Matrix (Complex script engines, universal phonetic expansions).
-* **U+F5100–U+F7FFF**: Tier 2 Layout Matrix (Historical expansions, custom layout geometry tracking).
-* **U+F8200–U+FDFFF**: Tier 3 Layout Matrix (Syllabary blocks, continuous logography foundations).
+To prevent clashing layout telemetry within rendering engines, dedicated structural placeholders are assigned as empty characters strictly under **Set 1** specifications. No active scripts or symbols are mapped to these coordinates:
 
-### 3.3 Plane 16 (SPUA-B) The Mass Core Reserve
-
-Dedicated storage layer for massive community logographies, complex syllabaries, or highly detailed scripts requiring wide address spaces.
-
-* **U+102000–U+10FFEF**: Core tracking matrix for wide-address community scripts and system symbols.
+* **BMP Sector:** `U+EED0`–`U+EEFF`
+* **Plane 15 Sector (SPUA-A Hints/Specials):** `U+FFF00`–`U+FFFFF`
+* **Plane 16 Sector (SPUA-B Hints/Specials):** `U+10FFC0`–`U+10FFFF` *(Consisting of Source Hints `10FFC0-10FFCF`, Transcoding Hints `10FFD0-10FFEF`, and Specials `10FFF0-10FFFF`)*
 
 ---
 
-### 3.4 Set 1 Open Real Estate & Tracking Matrix
+### 3.3 Set 1 Open Real Estate & Tracking Matrix
 
-The following blocks represent unallocated space (`OPEN_SLOT`) and defensively zoned space (`PROVISIONAL_RNUR_OPEN_SLOT`) within the active Set 1 framework. 
+The following blocks represent unallocated space (`OPEN_SLOT`) and defensively zoned space (`PROVISIONAL_RNUR_OPEN_SLOT`) within the active Set 1 framework.
 
 #### Plane 15 (SPUA-A) Provisional Open Slots
 * `U+F1CA0`–`U+F1EFF` | `U+F26B0`–`U+F26FF` | `U+F28E0`–`U+F28FF` | `U+F2960`–`U+F29FF`
@@ -102,17 +98,7 @@ The following blocks represent unallocated space (`OPEN_SLOT`) and defensively z
 
 ---
 
-### 3.5 Empty Character Space Allocations
-
-To prevent clashing layout telemetry within rendering engines, dedicated structural placeholders are assigned as empty characters strictly under **Set 1** specifications. No active scripts or symbols are mapped to these coordinates:
-
-* **BMP Sector:** `U+EED0`–`U+EEFF`
-* **Plane 15 Sector (SPUA-A Hints/Specials):** `U+FFF00`–`U+FFFFF`
-* **Plane 16 Sector (SPUA-B Hints/Specials):** `U+10FFC0`–`U+10FFFF` *(Consisting of Source Hints `10FFC0-10FFCF`, Transcoding Hints `10FFD0-10FFEF`, and Specials `10FFF0-10FFFF`)*
-
----
-
-### 3.6 Sets 2+ Architecture & Global Routing
+### 3.4 Sets 2+ Architecture & Global Routing
 
 Unlike the structured block constraints mapped out in Set 1, **Sets 2 and beyond (Sets 2+)** possess total, unrestricted access across all unmapped PUA space bounds. 
 
