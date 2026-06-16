@@ -54,7 +54,7 @@ To preserve memory space within Plane 0 (the Basic Multilingual Plane) while ens
 
 Reserved exclusively for low-payload, stable alphabets (such as simple featural, phonetic, or segmented writing systems) under Set 1 allocations.
 
-* **U+EE00–U+EFFF**: OPEN_SLOT — Overflow micro-blocks / Open tracking slot.
+* **U+EE00–U+EFCF**: OPEN_SLOT — Overflow micro-blocks / Open tracking slot.
 * **U+F500–U+F6FF**: OPEN_SLOT — Overflow micro-blocks / Open tracking slot.
 * **U+F820–U+F87F**: OPEN_SLOT — Overflow micro-blocks / Open tracking slot.
 
