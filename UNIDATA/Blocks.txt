@@ -1,5 +1,5 @@
 # Blocks-RNUR.txt
-# Date: 2026-06-16, 21:40:00
+# Date: 2026-06-17, 20:20:00
 #
 # Reddit Neographical Unicode Registry Character Database
 # Maintained by Registry Architecture / Nexus Tribarixa
@@ -92,13 +92,6 @@ F1C40..F1C7F; Titi Pula
 F1C80..F1C9F; Sitelen Pona Radicals
 F2000..F267F; Sadalian
 F28A0..F28DF; Zbalermorna
-
-# --- RNUR Set 1 Allocations (🟧) ---
-EE00..EE0F; Benjamin Franklin's Phonetic Additions
-EE10..EE5F; Loopiform
-EE60..EE8F; Foldian
-EE90..EEDF; Sulat Hiligaynon
-EEE0..EF2F; Western Script
 
 # --- Unconfirmed by UCSUR (⬛) ---
 F1A00..F1AFF; ¿Sitelen Pona Extended-A?
@@ -391,7 +384,6 @@ FDF00..FDFFF; Layout Sandbox Space (merrybot_v2 Reserved)
 # ================================================
 
 # --- Standard Unallocated Layout Tracking Space (OPEN_SLOT) ---
-EF30..EFFF; OPEN_SLOT
 F500..F6FF; OPEN_SLOT
 F820..F87F; OPEN_SLOT
 100580..1005BF; OPEN_SLOT
@@ -458,6 +450,8 @@ F820..F87F; OPEN_SLOT
 10FF00..10FFBF; OPEN_SLOT
 
 # --- Provisional RNUR Open Blocks (PROVISIONAL_RNUR_OPEN_SLOT) ---
+EE00..EEFF; PROVISIONAL_RNUR_OPEN_SLOT
+EF00..EFFF; PROVISIONAL_RNUR_OPEN_SLOT
 F1CA0..F1EFF; PROVISIONAL_RNUR_OPEN_SLOT
 F26B0..F26FF; PROVISIONAL_RNUR_OPEN_SLOT
 F28E0..F28FF; PROVISIONAL_RNUR_OPEN_SLOT
