@@ -198,3 +198,32 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
   </tbody>
 </table>
+
+---
+
+## Architectural Appendix: Registry Real Estate & Mapping Logic
+
+### 1. The Global Spectrum: Permanent vs. Provisional Territory Across PUA Spaces
+
+To ensure predictable layout boundaries for secondary forks and peer registry coordination, all standard Unicode PUA sectors (BMP PUA, Plane 15, and Plane 16) are mapped under structural states of RNUR Set 1 stewardship:
+
+| Registry State | Visual Notation | Global Technical Implementation & Developer Impact |
+| :--- | :--- | :--- |
+| **Truly Unassigned** | *Empty / Unallocated Space* | **Permanent RNUR Set 1 Sandbox Territory.** This space is permanently explicitly preserved as open, neutral territory within the global Set 1 framework. Because no defensive fences are built or temporary scripts mapped here, it serves as a permanent sanctuary for external custom font forks or uncoordinated local scripts. |
+| **Reserved Space** | `???` | **Provisional RNUR Set 1 Lease Territory.** This space functions as a defensive block structurally locked down by RNUR Set 1 to prevent internal overlap while awaiting upstream specification. It remains an open encoding vacuum from a network perspective, operating under a provisional lease paradigm until official upstream authorities (**UCSUR** or **SPUCE**) declare a structural allocation within these ranges. |
+
+### 2. Micro-Level Breakdown: Why the `???` Range is "Provisional RNUR / Unencoded (U)CSUR/SPUCE"
+
+The fragmented and extended ranges spanning the Basic Multilingual Plane (BMP)—specifically **`U+EE00–U+EFFF`**, **`U+F500–U+F6FF`**, and **`U+F820–U+F87F`**—are classified collectively under the `???` territory due to three core structural boundaries:
+
+* **Provisional RNUR Stewardship:** This real estate functions explicitly as **RNUR Set 1 space for now**. It is actively tracked and defended by the registry to anchor incoming community scripts, operating under a temporary lease paradigm.
+* **Upstream Vacuum:** While under RNUR stewardship, this space remains an open layout vacuum from the perspective of peer networks. It lacks an abstract character repertoire or formal upstream tracking, remaining designated as available real estate until **UCSUR** or **SPUCE** steps forward to claim an allocation within its boundaries.
+* **Allocation vs. Encoding Boundaries:** Macro-allocation handles defensive zoning (securing real estate borders on the layout grid). Micro-encoding handles the internal asset engineering (character logic inside those borders). The `???` marker denotes a completed macro-allocation that is waiting for an upcoming script specification to undergo character translation.
+
+### 3. Upstream Collision & Set 2 Eviction Protocol
+
+Because the `???` territory is provisionally staked inside an unmapped zone of the upstream architecture, the following conflict-resolution hierarchy applies to all scripts assigned here by RNUR before official ratification:
+
+* **Upstream Authority:** UCSUR and SPUCE reserve absolute historical priority over PUA layout structures.
+* **The Eviction Clause:** If an active script project is provisionally assigned to a specific block within the `???` territory by RNUR, and UCSUR or SPUCE subsequently ratifies/encodes a different, conflicting script into those exact code points, the RNUR script will undergo an automatic **Set 2 Eviction**.
+* **Set 2 Relocation Routing:** To preserve complete upstream alignment and prevent dirty runtime clashing or font rendering script pollution, the overridden internal script will be cleanly compiled out of Set 1 and reassigned to **RNUR Set 2** (Plane 16 or designated fallback overflow tables).
