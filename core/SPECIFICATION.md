@@ -110,6 +110,25 @@ Sets 2+ are completely exempt from structural block categories, provisional trac
 
 This unrestricted total allocation model allows Sets 2+ to accommodate broad-spectrum fallback routing, high-density character transcoding, and custom font mapping overflows without polluting active Set 1 layout tracks.
 
+---
+
+### 3.5 Upstream Registry Synchronization & Diplomatic Safeguards
+
+Because RNUR shares physical PUA space with established upstream registries—primarily the Under-ConScript Unicode Registry (UCSUR) and the Standard Private Use Code-point Extensions (SPUCE)—the permanence of Set 1 allocations depends on cross-registry diplomacy.
+
+#### 3.5.1 The Fluidity Vulnerability
+RNUR recognizes that upstream authorities do not possess rigid structural stability policies for unallocated or "Reserved for Hacks" ranges. Historical precedents (such as the 2023 UCSUR allocation of ATH within previously reserved corporate zones) demonstrate that unmapped space is subject to sudden, un-notified upstream occupation.
+
+#### 3.5.2 Diplomatic Non-Aggression Protocols
+To transition Set 1 from a localized allocation model to a true Global Consensus Layer, the RNUR Architecture Group enforces a mandatory upstream registry treaty protocol:
+1. **Formal Reservation:** RNUR must maintain active, verified registration status within the master documentation of UCSUR and SPUCE for all claimed BMP, Plane 15, and Plane 16 sectors.
+2. **Conflict Resolution Vectors:** In the event that an upstream vendor proposes an allocation that overlaps with an active RNUR Set 1 script, RNUR will coordinate with the vendor to steer the upstream allocation into an RNUR `OPEN_SLOT` or trigger a defensive relocation before the upstream spec formalizes.
+
+#### 3.5.3 Upstream Collision Mitigation (The Last Resort)
+If a hostile or uncoordinated upstream allocation occurs that completely overwrites an occupied RNUR Set 1 coordinate pair $(1, C)$:
+* The affected script's historical data table entry will be appended with an emergency `UPSTREAM_COLLISION` flag.
+* The local pre-processor runtime engine will prioritize the RNUR Set 1 font asset layer over the native system string fallback to prevent text-rendering corruption within RNUR-compliant applications.
+
 ## 4. Character Property Protocol
 
 Every character submission under RNUR Set 1 must match the Unicode Character Database (UCD) properties to maintain strict parity with modern text-shaping engines (e.g., HarfBuzz). Implementations must specify the following data structures:
