@@ -34,10 +34,9 @@ def validate_submission(set_number, start_hex, end_hex, master_csv_path):
     with open(master_csv_path, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         for row in reader:
-            # Skip checking against unallocated placeholder rows
-            if row['Status'] == 'Waiting for Submissions':
-                continue
-            
+            # Skip checking against genuinely unallocated/open slots
+            if row['Status'] in ['Waiting for Submissions', 'Provisional Allocation / Open for Submission']:
+                continue            
             try:
                 current_set = int(row['Set_Number'])
                 # Only check collisions within the exact same parallel set layer
