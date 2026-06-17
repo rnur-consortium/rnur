@@ -11,11 +11,38 @@ RNUR solves the limitations of classic monolithic PUA registries by introducing 
 RNUR operates on a **Coordinate-Pair System** mapped as `(Set_Number, Code_Point)`. This shifts typography from a flat, single-layer grid to a multi-dimensional matrix.
 
 ### The Set Layering System
-*   **Set 1 (Global Stability Layer):** Reserved for finalized, fully documented community scripts, active conlangs, and verified historical additions (e.g., Benjamin Franklin's phonetic alphabet reforms). Characters in Set 1 are globally unique and permanent.
-*   **Set 2+ (Sandbox Layers):** Isolated environments for experimental scripts, application-specific tokens (e.g., custom code syntax fonts), or localized rendering workflows. Set 2 allows developers to reuse standard PUA ranges (like `U+E000`) locally without corrupting the global consensus of Set 1.
+* **Set 1 (Global Stability Layer):** Reserved for finalized, fully documented community scripts, active conlangs, and verified historical additions. Characters locked into Set 1 are globally unique and protected.
+* **Set 2+ (Sandbox Layers):** Unrestricted, isolated environments for experimental scripts, application-specific tokens, or localized rendering workflows. Set 2 maps across the entire 16-plane PUA standard structure, allowing developers to reuse ranges locally while serving as the landing zone for automated evictions.
 
-### The Anchor Tenant Rule
-To preserve efficiency within Plane 0 (BMP), extensive writing systems requiring massive, uninterrupted code blocks for complex layout engines (like syllabaries requiring heavy OpenType ligature structures) bypass fragmented spaces and are allocated dedicated blocks starting at the gateway of **Plane 15** (`U+F0000`).
+### 🗺️ Registry Layer Architecture (Set 1)
+
+| Plane Layer | Code Point Range | Classification | Collision Strategy |
+| :--- | :--- | :--- | :--- |
+| **Plane 0 (BMP)** | `U+EE00–U+EFFF` | Tier B: Provisional Territory | Dynamic relocation to the base of Set 2 |
+| **Plane 0 (BMP)** | `U+F500–U+F6FF`<br>`U+F820–U+F87F` | Tier A: Permanent Structural Slots | 1:1 Parallel Address Mirror to Set 2 + Runtime Override |
+| **Plane 15 (SPUA-A)**| Explicit Gaps* | Tier B: Provisional Territory | Dynamic relocation to the base of Set 2 |
+| **Plane 15 (SPUA-A)**| Active Mappings (`U+F2A00+`) | Tier A: Permanent Allocations | Runtime Font Asset Override Protection |
+| **Plane 16 (SPUA-B)**| All Empty Gaps | Tier A: Permanent Structural Slots | 1:1 Parallel Address Mirror to Set 2 + Runtime Override |
+
+> *\*Note: Explicit Plane 15 Provisional Gaps include:* `F1CA0–F1EFF`, `F26B0–F26FF`, `F28E0–F28FF`, `F2960–F29FF`, `F5080–F50FF`, `F5EE0–F5EFF`, `F60C0–F60FF`, `F6400–F6A7F`, `F6DA0–F6DFF`, `F7700–F7F5F`, `F8290–F82FF`, `F8C00–F917F`, `F91C0–F91FF`, `F9250–F92FF`, `F9600–F99FF`, `F9C00–FA2FF`, `FA500–FACFF`, `FC5E0–FC5FF`, `FC730–FC7FF`, `FC920–FDEFF`, *and* `FF2B0–FF2BF`.
+
+---
+
+## ⚠️ Upstream Conflict & Eviction Policy
+
+Because RNUR shares physical PUA space with established upstream authorities—primarily the Under-ConScript Unicode Registry (UCSUR) and the Standard Private Use Code-point Extensions (SPUCE)—external collisions are handled automatically by our pipeline architecture based on slot classification:
+
+### 🔹 Tier A: Hardened Slots & Plane 16 Gaps
+This applies to finalized permanent allocations, the permanent structural space tracking slots of Plane 16, and designated Plane 0 gaps (`U+F500–U+F6FF`, `U+F820–U+F87F`). If an upstream registry overrides these sectors:
+1. **Parallel Addressing Mirror:** The registry pipeline triggers a **1:1 mathematical eviction** straight into the exact corresponding coordinate within **Set 2** (e.g., Set 1 `U+100580` maps directly to Set 2 `U+100580`).
+2. **Flag Deployment:** The script is appended with an `UPSTREAM_COLLISION` flag in the database.
+3. **Runtime Override:** Compliant local pre-processors forcibly prioritize the RNUR font layer over native system fallbacks to preserve layout integrity.
+
+### 🔹 Tier B: Provisional Territory (BMP `U+EE00–U+EFFF` & Plane 15 Gaps)
+These blocks function as defensive zones operating under an active upstream vacuum. If an upstream collision occurs, affected scripts trigger the **Automated Eviction Clause**:
+1. **Dynamic Database Migration:** The script is automatically migrated down to the first available, unassigned rows at the base of the Set 2 sandbox layer.
+2. **Metric Refactoring:** Compilation tools rewrite and refactor glyph metrics to align with the new sandbox target location.
+3. **Upstream Alignment:** The vacated Set 1 slot is updated to mirror the native upstream allocation, clearing out runtime font rendering pollution.
 
 ---
 
@@ -36,9 +63,10 @@ RNUR mirrors formal Unicode Consortium submission standards to ensure high-quali
 ```text
 ├── .github/                # Issue templates and workflows
 ├── core/                   # Registry specification documentation
+│   └── specification.md    # Core architectural guidelines
 ├── UNIDATA/                # Unicode data
 ├── data/
-│   ├── set1_master.csv     # The definitive master mapping for Set 1
+│   ├── set1_master.csv     # The definitive master mapping for Set 1 (with Flags schema)
 │   └── set2_sandbox.csv    # Registered sandbox identifiers
 ├── tools/
 │   └── validator.py        # Python script to check submissions for overlap conflicts
