@@ -124,10 +124,19 @@ To transition Set 1 from a localized allocation model to a true Global Consensus
 1. **Formal Reservation:** RNUR must maintain active, verified registration status within the master documentation of UCSUR and SPUCE for all claimed BMP, Plane 15, and Plane 16 sectors.
 2. **Conflict Resolution Vectors:** In the event that an upstream vendor proposes an allocation that overlaps with an active RNUR Set 1 script, RNUR will coordinate with the vendor to steer the upstream allocation into an RNUR `OPEN_SLOT` or trigger a defensive relocation before the upstream spec formalizes.
 
-#### 3.5.3 Upstream Collision Mitigation (The Last Resort)
-If a hostile or uncoordinated upstream allocation occurs that completely overwrites an occupied RNUR Set 1 coordinate pair $(1, C)$:
-* The affected script's historical data table entry will be appended with an emergency `UPSTREAM_COLLISION` flag.
-* The local pre-processor runtime engine will prioritize the RNUR Set 1 font asset layer over the native system string fallback to prevent text-rendering corruption within RNUR-compliant applications.
+#### 3.5.3 Upstream Collision Mitigation & Eviction Vectors
+If an uncoordinated upstream allocation occurs that overwrites an active RNUR coordinate pair $(1, C)$, mitigation routing branches into two strict architectural pipelines based on territorial tiering:
+
+##### 3.5.3.1 Tier A: Hardened Set 1 Allocations (Planes 15 & 16)
+For permanent, non-provisional Set 1 scripts, an upstream collision triggers an immediate structural freeze and deployment of the runtime safety net:
+* The affected script's historical data table entry is appended with a critical `UPSTREAM_COLLISION` flag.
+* The local font pre-processor runtime engine forcibly prioritizes the RNUR Set 1 font asset layer over the native system string fallback, overriding host fallbacks to preserve rendering integrity within RNUR-compliant software environments.
+
+##### 3.5.3.2 Tier B: Provisional Set 1 Allocations (BMP Block: U+EE00–U+EFFF)
+Because the Basic Multilingual Plane functions under a defensive "Provisional Lease" model to accommodate an active upstream vacuum, collisions do not trigger runtime overrides. Instead, the registry executes the **Automated Eviction Clause**:
+1. **Database Migration:** The registry master pipeline instantly executes an automated offline database migration, shifting the affected script's rows to an unassigned, parallel tracking coordinate block in **Set 2**.
+2. **Metric Refactoring:** Font engineering compilation tools rewrite the underlying glyph metrics and code point mappings to match the new Set 2 target plane layer.
+3. **Upstream Alignment:** The vacated BMP coordinate pair $(1, C)$ is refactored in the master database to mirror the native upstream allocation, safely clearing runtime font rendering pollution and eliminating script crossfire.
 
 ## 4. Character Property Protocol
 
