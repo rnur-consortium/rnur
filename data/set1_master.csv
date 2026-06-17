@@ -1,10 +1,6 @@
 Set_Number,Start_Code_Point,End_Code_Point,Script_Name,Author,Status,Description
-1,U+EE00,U+EE0F,Franklin Phonetic Alphabet,Benjamin Franklin,Allocated,16-hex historical incubator for phonetic alphabet reform.
-1,U+EE10,U+EE5F,Loopiform,Filipe Dos Reis,Allocated,72-character systematic phonetic script featuring duodecimal numerals and logographic punctuation.
-1,U+EE60,U+EE8F,Foldian,u/Willing_Squirrel_741,Allocated,32-character neography with 1 associated diacritic mark.
-1,U+EE90,U+EEDF,Sulat Hiligaynon,Julius Dalum,Allocated,Phonemic script for Hiligaynon language.
-1,U+EEE0,U+EF2F,Western Script,Julius Dalum,Allocated,Phonemic script for loanwords and western linguistics.
-1,U+EF30,U+EFFF,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
+1,U+EE00,U+EEFF,PROVISIONAL_RNUR_OPEN_SLOT,NONE,Provisional Allocation / Open for Submission,"??? Territory: Staked via provisional RNUR ownership under an active upstream vacuum. Defensive zoning macro-allocation complete, awaiting script engineering specifications. Subject to absolute Upstream Authority hierarchy, the Eviction Clause, and automatic clean Set 2 relocation routing to eliminate runtime font rendering script pollution if conflicting native allocations emerge upstream."
+1,U+EF00,U+EFFF,PROVISIONAL_RNUR_OPEN_SLOT,NONE,Provisional Allocation / Open for Submission,"??? Territory: Staked via provisional RNUR ownership under an active upstream vacuum. Defensive zoning macro-allocation complete, awaiting script engineering specifications. Subject to absolute Upstream Authority hierarchy, the Eviction Clause, and automatic clean Set 2 relocation routing to eliminate runtime font rendering script pollution if conflicting native allocations emerge upstream."
 1,U+F500,U+F6FF,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
 1,U+F820,U+F87F,OPEN_SLOT,NONE,Waiting for Submissions,Available for low-count stable alphabets (Plane 0).
 1,U+F1CA0,U+F1EFF,PROVISIONAL_RNUR_OPEN_SLOT,NONE,Provisional Allocation / Open for Submission,"??? Territory: Staked via provisional RNUR ownership under an active upstream vacuum. Defensive zoning macro-allocation complete, awaiting script engineering specifications. Subject to absolute Upstream Authority hierarchy, the Eviction Clause, and automatic clean Set 2 relocation routing to eliminate runtime font rendering script pollution if conflicting native allocations emerge upstream."
