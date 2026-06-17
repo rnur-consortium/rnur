@@ -125,18 +125,19 @@ To transition Set 1 from a localized allocation model to a true Global Consensus
 2. **Conflict Resolution Vectors:** In the event that an upstream vendor proposes an allocation that overlaps with an active RNUR Set 1 script, RNUR will coordinate with the vendor to steer the upstream allocation into an RNUR `OPEN_SLOT` or trigger a defensive relocation before the upstream spec formalizes.
 
 #### 3.5.3 Upstream Collision Mitigation & Eviction Vectors
-If an uncoordinated upstream allocation occurs that overwrites an active RNUR coordinate pair $(1, C)$, mitigation routing branches into two strict architectural pipelines based on territorial tiering:
+If an uncoordinated upstream allocation occurs that overwrites an active RNUR coordinate pair $(1, C)$, mitigation routing branches into two distinct operational pipelines based on the underlying slot classification:
 
-##### 3.5.3.1 Tier A: Hardened Set 1 Allocations (Planes 15 & 16)
-For permanent, non-provisional Set 1 scripts, an upstream collision triggers an immediate structural freeze and deployment of the runtime safety net:
-* The affected script's historical data table entry is appended with a critical `UPSTREAM_COLLISION` flag.
-* The local font pre-processor runtime engine forcibly prioritizes the RNUR Set 1 font asset layer over the native system string fallback, overriding host fallbacks to preserve rendering integrity within RNUR-compliant software environments.
+##### 3.5.3.1 Tier A: Non-Provisional Allocations & Gaps (Plane 16 Gaps, Locked Plane 15 Sectors, and Selected BMP Blocks)
+This tier applies to finalized allocations and the permanent structural space tracking slots of Plane 16, as well as the designated Plane 0 gaps (`U+F500–U+F6FF` and `U+F820–U+F87F`). Because these ranges represent rigid, permanent RNUR real estate, an upstream collision triggers a precise, deterministic architectural shift:
+1. **Parallel Addressing Mirror:** The registry master pipeline automatically triggers a 1:1 structural eviction. Instead of shifting to an unassigned block, the affected script mirrors directly into its exact corresponding mathematical coordinate address within **Set 2** (e.g., a collision at Set 1 $U+100580$ maps directly to Set 2 $U+100580$).
+2. **Flag Deployment:** The script’s historical data table entry is appended with an `UPSTREAM_COLLISION` flag.
+3. **Runtime Asset Override:** For software environments operating under RNUR compliance, the local font pre-processor runtime engine forces high-priority asset targeting over the native host system string fallback to prevent immediate layout corruption.
 
-##### 3.5.3.2 Tier B: Provisional Set 1 Allocations (BMP Block: U+EE00–U+EFFF)
-Because the Basic Multilingual Plane functions under a defensive "Provisional Lease" model to accommodate an active upstream vacuum, collisions do not trigger runtime overrides. Instead, the registry executes the **Automated Eviction Clause**:
-1. **Database Migration:** The registry master pipeline instantly executes an automated offline database migration, shifting the affected script's rows to an unassigned, parallel tracking coordinate block in **Set 2**.
-2. **Metric Refactoring:** Font engineering compilation tools rewrite the underlying glyph metrics and code point mappings to match the new Set 2 target plane layer.
-3. **Upstream Alignment:** The vacated BMP coordinate pair $(1, C)$ is refactored in the master database to mirror the native upstream allocation, safely clearing runtime font rendering pollution and eliminating script crossfire.
+##### 3.5.3.2 Tier B: Provisional Allocations (BMP Block U+EE00–U+EFFF & Empty Plane 15 Gaps)
+This tier applies to sectors explicitly designated as Provisional RNUR Territory, which operate defensively under an active upstream vacuum. Because these regions are subject to an absolute Upstream Authority hierarchy, a collision triggers an agile escape vector:
+1. **Dynamic Database Migration:** The registry master pipeline executes an automated offline database migration, shifting the displaced script's records away from the collision zone and into the first available, unassigned tracking ranges at the base of the Set 2 sandbox layer.
+2. **Metric Refactoring:** Font compilation tools rebuild and refactor the underlying glyph metrics and code point mappings to align cleanly with the new sandbox target plane destination.
+3. **Upstream Compliance:** The vacated Set 1 coordinate pair $(1, C)$ is updated in the master database to mirror the native upstream allocation, completely clearing out runtime font rendering pollution.
 
 ## 4. Character Property Protocol
 
