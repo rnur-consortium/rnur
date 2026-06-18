@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/rnur_logo.png" alt="RNUR Logo" width="800">
+</p>
+
 # Reddit Neographical Unicode Registry (RNUR)
 
 The official, open-source registry framework standardizing conflict-free Private Use Area (PUA) allocations for original scripts, conlangs, and neographies. 
