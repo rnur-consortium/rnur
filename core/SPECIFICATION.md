@@ -1,5 +1,7 @@
 <p align="center">
   <img src="../assets/rnur_logo.png" alt="RNUR Logo" width="800">
+  <br>
+  <i>Custom N-G-R Neography glyph designed by <a href="https://www.reddit.com/user/W4t3rf1r3">u/W4t3rf1r3</a></i>
 </p>
 
 # RNUR-TS-01: Neographical Unicode Registry Architecture Specification
