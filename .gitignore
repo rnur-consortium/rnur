@@ -1,0 +1,59 @@
+# ==============================================================================
+# RNUR Project Specific Exclusions
+# ==============================================================================
+# Ignore any local test copies of the registry matrices or local validation logs
+data/*_local.csv
+data/test_*.csv
+*.log
+
+# If you choose to store the GHSA template securely on your local machine,
+# this blocks it from accidentally being pushed to the public repo branch.
+.github/SECURITY_TEMPLATES/
+
+# ==============================================================================
+# Python & Automation Tooling Caches
+# ==============================================================================
+# Blocks byte-compiled/optimized files generated when running tools/validator.py
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# ==============================================================================
+# OS & System Trash (Keeps your folders clean across different computers)
+# ==============================================================================
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows thumbnail and folder settings files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+desktop.ini
+
+# Linux/XDG garbage
+.fuse_hidden
+.directory
+.Trash-*
+.nfs*
+
+# ==============================================================================
+# IDEs and Text Editors Configuration
+# ==============================================================================
+# VS Code local workspace folders
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains / PyCharm settings
+.idea/
+
+# Temporary / Backup files (Vim, Notepad++, etc.)
+*.swp
+*.swo
+*~
