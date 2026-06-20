@@ -29,33 +29,45 @@ jobs:
         def parse_hex(h):
             return int(h.upper().replace('U+', '').replace('0X', '').strip(), 16)
             
-        def check_file(path):
-            if not os.path.exists(path):
-                print(f"[-] CRITICAL ERROR: {path} does not exist in the repository root.")
-                sys.exit(1)
-                
-            print(f"Analyzing {path} for integrity...")
-            allocated = []
-            with open(path, 'r', encoding='utf-8') as f:
-                reader = csv.DictReader(f)
-                for line_num, row in enumerate(reader, start=2):
-                    if row['Status'] == 'Waiting for Submissions':
-                        continue
-                    try:
-                        s_set = int(row['Set_Number'])
-                        start = parse_hex(row['Start_Code_Point'])
-                        end = parse_hex(row['End_Code_Point'])
-                        
-                        for c_set, c_start, c_end, c_name, c_line in allocated:
-                            if s_set == c_set and max(start, c_start) <= min(end, c_end):
-                                print(f"[-] CRITICAL ERROR: Collision detected between Line {line_num} ({row['Script_Name']}) and Line {c_line} ({c_name})")
-                                sys.exit(1)
-                        allocated.append((s_set, start, end, row['Script_Name'], line_num))
-                    except Exception as e:
-                        print(f"[-] Malformed data on line {line_num}: {e}")
-                        sys.exit(1)
-            print(f"[+] {path} passed integrity verification cleanly.")
+        def validate_rnur_matrix():
+            paths = ['data/set1_master.csv', 'data/set2_sandbox.csv']
+            allocated = []  # Keeps global memory active across ALL file parsing loops
             
-        check_file('data/set1_master.csv')
-        check_file('data/set2_sandbox.csv')
+            for path in paths:
+                if not os.path.exists(path):
+                    print(f"[-] CRITICAL ERROR: {path} does not exist in the repository root.")
+                    sys.exit(1)
+                    
+                print(f"Analyzing {path} for integrity...")
+                with open(path, 'r', encoding='utf-8') as f:
+                    reader = csv.DictReader(f)
+                    for line_num, row in enumerate(reader, start=2):
+                        if row['Status'] == 'Waiting for Submissions':
+                            continue
+                        try:
+                            s_set = int(row['Set_Number'])
+                            start = parse_hex(row['Start_Code_Point'])
+                            end = parse_hex(row['End_Code_Point'])
+                            
+                            # Safely fetch item name across differing schemas (Set 1 vs Set 2)
+                            script_name = row.get('Script_Name') or row.get('Project_Name') or "UNKNOWN_ITEM"
+                            
+                            # Parallel Isolation Rule: Only crash if sets match AND ranges intersect
+                            for c_file, c_set, c_start, c_end, c_name, c_line in allocated:
+                                if s_set == c_set and max(start, c_start) <= min(end, c_end):
+                                    print(f"\n[-] CRITICAL COLLISION DETECTED IN SET {s_set}!")
+                                    print(f"    Overlapping code point matrix detected:")
+                                    print(f"    -> Current:  {path}, Line {line_num} ({script_name}) [{hex(start)} - {hex(end)}]")
+                                    print(f"    -> Existing: {c_file}, Line {c_line} ({c_name}) [{hex(c_start)} - {hex(c_end)}]")
+                                    sys.exit(1)
+                                    
+                            allocated.append((path, s_set, start, end, script_name, line_num))
+                        except Exception as e:
+                            print(f"[-] Malformed data in {path} on line {line_num}: {e}")
+                            sys.exit(1)
+                print(f"[+] {path} passed internal layer validation.")
+            
+            print("\n[+] SUCCESS: All parallel sets (Sets 1, 2, and 3) verified cleanly with zero internal overlaps.")
+
+        validate_rnur_matrix()
         EOF
