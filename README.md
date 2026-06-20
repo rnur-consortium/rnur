@@ -68,6 +68,7 @@ RNUR mirrors formal Unicode Consortium submission standards to ensure high-quali
 
 ```text
 ├── .github/                # Issue templates and workflows
+├── assets/                 # Assets
 ├── core/                   # Registry specification documentation
 │   └── specification.md    # Core architectural guidelines
 ├── UNIDATA/                # Unicode data
@@ -77,3 +78,28 @@ RNUR mirrors formal Unicode Consortium submission standards to ensure high-quali
 ├── tools/
 │   └── validator.py        # Python script to check submissions for overlap conflicts
 └── README.md               # You are here
+
+---
+
+---
+
+## 🛠️ How to Contribute
+
+RNUR is an open-source, community-driven framework. Whether you are submitting a new script allocation or fixing a tool, please use the project structure detailed above to direct your changes:
+
+### 1. Proposing a New Script Allocation
+To claim a block of code points for a custom writing system, please follow this pipeline:
+* **Step 1:** Look at `data/set1_master.csv` and the files inside `S1/Roadmap/` (`bmp_pua_roadmap.md`, `spua-a_roadmap.md`, and `spua-b_roadmap.md`) to verify your desired code points are entirely unassigned.
+* **Step 2:** Go to the **Issues** tab on GitHub and open a new proposal using our structured `script_proposal.yml` template.
+* **Step 3:** Once reviewed, your script will initially be assigned to `data/set2_sandbox.csv` for testing and layout layout validation.
+
+### 2. Infrastructure & Tooling Updates
+* If you are modifying automated validation logic, work within the `tools/` directory.
+* Every single pull request automatically triggers our automated GitHub Actions workflow (`.github/workflows/registry_check.yml`). Your PR will not merge unless this script successfully verifies that your data formatting conforms strictly to our `core/SPECIFICATION.md`.
+* Bug reports regarding the infrastructure should be filed using the `.github/ISSUE_TEMPLATE/bug_report.yml` form.
+
+### 3. Open-Source Etiquette & Asset Submission
+* **Community Attribution:** RNUR is built on community collaboration. If you incorporate or build upon glyphs, assets, or text created by another user, you must provide explicit credit to them within your documentation or commit log.
+* **Visual Media:** Project graphics, repository diagrams, and localized asset variations stored in the `assets/` folder (such as `rnur_logo.png`) can be designed in lightweight, accessible tools like Paint.NET, provided they meet our clear format guidelines.
+
+For full step-by-step submission workflows and formatting rules, please read the complete [CONTRIBUTING.md](CONTRIBUTING.md) file.
