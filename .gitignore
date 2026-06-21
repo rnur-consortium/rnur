@@ -6,10 +6,6 @@ data/*_local.csv
 data/test_*.csv
 *.log
 
-# If you choose to store the GHSA template securely on your local machine,
-# this blocks it from accidentally being pushed to the public repo branch.
-.github/SECURITY_TEMPLATES/
-
 # ==============================================================================
 # Python & Automation Tooling Caches
 # ==============================================================================
