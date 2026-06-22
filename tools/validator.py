@@ -35,7 +35,7 @@ def run_full_database_scan(base_dir):
         with open(path, 'r', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             for line_num, row in enumerate(reader, start=2):
-                # Skip checking against open/empty slots
+                # Skip checking against open/empty sandbox slots
                 if row.get('Status') in ['Waiting for Submissions', 'Provisional Allocation / Open for Submission']:
                     continue
                 try:
@@ -68,10 +68,19 @@ def run_full_database_scan(base_dir):
     print("\n[+] SUCCESS: Entire RNUR matrix verified cleanly with zero internal overlaps.")
     return True
 
-def validate_single_submission(set_number, start_hex, end_hex, master_csv_path):
-    """Checks a single new script proposal against the master registry file."""
-    if not os.path.exists(master_csv_path):
-        print(f"[-] Error: Master registry file not found at {master_csv_path}")
+def validate_single_submission(set_number, start_hex, end_hex, base_dir):
+    """Checks a single new script proposal against the appropriate target layer sheet."""
+    # Dynamic Routing Protocol based on Target Environment Layer
+    if int(set_number) == 1:
+        target_csv_path = os.path.join(base_dir, 'data', 'set1_master.csv')
+    elif int(set_number) == 2:
+        target_csv_path = os.path.join(base_dir, 'data', 'set2_sandbox.csv')
+    else:
+        print(f"[-] Error: Set {set_number} configuration file does not exist locally.")
+        return False
+
+    if not os.path.exists(target_csv_path):
+        print(f"[-] Error: Target registry file not found at {target_csv_path}")
         return False
 
     try:
@@ -87,7 +96,7 @@ def validate_single_submission(set_number, start_hex, end_hex, master_csv_path):
 
     collisions = []
 
-    with open(master_csv_path, mode='r', encoding='utf-8') as file:
+    with open(target_csv_path, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         for row in reader:
             if row['Status'] in ['Waiting for Submissions', 'Provisional Allocation / Open for Submission']:
@@ -120,14 +129,13 @@ if __name__ == "__main__":
     # Calculate base repository directories
     tools_dir = os.path.dirname(os.path.abspath(__file__))
     base_dir = os.path.dirname(tools_dir)
-    master_path = os.path.join(base_dir, 'data', 'set1_master.csv')
     
     # If passed explicit parameters, perform a precision check for a single input
     if len(sys.argv) == 4:
         target_set = sys.argv[1]
         start_pt = sys.argv[2]
         end_pt = sys.argv[3]
-        success = validate_single_submission(target_set, start_pt, end_pt, master_path)
+        success = validate_single_submission(target_set, start_pt, end_pt, base_dir)
         sys.exit(0 if success else 1)
         
     # Default behavior: run a complete automated sweep across all registry sheets
