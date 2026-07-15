@@ -81,7 +81,7 @@ To prevent clashing layout telemetry within rendering engines, dedicated structu
 The following blocks represent unallocated space (`OPEN_SLOT`) and defensively zoned space (`PROVISIONAL_RNUR_OPEN_SLOT`) within the active Set 1 framework.
 
 #### Plane 15 (SPUA-A) Provisional Open Slots
-* `U+F1CA0`–`U+F1EFF` | `U+F26B0`–`U+F26FF` | `U+F28E0`–`U+F28FF` | `U+F2960`–`U+F29FF`
+* `U+F1D00`–`U+F1EFF` | `U+F26B0`–`U+F26FF` | `U+F28E0`–`U+F28FF` | `U+F2960`–`U+F29FF`
 * `U+F5080`–`U+F50FF` | `U+F5EE0`–`U+F5EFF` | `U+F60C0`–`U+F615F` | `U+F6400`–`U+F6A7F`
 * `U+F6DA0`–`U+F6DFF` | `U+F6F80`–`U+F6FFF` | `U+F7700`–`U+F7F5F` | `U+F8290`–`U+F82FF`
 * `U+F8C00`–`U+F917F` | `U+F91C0`–`U+F91FF` | `U+F9250`–`U+F92FF` | `U+F9600`–`U+F99FF`
