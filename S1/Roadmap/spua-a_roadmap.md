@@ -158,7 +158,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="4" align="center">🟩 Shidinn (F1C00–F1C3F)</td>
       <td colspan="4" align="center">🟩 Titi Pula (F1C40–F1C7F)</td>
       <td colspan="2" align="center">🟩 Sitelen Pona Radicals (F1C80–F1C9F)</td>
-      <td colspan="6" align="center">??? (F1CA0–F1CFF)</td>
+      <td colspan="6" align="center">🟩 Yapiri (F1CA0–F1CFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F1Dxx</b></td>
