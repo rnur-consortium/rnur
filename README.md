@@ -30,7 +30,7 @@ RNUR operates on a **Coordinate-Pair System** mapped as `(Set_Number, Code_Point
 | **Plane 15 (SPUA-A)**| Active Mappings (`U+F2A00+`) | Tier A: Permanent Allocations | Runtime Font Asset Override Protection |
 | **Plane 16 (SPUA-B)**| All Empty Gaps | Tier A: Permanent Structural Slots | 1:1 Parallel Address Mirror to Set 2 + Runtime Override |
 
-> *\*Note: Explicit Plane 15 Provisional Gaps include:* `F1CA0–F1EFF`, `F26B0–F26FF`, `F28E0–F28FF`, `F2960–F29FF`, `F5080–F50FF`, `F5EE0–F5EFF`, `F60C0–F60FF`, `F6100–F615F`, `F6400–F6A7F`, `F6DA0–F6DFF`, `F7700–F7F5F`, `F8290–F82FF`, `F8C00–F917F`, `F91C0–F91FF`, `F9250–F92FF`, `F9600–F99FF`, `F9C00–FA2FF`, `FA500–FACFF`, `FC5E0–FC5FF`, `FC730–FC7FF`, `FC920–FDEFF`, *and* `FF2B0–FF2BF`.
+> *\*Note: Explicit Plane 15 Provisional Gaps include:* `F1D00–F1EFF`, `F26B0–F26FF`, `F28E0–F28FF`, `F2960–F29FF`, `F5080–F50FF`, `F5EE0–F5EFF`, `F60C0–F60FF`, `F6100–F615F`, `F6400–F6A7F`, `F6DA0–F6DFF`, `F7700–F7F5F`, `F8290–F82FF`, `F8C00–F917F`, `F91C0–F91FF`, `F9250–F92FF`, `F9600–F99FF`, `F9C00–FA2FF`, `FA500–FACFF`, `FC5E0–FC5FF`, `FC730–FC7FF`, `FC920–FDEFF`, *and* `FF2B0–FF2BF`.
 
 ---
 
