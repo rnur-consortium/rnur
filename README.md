@@ -105,4 +105,4 @@ For full step-by-step submission workflows and formatting rules, please read the
 
 ---
 
-Further information about the CSUR is available from: John Cowan (mailto:jcowan@reutershealth.com) or Michael Everson (mailto:everson@evertype.com). Updated 2008-04-14 (original), 2026-07-15 (reddit) I WILL COMPLY WITH ANY REQUEST FROM JOHN COWAN OR MICHAEL EVERSON CONCERNING THIS REPOSITORY AND/OR ITS FILES.
+Further information about the CSUR is available from: [John Cowan](mailto:jcowan@reutershealth.com) or [Michael Everson](mailto:everson@evertype.com). Updated 2008-04-14 (original), 2026-07-15 (reddit) I WILL COMPLY WITH ANY REQUEST FROM JOHN COWAN OR MICHAEL EVERSON CONCERNING THIS REPOSITORY AND/OR ITS FILES.
