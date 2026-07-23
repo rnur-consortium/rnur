@@ -1206,8 +1206,9 @@ Because the `???` territory is provisionally staked inside an unmapped zone of t
 * **The Eviction Clause:** If an active script project is provisionally assigned to a specific block within the `???` territory by RNUR, and UCSUR or SPUCE subsequently ratifies/encodes a different, conflicting script into those exact code points, the RNUR script will undergo an automatic **Set 2 Eviction**.
 * **Set 2 Relocation Routing:** To preserve complete upstream alignment and prevent dirty runtime clashing or font rendering script pollution, the overridden internal script will be cleanly compiled out of Set 1 and reassigned to **RNUR Set 2** (Plane 16 or designated fallback overflow tables).
 
-  [!NOTE]
-**Status Report: Antarctica Pix** (U+F7600–U+F76FF)
+> [!NOTE] 
+
+> **Status Report: Antarctica Pix** (U+F7600–U+F76FF)
 The allocation designated for Antarctica Pix is marked with a black square (⬛) as **Unconfirmed by UCSUR** and styled as ¿Antarctica Pix?. Current typographic telemetry suggests this block may represent one of two potential implementations:
 
 * A dedicated pixel font engineered by *Kreative Korp* (Rebecca Bettencourt herself!).
