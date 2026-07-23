@@ -25,7 +25,7 @@ RNUR operates on a **Coordinate-Pair System** mapped as `(Set_Number, Code_Point
 | Plane Layer | Code Point Range | Classification | Collision Strategy |
 | :--- | :--- | :--- | :--- |
 | **Plane 0 (BMP)** | `U+EE00–U+EFFF` | Tier B: Provisional Territory | Dynamic relocation to the base of Set 2 |
-| **Plane 0 (BMP)** | `U+F500–U+F6FF`<br>`U+F820–U+F87F` | Tier A: Permanent Structural Slots | 1:1 Parallel Address Mirror to Set 2 + Runtime Override |
+| **Plane 0 (BMP)** | `U+F5C0–U+F6FF`<br>`U+F820–U+F87F` | Tier A: Permanent Structural Slots | 1:1 Parallel Address Mirror to Set 2 + Runtime Override |
 | **Plane 15 (SPUA-A)**| Explicit Gaps* | Tier B: Provisional Territory | Dynamic relocation to the base of Set 2 |
 | **Plane 15 (SPUA-A)**| Active Mappings (`U+F2A00+`) | Tier A: Permanent Allocations | Runtime Font Asset Override Protection |
 | **Plane 16 (SPUA-B)**| All Empty Gaps | Tier A: Permanent Structural Slots | 1:1 Parallel Address Mirror to Set 2 + Runtime Override |
@@ -39,7 +39,7 @@ RNUR operates on a **Coordinate-Pair System** mapped as `(Set_Number, Code_Point
 Because RNUR shares physical PUA space with established upstream authorities—primarily the Under-ConScript Unicode Registry (UCSUR) and the Standard Private Use Code-point Extensions (SPUCE)—external collisions are handled automatically by our pipeline architecture based on slot classification:
 
 ### 🔹 Tier A: Hardened Slots & Plane 16 Gaps
-This applies to finalized permanent allocations, the permanent structural space tracking slots of Plane 16, and designated Plane 0 gaps (`U+F500–U+F6FF`, `U+F820–U+F87F`). If an upstream registry overrides these sectors:
+This applies to finalized permanent allocations, the permanent structural space tracking slots of Plane 16, and designated Plane 0 gaps (`U+F5C0–U+F6FF`, `U+F820–U+F87F`). If an upstream registry overrides these sectors:
 1. **Parallel Addressing Mirror:** The registry pipeline triggers a **1:1 mathematical eviction** straight into the exact corresponding coordinate within **Set 2** (e.g., Set 1 `U+100580` maps directly to Set 2 `U+100580`).
 2. **Flag Deployment:** The script is appended with an `UPSTREAM_COLLISION` flag in the database.
 3. **Runtime Override:** Compliant local pre-processors forcibly prioritize the RNUR font layer over native system fallbacks to preserve layout integrity.

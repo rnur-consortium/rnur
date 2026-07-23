@@ -177,7 +177,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>F5xx</b></td>
-      <td colspan="16" align="center">(F500-F5FF)</td>
+      <td colspan="12" align="center">🟥 Number Forms Extended-I(F500-F5FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F6xx</b></td>
@@ -215,7 +215,7 @@ To ensure predictable layout boundaries for secondary forks and peer registry co
 
 ### 2. Micro-Level Breakdown: Why the `???` Range is "Provisional RNUR / Unencoded (U)CSUR/SPUCE"
 
-The fragmented and extended ranges spanning the Basic Multilingual Plane (BMP)—specifically **`U+EE00–U+EFFF`**, **`U+F500–U+F6FF`**, and **`U+F820–U+F87F`**—are classified collectively under the `???` territory due to three core structural boundaries:
+The fragmented and extended ranges spanning the Basic Multilingual Plane (BMP)—specifically **`U+EE00–U+EFFF`**, **`U+F5C0–U+F6FF`**, and **`U+F820–U+F87F`**—are classified collectively under the `???` territory due to three core structural boundaries:
 
 * **Provisional RNUR Stewardship:** This real estate functions explicitly as **RNUR Set 1 space for now**. It is actively tracked and defended by the registry to anchor incoming community scripts, operating under a temporary lease paradigm.
 * **Upstream Vacuum:** While under RNUR stewardship, this space remains an open layout vacuum from the perspective of peer networks. It lacks an abstract character repertoire or formal upstream tracking, remaining designated as available real estate until **UCSUR** or **SPUCE** steps forward to claim an allocation within its boundaries.

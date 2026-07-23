@@ -61,7 +61,7 @@ To preserve memory space within Plane 0 (the Basic Multilingual Plane) while ens
 Reserved exclusively for low-payload, stable alphabets (such as simple featural, phonetic, or segmented writing systems) under Set 1 allocations.
 
 * **U+EE00–U+EFCF**: OPEN_SLOT — Overflow micro-blocks / Open tracking slot.
-* **U+F500–U+F6FF**: OPEN_SLOT — Overflow micro-blocks / Open tracking slot.
+* **U+F5C0–U+F6FF**: OPEN_SLOT — Overflow micro-blocks / Open tracking slot.
 * **U+F820–U+F87F**: OPEN_SLOT — Overflow micro-blocks / Open tracking slot.
 
 ---
@@ -134,7 +134,7 @@ To transition Set 1 from a localized allocation model to a true Global Consensus
 If an uncoordinated upstream allocation occurs that overwrites an active RNUR coordinate pair $(1, C)$, mitigation routing branches into two distinct operational pipelines based on the underlying slot classification:
 
 ##### 3.5.3.1 Tier A: Non-Provisional Allocations & Gaps (Plane 16 Gaps, Locked Plane 15 Sectors, and Selected BMP Blocks)
-This tier applies to finalized allocations and the permanent structural space tracking slots of Plane 16, as well as the designated Plane 0 gaps (`U+F500–U+F6FF` and `U+F820–U+F87F`). Because these ranges represent rigid, permanent RNUR real estate, an upstream collision triggers a precise, deterministic architectural shift:
+This tier applies to finalized allocations and the permanent structural space tracking slots of Plane 16, as well as the designated Plane 0 gaps (`U+F5C0–U+F6FF` and `U+F820–U+F87F`). Because these ranges represent rigid, permanent RNUR real estate, an upstream collision triggers a precise, deterministic architectural shift:
 1. **Parallel Addressing Mirror:** The registry master pipeline automatically triggers a 1:1 structural eviction. Instead of shifting to an unassigned block, the affected script mirrors directly into its exact corresponding mathematical coordinate address within **Set 2** (e.g., a collision at Set 1 $U+100580$ maps directly to Set 2 $U+100580$).
 2. **Flag Deployment:** The script’s historical data table entry is appended with an `UPSTREAM_COLLISION` flag.
 3. **Runtime Asset Override:** For software environments operating under RNUR compliance, the local font pre-processor runtime engine forces high-priority asset targeting over the native host system string fallback to prevent immediate layout corruption.

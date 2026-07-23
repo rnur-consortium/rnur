@@ -384,7 +384,7 @@ FDF00..FDFFF; Layout Sandbox Space (merrybot_v2 Reserved)
 # ================================================
 
 # --- Standard Unallocated Layout Tracking Space (OPEN_SLOT) ---
-F500..F6FF; OPEN_SLOT
+F5C0..F6FF; OPEN_SLOT
 F820..F87F; OPEN_SLOT
 100580..1005BF; OPEN_SLOT
 100700..10109F; OPEN_SLOT
