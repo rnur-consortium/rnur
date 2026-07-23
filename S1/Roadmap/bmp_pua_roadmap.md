@@ -182,19 +182,17 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>F6xx</b></td>
-      <td colspan="16" align="center">(F600-F6FF)</td>
+      <td colspan="16" align="center">???(F600-F6FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F7xx</b></td>
-      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Hebrew Extended-I (F700-F71F)</td>
-      <td colspan="10" bgcolor="#FFD2D2" align="center">🟥 Faundish (F720-F7BF)</td>
-      <td colspan="4" bgcolor="#FFD2D2" align="center">🟥 Kana Extended-I (F7C0-F7FF)</td>
+      <td colspan="16" align="center">???(F700-F7FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F8xx</b></td>
-      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Corporate Symbols (F800-F81F)</td>
-      <td colspan="6" bgcolor="#FFD2D2" align="center">(F820-F87F)</td>
-      <td colspan="2" bgcolor="#FFD2D2" align="center">🟥 Font Specifics (F880-F89F)</td>
+      <td colspan="2" align="center">🟥 Corporate Symbols (F800-F81F)</td>
+      <td colspan="6" align="center">(F820-F87F)</td>
+      <td colspan="2" align="center">🟥 Font Specifics (F880-F89F)</td>
       <td colspan="3" align="center">🟪 Aiha (F8A0-F8CF)</td>
       <td colspan="3" align="center">🟪 Klingon (F8D0-F8FF)</td>
     </tr>
@@ -216,7 +214,7 @@ To ensure predictable layout boundaries for secondary forks and peer registry co
 
 ### 2. Micro-Level Breakdown: Why the `???` Range is "Provisional RNUR / Unencoded (U)CSUR/SPUCE"
 
-The fragmented and extended ranges spanning the Basic Multilingual Plane (BMP)—specifically **`U+EE00–U+EFFF`**, **`U+F5C0–U+F6FF`**, and **`U+F820–U+F87F`**—are classified collectively under the `???` territory due to three core structural boundaries:
+The fragmented and extended ranges spanning the Basic Multilingual Plane (BMP)—specifically **`U+EE00–U+EFFF`**, **`U+F5C0–U+F6FF`**, **`F700-F7FF`** and **`U+F820–U+F87F`**—are classified collectively under the `???` territory due to three core structural boundaries:
 
 * **Provisional RNUR Stewardship:** This real estate functions explicitly as **RNUR Set 1 space for now**. It is actively tracked and defended by the registry to anchor incoming community scripts, operating under a temporary lease paradigm.
 * **Upstream Vacuum:** While under RNUR stewardship, this space remains an open layout vacuum from the perspective of peer networks. It lacks an abstract character repertoire or formal upstream tracking, remaining designated as available real estate until **UCSUR** or **SPUCE** steps forward to claim an allocation within its boundaries.
