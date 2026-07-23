@@ -177,7 +177,8 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>F5xx</b></td>
-      <td colspan="12" align="center">🟥 Number Forms Extended-I(F500-F5FF)</td>
+      <td colspan="12" align="center">🟥 Number Forms Extended-I(F500-F5BF)</td>
+      <td colspan="4" align="center">???(F5C0-F5FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F6xx</b></td>
