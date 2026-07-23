@@ -374,7 +374,9 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td align="center"><b>F50xx</b></td>
       <td colspan="3" align="center">🟥 Welsh Bardic (F5000–F502F)</td>
       <td colspan="5" align="center">🟥 Mifo-Circassian (F5030–F507F)</td>
-      <td colspan="8" align="center">??? (F5080–F50FF)</td>
+      <td colspan="4" align="center">🟥 Formosan (F5080–F50BF)</td>
+      <td colspan="3" align="center">🟥 Pseudo-Kurdish (F50C0–F50EF)</td>
+      <td colspan="1" align="center">??? (F50F0–F50FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F51xx</b></td>
@@ -1135,15 +1137,15 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>FF7xx</b></td>
-      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Control Pictures Extended-II (FF700–FF7FF)</td>
+      <td colspan="16" align="center">??? (FF700–FF7FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FF8xx</b></td>
-      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Control Pictures Extended-II (FF800–FF8FF)</td>
+      <td colspan="16" align="center">??? (FF800–FF8FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FF9xx</b></td>
-      <td colspan="16" bgcolor="#FFD2D2" align="center">🟥 Control Pictures Extended-II (FF900–FF9FF)</td>
+      <td colspan="16" align="center">??? (FF900–FF9FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FFAxx</b></td>
@@ -1192,7 +1194,7 @@ To ensure predictable layout boundaries for secondary forks and peer registry co
 
 ### 2. Micro-Level Breakdown: Why the `???` Range is "Provisional RNUR / Unencoded (U)CSUR/SPUCE"
 
-The fragmented and extended ranges spanning **`F1D00–F1EFF`**, **`F26B0–F26FF`**, **`F28E0–F28FF`**, **`F2960–F29FF`**, **`F5080–F50FF`**, **`F5EE0–F5EFF`**, **`F60C0–F60FF`**, **`F6400–F6A7F`**, **`F6DA0–F6DFF`**, **`F7700–F7F5F`**, **`F8290–F82FF`**, **`F8C00–F917F`**, **`F91C0–F91FF`**, **`F9250–F92FF`**, **`F9600–F99FF`**, **`F9C00–FA2FF`**, **`FA500–FACFF`**, **`FC5E0–FC5FF`**, **`FC730–FC7FF`**, **`FC920–FDEFF`**, and **`FF2B0–FF2BF`** are classified collectively under the `???` territory due to three core structural boundaries:
+The fragmented and extended ranges spanning **`F1D00–F1EFF`**, **`F26B0–F26FF`**, **`F28E0–F28FF`**, **`F2960–F29FF`**, **`F50F0–F50FF`**, **`F5EE0–F5EFF`**, **`F60C0–F60FF`**, **`F6400–F6A7F`**, **`F6DA0–F6DFF`**, **`F7700–F7F5F`**, **`F8290–F82FF`**, **`F8C00–F917F`**, **`F91C0–F91FF`**, **`F9250–F92FF`**, **`F9600–F99FF`**, **`F9C00–FA2FF`**, **`FA500–FACFF`**, **`FC5E0–FC5FF`**, **`FC730–FC7FF`**, **`FC920–FDEFF`**, **`FF2B0–FF2BF`**, **`FF700–FF7FF`**, **`FF800–FF8FF`**, and **`FF900–FF9FF`** are classified collectively under the `???` territory due to three core structural boundaries:
 
 * **Provisional RNUR Ownership:** This real estate functions explicitly as **RNUR Set 1 space for now**. It is actively tracked and defended by the registry to anchor incoming community scripts, operating under a temporary lease paradigm.
 * **Upstream Vacuum:** While under RNUR stewardship, this space remains an open layout vacuum from the perspective of peer networks. It lacks an abstract character repertoire or formal upstream tracking, remaining designated as available real estate until **UCSUR** or **SPUCE** steps forward to claim an allocation within its boundaries.
