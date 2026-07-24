@@ -7,7 +7,6 @@ This matrix maps out allocations visually across the 16-column boundaries of the
 * 🟥 = **SPUCE Project Allocations** (Red)
   * 🟨 = **SPUCE Project Allocations (Reserved for SPUCE Admin and FontStruct user @erictom333)** (Yellow)
 * 🟧 = **RNUR Set 1 Allocations** (Orange)
-  * 🟧 *Reserved zones for cross-compatibility with SPUCE Plane 15 allocations (F9000–F9FFF and FB000–FBFFF)*
 * ⬛ = **Unconfirmed by UCSUR** (Black) → *Formatted as ¿Script Name?*
 
 ---
@@ -637,67 +636,67 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="1" align="center">🟧 Benjamin Franklin's Phonetic Additions (F9000–F900F)</td>
       <td colspan="5" align="center">🟧 Loopiform (F9010–F905F)</td>
       <td colspan="3" align="center">🟧 Foldian (F9060–F908F)</td>
-      <td colspan="7" align="center">🟧 (F9090–F90FF)</td>
+      <td colspan="7" align="center">(F9090–F90FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F91xx</b></td>
-      <td colspan="16" align="center">🟧 (F9100–F91FF)</td>
+      <td colspan="16" align="center">(F9100–F91FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F92xx</b></td>
-      <td colspan="16" align="center">🟧 (F9200–F92FF)</td>
+      <td colspan="16" align="center">(F9200–F92FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F93xx</b></td>
-      <td colspan="16" align="center">🟧 (F9300–F93FF)</td>
+      <td colspan="16" align="center">(F9300–F93FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F94xx</b></td>
-      <td colspan="16" align="center">🟧 (F9400–F94FF)</td>
+      <td colspan="16" align="center">(F9400–F94FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F95xx</b></td>
-      <td colspan="16" align="center">🟧 (F9500–F95FF)</td>
+      <td colspan="16" align="center">(F9500–F95FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F96xx</b></td>
-      <td colspan="16" align="center">🟧 (F9600–F96FF)</td>
+      <td colspan="16" align="center">(F9600–F96FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F97xx</b></td>
-      <td colspan="16" align="center">🟧 (F9700–F97FF)</td>
+      <td colspan="16" align="center">(F9700–F97FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F98xx</b></td>
-      <td colspan="16" align="center">🟧 (F9800–F98FF)</td>
+      <td colspan="16" align="center">(F9800–F98FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F99xx</b></td>
-      <td colspan="16" align="center">🟧 (F9900–F99FF)</td>
+      <td colspan="16" align="center">(F9900–F99FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F9Axx</b></td>
-      <td colspan="16" align="center">🟧 (F9A00–F9AFF)</td>
+      <td colspan="16" align="center">(F9A00–F9AFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F9Bxx</b></td>
-      <td colspan="16" align="center">🟧 (F9B00–F9BFF)</td>
+      <td colspan="16" align="center">(F9B00–F9BFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F9Cxx</b></td>
-      <td colspan="16" align="center">🟧 (F9C00–F9CFF)</td>
+      <td colspan="16" align="center">(F9C00–F9CFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F9Dxx</b></td>
-      <td colspan="16" align="center">🟧 (F9D00–F9DFF)</td>
+      <td colspan="16" align="center">(F9D00–F9DFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F9Exx</b></td>
-      <td colspan="16" align="center">🟧 (F9E00–F9EFF)</td>
+      <td colspan="16" align="center">(F9E00–F9EFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F9Fxx</b></td>
-      <td colspan="16" align="center">🟧 (F9F00–F9FFF)</td>
+      <td colspan="16" align="center">(F9F00–F9FFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FA0xx</b></td>
@@ -765,67 +764,67 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>FB0xx</b></td>
-      <td colspan="16" align="center">??? (FB000–FB0FF)</td>
+      <td colspan="16" align="center">(FB000–FB0FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB1xx</b></td>
-      <td colspan="16" align="center">??? (FB100–FB1FF)</td>
+      <td colspan="16" align="center">(FB100–FB1FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB2xx</b></td>
-      <td colspan="16" align="center">??? (FB200–FB2FF)</td>
+      <td colspan="16" align="center">(FB200–FB2FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB3xx</b></td>
-      <td colspan="16" align="center">??? (FB300–FB3FF)</td>
+      <td colspan="16" align="center">(FB300–FB3FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB4xx</b></td>
-      <td colspan="16" align="center">??? (FB400–FB4FF)</td>
+      <td colspan="16" align="center">(FB400–FB4FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB5xx</b></td>
-      <td colspan="16" align="center">??? (FB500–FB5FF)</td>
+      <td colspan="16" align="center">(FB500–FB5FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB6xx</b></td>
-      <td colspan="16" align="center">??? (FB600–FB6FF)</td>
+      <td colspan="16" align="center">(FB600–FB6FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB7xx</b></td>
-      <td colspan="16" align="center">??? (FB700–FB7FF)</td>
+      <td colspan="16" align="center">(FB700–FB7FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB8xx</b></td>
-      <td colspan="16" align="center">??? (FB800–FB8FF)</td>
+      <td colspan="16" align="center">(FB800–FB8FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FB9xx</b></td>
-      <td colspan="16" align="center">??? (FB900–FB9FF)</td>
+      <td colspan="16" align="center">(FB900–FB9FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FBAxx</b></td>
-      <td colspan="16" align="center">??? (FBA00–FBAFF)</td>
+      <td colspan="16" align="center">(FBA00–FBAFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FBBxx</b></td>
-      <td colspan="16" align="center">??? (FBB00–FBBFF)</td>
+      <td colspan="16" align="center">(FBB00–FBBFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FBCxx</b></td>
-      <td colspan="16" align="center">??? (FBC00–FBCFF)</td>
+      <td colspan="16" align="center">(FBC00–FBCFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FBDxx</b></td>
-      <td colspan="16" align="center">??? (FBD00–FBDFF)</td>
+      <td colspan="16" align="center">(FBD00–FBDFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FBExx</b></td>
-      <td colspan="16" align="center">??? (FBE00–FBEFF)</td>
+      <td colspan="16" align="center">(FBE00–FBEFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FBFxx</b></td>
-      <td colspan="16" align="center">??? (FBF00–FBFFF)</td>
+      <td colspan="16" align="center">(FBF00–FBFFF)</td>
     </tr>
     <tr>
       <td align="center"><b>FC0xx</b></td>
@@ -1122,7 +1121,7 @@ To ensure predictable layout boundaries for secondary forks and peer registry co
 
 ### 2. Micro-Level Breakdown: Why the `???` Range is "Provisional RNUR / Unencoded (U)CSUR/SPUCE"
 
-The fragmented and extended ranges spanning **`F1D00–F1EFF`**, **`F26B0–F26FF`**, **`F28E0–F28FF`**, **`F2960–F29FF`**, **`F50F0–F50FF`**, **`F5EE0–F5EFF`**, **`F60C0–F60FF`**, **`F6400–F6A7F`**, **`F6DA0–F6DFF`**, **`F7700–F7F5F`**, **`F8290–F82FF`**, **`F8C00–F917F`**, **`F91C0–F91FF`**, **`F9250–F92FF`**, **`F9600–F99FF`**, **`F9C00–FA2FF`**, **`FA500–FACFF`**, **`FC5E0–FC5FF`**, **`FC730–FC7FF`**, **`FC920–FDEFF`**, **`FF2B0–FF2BF`**, **`FF700–FF7FF`**, **`FF800–FF8FF`**, and **`FF900–FF9FF`** are classified collectively under the `???` territory due to three core structural boundaries:
+The fragmented and extended ranges spanning **`F1D00–F1EFF`**, **`F26B0–F26FF`**, **`F28E0–F28FF`**, **`F2960–F29FF`**, **`F3400-F4FFF`**, **`F50F0-F7FFF`**, **`F81B0–F8FFF`**, **`FA000–FAFFF`**, **`FC000–FDFFF`**, **`FF200–FF27F`**, **`FF2A0–FF2BF`**, **`FF700–FF9FF`**, and **`FFE00–FFEFF`** are classified collectively under the `???` territory due to three core structural boundaries:
 
 * **Provisional RNUR Ownership:** This real estate functions explicitly as **RNUR Set 1 space for now**. It is actively tracked and defended by the registry to anchor incoming community scripts, operating under a temporary lease paradigm.
 * **Upstream Vacuum:** While under RNUR stewardship, this space remains an open layout vacuum from the perspective of peer networks. It lacks an abstract character repertoire or formal upstream tracking, remaining designated as available real estate until **UCSUR** or **SPUCE** steps forward to claim an allocation within its boundaries.
@@ -1135,14 +1134,3 @@ Because the `???` territory is provisionally staked inside an unmapped zone of t
 * **Upstream Authority:** UCSUR and SPUCE reserve absolute historical priority over PUA layout structures.
 * **The Eviction Clause:** If an active script project is provisionally assigned to a specific block within the `???` territory by RNUR, and UCSUR or SPUCE subsequently ratifies/encodes a different, conflicting script into those exact code points, the RNUR script will undergo an automatic **Set 2 Eviction**.
 * **Set 2 Relocation Routing:** To preserve complete upstream alignment and prevent dirty runtime clashing or font rendering script pollution, the overridden internal script will be cleanly compiled out of Set 1 and reassigned to **RNUR Set 2** (Plane 16 or designated fallback overflow tables).
-
-> [!NOTE] 
-
-> **Status Report: Antarctica Pix** (U+F7600–U+F76FF)
-The allocation designated for Antarctica Pix is marked with a black square (⬛) as **Unconfirmed by UCSUR** and styled as ¿Antarctica Pix?. Current typographic telemetry suggests this block may represent one of two potential implementations:
-
-* A dedicated pixel font engineered by *Kreative Korp* (Rebecca Bettencourt herself!).
-
-* A structural placeholder allocation explicitly reserved to support such a font.
-
-Because definitive architectural documentation is currently missing, it is isolated under the unconfirmed tracking protocol until its origin can be formally verified.

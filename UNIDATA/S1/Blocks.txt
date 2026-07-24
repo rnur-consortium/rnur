@@ -90,6 +90,7 @@ F1900..F19FF; Sitelen Pona
 F1B00..F1C3F; Shidinn
 F1C40..F1C7F; Titi Pula
 F1C80..F1C9F; Sitelen Pona Radicals
+F1CA0..F1CFF; Yapiri
 F2000..F267F; Sadalian
 F28A0..F28DF; Zbalermorna
 
@@ -101,7 +102,6 @@ F2700..F27FF; ¿Hacm?
 F2800..F282F; ¿Liparxe?
 F2830..F289F; ¿Shaleian?
 F2900..F295F; ¿Visible Speech Extended?
-F7600..F76FF; ¿Antarctica Pix?
 
 # --- SPUCE Project Allocations (🟥) ---
 F000..F0FF; Stylistic Variant Forms
@@ -110,225 +110,49 @@ F200..F2FF; Latin Extended-I
 F300..F37F; Greek Extended-I
 F380..F3FF; Cyrillic Extended-I
 F400..F4BF; Symbols and Punctuation Extended-I
-F4F0..F4FF; Number Forms Extended-I
-F700..F71F; Hebrew Extended-I
-F720..F7BF; Faundish
-F7C0..F7FF; Kana Extended-I
+F4F0..F5BF; Number Forms Extended-I
 F800..F81F; Corporate Symbols
 F880..F89F; Font Specifics
-F2A00..F2DFF; CanIPA Extensions
-F2E00..F31FF; Phonetic Extensions-II
-F3300..F337F; Latin Medievalist Extensions
-F3380..F45FF; Latin Extensions-II
-F4600..F49FF; Phonetic Extensions-III
-F4A00..F4BFF; Greek Extended-II
-F4C00..F4DFF; Cyrillic Extended-II
+F2A00..F2FFF; Phonetic Extensions-II
+F3000..F33FF; Latin Extended-II
 F4E00..F4FFF; Halfwidth and Fullwidth Forms Extended-I
 F5000..F502F; Welsh Bardic
 F5030..F507F; Mifo-Circassian
-F5100..F51FF; Georgian Extended-II
-F5200..F54FF; Latin Extended-III
-F5500..F57FF; Greek Extended-III
-F5800..F58FF; Ancient Monograms
-F5900..F5CFF; Old Danube Writing
-F5D00..F5E1F; Voynich
-F5E20..F5E3F; Cistercian Cipher
-F5E40..F5EDF; Tironian Notes
-F5F00..F60BF; Pigpen
-F6160..F62FF; Pigpen Extended-I
-F6300..F63FF; Runic Extended-I
-F6A80..F6AAF; Bopomofo Extended-I
-F6AB0..F6AFF; Kodo Symbols
-F6B00..F6CFF; Kamakawi
-F6D00..F6D3F; Lakota
-F6D40..F6D9F; Nawa
-F6E00..F6F7F; Unified Canadian Syllabics Extended-I
-F7000..F73FF; Aymara Pictograms
-F7400..F75FF; Paucartambo
-F7F60..F7FDF; Muric
-F7FE0..F7FFF; Plutonian
 F8000..F805F; Gyorsrovas
 F8060..F80AF; Bostani
 F80B0..F80FF; New Mong
 F8100..F813F; New Akha
 F8140..F817F; Akkhara Muni
 F8180..F81AF; New Maori
-F81B0..F81CF; Maui
-F81D0..F820F; Fontok
-F8210..F826F; Elektrum
-F8270..F828F; Pranish
-F8300..F84FF; Sylabica Extended-I
-F8500..F89AF; Niji Syllables
-F89B0..F8BFF; Gem Language Ideographs
-F9180..F91BF; Aliphbepf
-F9200..F924F; Jurgenschmidt
-100000..10037F; Latin Extended-IV
-100380..10038F; Greek Extended-IV
-100390..1003FF; Itinyrin
-100400..10057F; Cyrillic Extended-IV
-1005C0..1005FF; Hebrew Extended-II
-100600..1006FF; Arabic Extended-II
-1010A0..1010FF; Georgian Extended-III
-101200..10137F; Ethiopic Extended-I
-1013E0..1013FF; Cherokee Extended-I
-102000..10223F; Symbols and Punctuation Extended-III
-102240..10224F; Geomantic Figures
-102250..10227F; C64-OS Symbols
-102280..1022BF; Commander X16 Symbols
-1022C0..1022FF; Powerline Symbols
-1024D0..1024FF; Shade Quadrants
-102700..1027FF; Dingbats Extended-I
-102800..102DFF; Mathematical Alphanumeric Symbols Extended-I
-103000..1030FF; Kana Extended-II
-107200..10743F; Bamum Extended-I
-108000..10802F; Amagasanese
-108070..1080BF; Number Forms Extended-IV
-1080C0..1080FF; Laki Symbols Supplement
-108100..10810F; Laki Symbols
-108110..10812F; Momoiro Clover Z Symbols
-108130..10816F; Kabochanian
-108170..1081AF; Seiyuunese
-108300..10832F; Old Italic Presentation Forms
-108400..10847F; Buono Symbols
-108480..1084AF; Osmanya Extended-I
-108600..1086FF; Morning Musume Symbols
-108700..1087FF; Country Girls Symbols
-108800..10884F; KodouOK
-1088C0..1088FF; Ubi Payang Ideographs
-108900..1089FF; C-ute Symbols
-108A00..108AFF; S/mileage Symbols
-108B00..108B7F; Koubounese
-108BC0..108BFF; Khambu Rai
-108C00..108CFF; Latin Extended-V
-108F00..108F3F; Berryz Koubou Symbols
-109380..1094FF; Zhizhue Color Pictograms
-109500..1095FF; Juice=Juice Symbols
-109600..10963F; Lisu Extended-I
-109700..10977F; QWER Symbols
-1097E0..1097FF; TBH
-109800..10987F; Kobushi Factory Symbols
-109880..1098FF; Tsubaki Color Symbols
-109E80..109EFF; Beyooooonds Symbols
-109F00..109F7F; Ocha Norma Symbols
-109F80..109FFF; Rosy Chronicle Symbols
-10A000..10A05F; Peixuyian
-10A060..10A07F; Meventarde
-10A080..10A08F; Vithkuqi Extended-I
-10A090..10A0AF; QWER Symbols Supplement
-10A100..10A17F; GaruGaku Symbols
-10A180..10A1BF; Hello! Project Symbols
-10A200..10A2FF; Peixuyian Supplement
-10A300..10A4FF; Futrimese Clothing Script
-10A500..10A6AF; Symbols for Legacy Computing Extended-II
-10A6E0..10A6FF; Bamum Extended-I
-10AEA0..10AEFF; Ihatemysalf
-10D000..10D09F; Domino Tiles Extended-I
-10D300..10D3FF; Flag Symbols
-10E000..10E07F; Tengwar Presentation Forms
-10E080..10E0FF; Cirth Presentation Forms
-10E100..10E1FF; Engsvanyáli Presentation Forms
-10E360..10E37F; Sarkai Extended-I
-10E380..10E3AF; Sarkai Presentation Forms
-10E3B0..10E3FF; Olaetyan Extended-I
-10E400..10E42F; Nísklôz Presentation Forms
-10E430..10E44F; Kazat Akkorou Extended-I
-10E450..10E46F; Kazvarad Presentation Forms
-10E4F0..10E4FF; Kelwathi Extended-I
-10E500..10E51F; Saklor Extended-I
-10E520..10E57F; Rynnan Presentation Forms
-10E580..10E59F; Telarasso Extended-I
-10E5E0..10E5FF; Ophidian Presentation Forms
-10E600..10E62F; Ferengi Extended-I
-10E650..10E67F; Sylabica Extended-II
-10E680..10E6CF; Ewellic Presentation Forms
-10E800..10E82F; Monofon Extended-I
-10E830..10E89F; Shaleian Presentation Forms
-10EA00..10EA9F; Lhenzi Extended-I
-10EBA0..10EBDF; Cistercian Numerals Extended-I
-10EFA0..10EFCF; Aiha Presentation Forms
-10F900..10F91F; Thai Compatibility Forms
-10FB00..10FCFF; Latin Fractional Forms
-10FD00..10FEFF; Mongolian Presentation Forms
-10FFC0..10FFCF; Source Hints
-10FFD0..10FFEF; Transcoding Hints
-10FFF0..10FFFF; Plane 16 Specials
-FC300..FC31F; The Calling
-FC320..FC34F; UUFO
-FC350..FC38F; Kaotican
-FC390..FC3BF; Mirror Text
-FC3C0..FC3EF; Auroran
-FC3F0..FC41F; Aquamarine
-FC420..FC44F; Q-Block
-FC450..FC47F; Supersolar
-FC480..FC4AF; Voltik
-FC4B0..FC4DF; Bloom
-FC4E0..FC50F; Spheric
-FC510..FC53F; EL
-FC540..FC56F; Infinitum
-FC570..FC59F; Coloraturan
-FC5A0..FC5DF; Tahano Veno
-FC600..FC62F; Hylian Syllabary-1
-FC630..FC68F; Hylian Syllabary-2
-FC690..FC6AF; Hylian-1
-FC6B0..FC6CF; Hylian-2
-FC6D0..FC6EF; Hylian-3
-FC6F0..FC6FF; Gerudo Extended
-FC700..FC72F; Sheikah
-FC800..FC91F; Cyrillic Mathematical Alphanumeric Symbols
 FF000..FF05F; Vexillology Symbols
 FF060..FF0FF; Miscellaneous Technical Extended-I
 FF100..FF16F; Control Pictures Extended-I
 FF170..FF1FF; Segmented Display Patterns
-FF200..FF27F; Number Forms Extended-III
 FF280..FF28F; Dozenal Numerals
 FF290..FF29F; Camp Dozenal Numerals
-FF2A0..FF2AF; Bibi-binary Numerals
 FF2C0..FF2FF; Marian Sexagesimal Numerals
 FF300..FF3FF; Block Elements Extended-I
 FF400..FF5BF; Box Drawing Extended-I
 FF5C0..FF5FF; Arrows Extended-I
 FF600..FF6FF; Hex Byte Pictures
-FF700..FF9FF; Control Pictures Extended-II
 FFA00..FFABF; Astronomical Symbols
 FFAC0..FFBFF; Chess Symbols Extended-I
 FFC00..FFC2F; Arrows Extended-II
 FFC30..FFC4F; Rayalaka Color Symbols
 FFC50..FFDFF; Symbols for Legacy Computing Extended-I
-FFE00..FFE1F; Adobe Compatibility Forms
-FFE20..FFEFF; Apple Compatibility Forms
 FFF00..FFFEF; Fragments
 FFFF0..FFFFF; Plane 15 Specials
+10FFF0..10FFFF; Plane 16 Specials
 
 # --- SPUCE Project Allocations (Reserved for @erictom333 & SPUCE Admin) (🟨) ---
-FE000..FE01F; Raichi-1
-FE020..FE02F; Reichi-2
-FE030..FE06F; Orange Sheet Ideographs
-FE070..FE08F; A20
-FE090..FE0CF; Aereian
-FE0D0..FE10F; A56
-FE110..FE15F; Pargy
-FE160..FE17F; Early Gerudo
-FE180..FE19F; Tone Letters Extended-I
-FE1A0..FE1BF; Diacritics Extended-I
-FE1C0..FE1FF; Layout Sandbox Space (erictom333 Reserved)
-FE200..FE3FF; Yoshiese Ideographs
+FE000..FE3FF; Layout Sandbox Space (erictom333 Reserved)
 FE400..FE41F; Minecraftian Supplement
 FE420..FE6FF; Minecraftian
 FE700..FE77F; Hylian
 FE780..FE79F; Gerudo
 FE7A0..FE7DF; Gerudo Presentation Forms
 FE7E0..FE7FF; L8
-FE800..FE87F; Legend of Zelda Symbols
-FE880..FE8BF; Super Smash Bros Series Symbols
-FE8C0..FE8FF; Fantendo Smash Bros Series Symbols
-FE900..FE97F; Mathematical Symbols Extended-I
-FE980..FE9BF; Symbols and Punctuation Extended-II
-FE9C0..FE9FF; Number Forms Extended-II
-FEA00..FEBFF; Layout Sandbox Space (erictom333 Reserved)
-FEC00..FEC0F; Gothic Extended-I
-FEC10..FEC3F; Arabic Extended-I
-FEC40..FEC9F; Layout Sandbox Space (erictom333 Reserved)
-FECA0..FECFF; Cyrillic Extended-III
+FE800..FECFF; Layout Sandbox Space (erictom333 Reserved)
 FED00..FED5F; Tatar
 FED60..FED7F; Layout Sandbox Space (erictom333 Reserved)
 FED80..FEDAF; Script Gerudo
@@ -339,141 +163,31 @@ FEF00..FEF3F; Featural Minecraftian
 FEF40..FEF8F; African Transitional
 FEF90..FEFFF; Layout Sandbox Space (erictom333 Reserved)
 
-# --- SPUCE Project Allocations (Reserved for @NataliaKenigFan826) (🔴) ---
-F9300..F931F; Zhiung Logograms
-F9320..F95FF; Zhiung Logograms Supplement
-F9A00..F9BFF; Tulu Zoom
-
-# --- SPUCE Project Allocations (Reserved for @AshtonTameirao25) (🟣) ---
-FA300..FA4FF; Putnam Pictograms
-FAFA0..FB1FF; Layout Sandbox Space (AshtonTameirao25 Reserved)
-FB200..FB23F; Bubble Guppies Symbols
-FB240..FB29F; Guppinese Presentation Forms
-FB2A0..FB2FF; Layout Sandbox Space (AshtonTameirao25 Reserved)
-FB000..FB07F; Guppinese Latin Extensions
-FAD00..FAD7F; Guppinese
-FAD80..FAEFF; Deemanese Pictograms
-FAF00..FAF9F; Gobian Cursive
-
-# --- SPUCE Project Allocations (Reserved for @ExtendedMaster113) (🟠) ---
-10AF00..10AFFF; Symbols for Elevators and Escalators
-
-# --- SPUCE Project Allocations (Reserved for @Greenstar967 / Oneiria) (🟢) ---
-FB300..FB37F; Djenpa
-FB380..FB3FF; Layout Sandbox Space (Oneiria Reserved)
-FB400..FB47F; Vinhorai
-FB480..FB4FF; Sirboan
-FB500..FB57F; Xiphosee
-FB580..FB5FF; Minirasse
-FB600..FB67F; Anemoian
-FB680..FB6FF; Nihilezhxa
-FB700..FB77F; Aa-Infinitio
-FB780..FB7FF; Kaioloko
-FB800..FBCFF; Layout Sandbox Space (Oneiria Reserved)
-FBD00..FBD7F; Xiphosee Cursive
-FBD80..FC2FF; Layout Sandbox Space (Oneiria Reserved)
-
-# --- SPUCE Project Allocations (Reserved for @merrybot_v2) (🟦) ---
-FDF00..FDFFF; Layout Sandbox Space (merrybot_v2 Reserved)
-
-# --- SPUCE Project Allocations (Reserved for AI Models) (🔵) ---
-109900..109E7F; Layout Sandbox Space
-
 # ================================================
 # ARCHITECTURAL OPEN Real Estate / Tracking
 # ================================================
 
 # --- Standard Unallocated Layout Tracking Space (OPEN_SLOT) ---
-F5C0..F6FF; OPEN_SLOT
-F820..F87F; OPEN_SLOT
-100580..1005BF; OPEN_SLOT
-100700..10109F; OPEN_SLOT
-101100..1011FF; OPEN_SLOT
-101380..1013DF; OPEN_SLOT
-101500..101FFF; OPEN_SLOT
-102300..1024CF; OPEN_SLOT
-102500..1026FF; OPEN_SLOT
-102E00..102FFF; OPEN_SLOT
-103100..1071FF; OPEN_SLOT
-107440..1074FF; OPEN_SLOT
-108030..10806F; OPEN_SLOT
-1081B0..1081FF; OPEN_SLOT
-108200..1082FF; OPEN_SLOT
-108330..1083FF; OPEN_SLOT
-1084B0..1084FF; OPEN_SLOT
-108500..1085FF; OPEN_SLOT
-108850..1088BF; OPEN_SLOT
-108B80..108BBF; OPEN_SLOT
-108D00..108DFF; OPEN_SLOT
-108E00..108EFF; OPEN_SLOT
-108F40..108FFF; OPEN_SLOT
-109000..10937F; OPEN_SLOT
-109640..1096FF; OPEN_SLOT
-109780..1097DF; OPEN_SLOT
-10A0B0..10A0FF; OPEN_SLOT
-10A1C0..10A1FF; OPEN_SLOT
-10A6B0..10A6DF; OPEN_SLOT
-10A700..10AE9F; OPEN_SLOT
-10B000..10CFFF; OPEN_SLOT
-10D0A0..10D0FF; OPEN_SLOT
-10D100..10D1FF; OPEN_SLOT
-10D200..10D2FF; OPEN_SLOT
-10D400..10DFFF; OPEN_SLOT
-10E200..10E2FF; OPEN_SLOT
-10E300..10E35F; OPEN_SLOT
-10E470..10E4EF; OPEN_SLOT
-10E5A0..10E5DF; OPEN_SLOT
-10E630..10E64F; OPEN_SLOT
-10E6D0..10E6FF; OPEN_SLOT
-10E700..10E7FF; OPEN_SLOT
-10E8A0..10E8FF; OPEN_SLOT
-10E900..10E9FF; OPEN_SLOT
-10EAA0..10EAFF; OPEN_SLOT
-10EB00..10EB9F; OPEN_SLOT
-10EBE0..10EBFF; OPEN_SLOT
-10EC00..10ECFF; OPEN_SLOT
-10ED00..10EDFF; OPEN_SLOT
-10EE00..10EEFF; OPEN_SLOT
-10EF00..10EF9F; OPEN_SLOT
-10EFD0..10EFFF; OPEN_SLOT
-10F000..10F0FF; OPEN_SLOT
-10F100..10F1FF; OPEN_SLOT
-10F200..10F2FF; OPEN_SLOT
-10F300..10F3FF; OPEN_SLOT
-10F400..10F4FF; OPEN_SLOT
-10F500..10F5FF; OPEN_SLOT
-10F600..10F6FF; OPEN_SLOT
-10F700..10F7FF; OPEN_SLOT
-10F800..10F8FF; OPEN_SLOT
-10F920..10F9FF; OPEN_SLOT
-10FA00..10FAFF; OPEN_SLOT
-10FF00..10FFBF; OPEN_SLOT
+F9000..F9FFF; OPEN_SLOT
+FB000..FBFFF; OPEN_SLOT
 
 # --- Provisional RNUR Open Blocks (PROVISIONAL_RNUR_OPEN_SLOT) ---
-EE00..EEFF; PROVISIONAL_RNUR_OPEN_SLOT
-EF00..EFFF; PROVISIONAL_RNUR_OPEN_SLOT
+EE00..EFFF; PROVISIONAL_RNUR_OPEN_SLOT
+F5C0..F7FF; PROVISIONAL_RNUR_OPEN_SLOT
+F820..F87F; PROVISIONAL_RNUR_OPEN_SLOT
+100000..10FFEF; PROVISIONAL_RNUR_OPEN_SLOT
 F1D00..F1EFF; PROVISIONAL_RNUR_OPEN_SLOT
 F26B0..F26FF; PROVISIONAL_RNUR_OPEN_SLOT
 F28E0..F28FF; PROVISIONAL_RNUR_OPEN_SLOT
 F2960..F29FF; PROVISIONAL_RNUR_OPEN_SLOT
-F5080..F50FF; PROVISIONAL_RNUR_OPEN_SLOT
-F5EE0..F5EFF; PROVISIONAL_RNUR_OPEN_SLOT
-F60C0..F60FF; PROVISIONAL_RNUR_OPEN_SLOT
-F6100..F615F; PROVISIONAL_RNUR_OPEN_SLOT
-F6400..F6A7F; PROVISIONAL_RNUR_OPEN_SLOT
-F6DA0..F6DFF; PROVISIONAL_RNUR_OPEN_SLOT
-F6F80..F6FFF; PROVISIONAL_RNUR_OPEN_SLOT
-F7700..F7F5F; PROVISIONAL_RNUR_OPEN_SLOT
-F8290..F82FF; PROVISIONAL_RNUR_OPEN_SLOT
-F8C00..F917F; PROVISIONAL_RNUR_OPEN_SLOT
-F91C0..F91FF; PROVISIONAL_RNUR_OPEN_SLOT
-F9250..F92FF; PROVISIONAL_RNUR_OPEN_SLOT
-F9600..F99FF; PROVISIONAL_RNUR_OPEN_SLOT
-F9C00..FA2FF; PROVISIONAL_RNUR_OPEN_SLOT
-FA500..FACFF; PROVISIONAL_RNUR_OPEN_SLOT
-FC5E0..FC5FF; PROVISIONAL_RNUR_OPEN_SLOT
-FC730..FC7FF; PROVISIONAL_RNUR_OPEN_SLOT
-FC920..FDEFF; PROVISIONAL_RNUR_OPEN_SLOT
-FF2B0..FF2BF; PROVISIONAL_RNUR_OPEN_SLOT
+F3400..F4FFF; PROVISIONAL_RNUR_OPEN_SLOT
+F50F0..F7FFF; PROVISIONAL_RNUR_OPEN_SLOT
+F81B0..F8FFF; PROVISIONAL_RNUR_OPEN_SLOT
+FA000..FAFFF; PROVISIONAL_RNUR_OPEN_SLOT
+FC000..FDFFF; PROVISIONAL_RNUR_OPEN_SLOT
+FF200..FF27F; PROVISIONAL_RNUR_OPEN_SLOT
+FF2A0..FF2BF; PROVISIONAL_RNUR_OPEN_SLOT
+FF700..FF9FF; PROVISIONAL_RNUR_OPEN_SLOT
+FFE00..FFEFF; PROVISIONAL_RNUR_OPEN_SLOT
 
 # EOF
