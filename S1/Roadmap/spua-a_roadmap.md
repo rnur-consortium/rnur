@@ -11,6 +11,30 @@ This matrix maps out allocations visually across the 16-column boundaries of the
 
 ---
 
+## SPUCE Plane 15 Zone Map
+
+Plane 15 is provisionally zoned by SPUCE into the thirteen sectors below. Two of them (`F9000–F9FFF` and `FB000–FBFFF`) are carved out and reserved for RNUR as the embassy layer, and `FE000–FEFFF` is reserved for SPUCE admin and FontStruct user @erictom333. Wherever SPUCE has allocated a script, those code points are SPUCE's; whatever space is left empty inside a zone stays held by RNUR as a Tier B defensive zone (`???`). Scripts that remain UCSUR-listed keep their UCSUR colour instead of the zone colour.
+
+| Zone | Code Range | Scope | Steward |
+| :--- | :--- | :--- | :--- |
+| **1** | `F0000–F2AFF` | Large UCSUR scripts | 🟥 SPUCE |
+| **2** | `F2B00–F4FFF` | Extensions of existing Unicode scripts and existing real-world scripts | 🟥 SPUCE |
+| **3** | `F5000–F5FFF` | Notation, ciphers, undeciphered scripts, and pseudohistorical scripts | 🟥 SPUCE |
+| **4** | `F6000–F7FFF` | Constructed scripts from existing media | 🟥 SPUCE |
+| **5** | `F8000–F8FFF` | Constructed scripts for existing languages | 🟥 SPUCE |
+| **6** | `F9000–F9FFF` | Constructed scripts for existing languages | 🟧 Reserved for RNUR |
+| **7** | `FA000–FAFFF` | Constructed scripts for constructed languages | 🟥 SPUCE |
+| **8** | `FB000–FBFFF` | Constructed scripts for constructed languages | 🟧 Reserved for RNUR |
+| **9** | `FC000–FDFFF` | Constructed scripts by FontStruct users | 🟥 SPUCE |
+| **10** | `FE000–FEFFF` | Personal reservation | 🟨 Reserved for @erictom333 |
+| **11** | `FF000–FFEFF` | Symbols | 🟥 SPUCE |
+| **12** | `FFF00–FFFEF` | Fragments | 🟥 SPUCE |
+| **13** | `FFFF0–FFFFF` | Specials | 🟥 SPUCE |
+
+---
+
+## Allocation Grid
+
 <table>
   <thead>
     <tr>
@@ -240,19 +264,19 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>F30xx</b></td>
-      <td colspan="16" align="center">🟥 Latin Extensions-II (F3000–F30FF)</td>
+      <td colspan="16" align="center">🟥 Latin Extended-II (F3000–F30FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F31xx</b></td>
-      <td colspan="16" align="center">🟥 Latin Extensions-II (F3100–F31FF)</td>
+      <td colspan="16" align="center">🟥 Latin Extended-II (F3100–F31FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F32xx</b></td>
-      <td colspan="16" align="center">🟥 Latin Extensions-II (F3200–F32FF)</td>
+      <td colspan="16" align="center">🟥 Latin Extended-II (F3200–F32FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F33xx</b></td>
-      <td colspan="16" align="center">🟥 Latin Extensions-II (F3300–F337F)</td>
+      <td colspan="16" align="center">🟥 Latin Extended-II (F3300–F33FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F34xx</b></td>
@@ -325,9 +349,6 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     <tr>
       <td align="center"><b>F45xx</b></td>
       <td colspan="16" align="center">??? (F4500–F45FF)</td>
-    <tr>
-      <td align="center"><b>F45xx</b></td>
-      <td colspan="16" align="center">??? (F4500–F45FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F46xx</b></td>
@@ -378,7 +399,6 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="1" align="center">🟥 Enochian (F50F0–F50FF)</td>
     </tr>
     <tr>
-      <tr>
       <td align="center"><b>F51xx</b></td>
       <td colspan="1" align="center">🟥 Enochian (F5100–F510F)</td>
       <td colspan="2" align="center">🟥 Litterae Ignotae (F5110–F512F)</td>
@@ -1027,7 +1047,8 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     <tr>
       <td align="center"><b>FEDxx</b></td>
       <td colspan="5" align="center">🟨 Tatar (FED00–FED4F)</td>
-      <td colspan="3" align="center">🟨 Layout Sandbox Space (FED50–FED7F)</td>
+      <td colspan="1" align="center">🟨 Tatar (FED50–FED5F)</td>
+      <td colspan="2" align="center">🟨 Interscript (FED60–FED7F)</td>
       <td colspan="3" align="center">🟨 Script Gerudo (FED80–FEDAF)</td>
       <td colspan="5" align="center">🟨 Script Gerudo Presentation Forms (FEDB0–FEDFF)</td>
     </tr>
@@ -1079,15 +1100,15 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>FF7xx</b></td>
-      <td colspan="16" align="center">??? (FF700–FF7FF)</td>
+      <td colspan="16" align="center">🟥 Control Pictures Extended-II — Soon Going to Be Encoded in Plane 16 (FF700–FF7FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FF8xx</b></td>
-      <td colspan="16" align="center">??? (FF800–FF8FF)</td>
+      <td colspan="16" align="center">🟥 Control Pictures Extended-II — Soon Going to Be Encoded in Plane 16 (FF800–FF8FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FF9xx</b></td>
-      <td colspan="16" align="center">??? (FF900–FF9FF)</td>
+      <td colspan="16" align="center">🟥 Control Pictures Extended-II — Soon Going to Be Encoded in Plane 16 (FF900–FF9FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FFAxx</b></td>
@@ -1135,11 +1156,12 @@ To ensure predictable layout boundaries for secondary forks and peer registry co
 
 ### 2. Micro-Level Breakdown: Why the `???` Range is "Provisional RNUR / Unencoded (U)CSUR/SPUCE"
 
-The fragmented and extended ranges spanning **`F1D00–F1EFF`**, **`F26B0–F26FF`**, **`F28E0–F28FF`**, **`F2960–F29FF`**, **`F3400-F4FFF`**, **`F5150-F7FFF`**, **`F81B0–F8FFF`**, **`FA000–FAFFF`**, **`FC000–FDFFF`**, **`FF200–FF27F`**, **`FF2A0–FF2BF`**, **`FF700–FF9FF`**, and **`FFE00–FFEFF`** are classified collectively under the `???` territory due to three core structural boundaries:
+The fragmented and extended ranges spanning **`F1D00–F1EFF`**, **`F26B0–F26FF`**, **`F28E0–F28FF`**, **`F2960–F29FF`**, **`F3400–F4DFF`**, **`F5150–F7FFF`**, **`F81B0–F8FFF`**, **`FA000–FAFFF`**, **`FC000–FDFFF`**, **`FF200–FF27F`**, **`FF2A0–FF2BF`**, and **`FFE00–FFEFF`** are classified collectively under the `???` territory due to three core structural boundaries:
 
 * **Provisional RNUR Ownership:** This real estate functions explicitly as **RNUR Set 1 space for now**. It is actively tracked and defended by the registry to anchor incoming community scripts, operating under a temporary lease paradigm.
 * **Upstream Vacuum:** While under RNUR stewardship, this space remains an open layout vacuum from the perspective of peer networks. It lacks an abstract character repertoire or formal upstream tracking, remaining designated as available real estate until **UCSUR** or **SPUCE** steps forward to claim an allocation within its boundaries.
 * **Allocation vs. Encoding Boundaries:** Macro-allocation handles defensive zoning (securing real estate borders on the layout grid). Micro-encoding handles the internal asset engineering (character logic inside those borders). The `???` marker denotes a completed macro-allocation that is waiting for an upcoming script specification to undergo character translation.
+* **SPUCE Encoded vs. RNUR Vacancy:** Only the space SPUCE leaves unallocated inside its zones stays `???` territory. As soon as SPUCE allocates a script, those code points leave the RNUR provisional list and become SPUCE allocations — for example `FF700–FF9FF` (Control Pictures Extended-II, soon going to be encoded in Plane 16), `F50F0–F514F` (Enochian, Litterae Ignotae, and Theban), and `F92C0–F941F` (Placeholder). Conversely, the sectors SPUCE reserved for RNUR (`F9000–F9FFF`, `FB000–FBFFF`) are Tier A embassy slots and are never `???` territory.
 
 ### 3. Upstream Collision & Set 2 Eviction Protocol
 

@@ -91,7 +91,7 @@ The following blocks represent unallocated space (`OPEN_SLOT`) and defensively z
 #### Plane 15 (SPUA-A) Provisional Open Slots
 * `U+F1D00`–`U+F1EFF` | `U+F26B0`–`U+F26FF` | `U+F28E0`–`U+F28FF` | `U+F2960`–`U+F29FF`
 * `U+F3400`–`U+F4DFF` | `U+F5150`–`U+F7FFF` | `U+F81B0`–`U+F8FFF` | `U+FA000`–`U+FAFFF`
-* `U+FC000`–`U+FDFFF` | `U+FF200`–`U+FF27F` | `U+FF2A0`–`U+FF2BF` | `U+FF700`–`U+FF9FF`
+* `U+FC000`–`U+FDFFF` | `U+FF200`–`U+FF27F` | `U+FF2A0`–`U+FF2BF`
 * `U+FFE00`–`U+FFEFF`
 
 > **Note on Provisional Eviction:** All ranges designated as `PROVISIONAL_RNUR_OPEN_SLOT` are held via defensive zoning under an active upstream vacuum. These are subject to the absolute Upstream Authority hierarchy and the Eviction Clause. If conflicting native allocations emerge upstream, these slots face automatic clean relocation routing to Set 2+ execution layers to prevent string parsing pollution.
@@ -151,6 +151,28 @@ These sectors are tracked in `data/set1_master.csv` as permanent `OPEN_SLOT` ter
 * **`U+FB000`–`U+FBFFF`** (RNUR Embassy Space in SPUCE)
 
 The Placeholder cipher is also allocated within the RNUR SPUA-A embassy space at `U+F92C0`–`U+F941F` (mirroring the RNUR Set 1 BMP PUA allocation `U+F5C0`–`U+F71F`).
+
+#### 3.5.5 Plane 15 Zone Map (SPUCE Provisional Zoning)
+
+SPUCE provisionally partitions Plane 15 (SPUA-A) into thirteen zones. Two of them, `U+F9000`–`U+F9FFF` and `U+FB000`–`U+FBFFF`, are carved out and permanently reserved for RNUR as the embassy layer described in §3.5.4, and `U+FE000`–`U+FEFFF` is reserved for SPUCE admin and FontStruct user @erictom333. The full grid is charted in `S1/Roadmap/spua-a_roadmap.md`:
+
+| Zone | Code Range | Scope | Steward |
+| :--- | :--- | :--- | :--- |
+| **1** | `F0000–F2AFF` | Large UCSUR scripts | SPUCE |
+| **2** | `F2B00–F4FFF` | Extensions of existing Unicode scripts and existing real-world scripts | SPUCE |
+| **3** | `F5000–F5FFF` | Notation, ciphers, undeciphered scripts, and pseudohistorical scripts | SPUCE |
+| **4** | `F6000–F7FFF` | Constructed scripts from existing media | SPUCE |
+| **5** | `F8000–F8FFF` | Constructed scripts for existing languages | SPUCE |
+| **6** | `F9000–F9FFF` | Constructed scripts for existing languages | Reserved for RNUR |
+| **7** | `FA000–FAFFF` | Constructed scripts for constructed languages | SPUCE |
+| **8** | `FB000–FBFFF` | Constructed scripts for constructed languages | Reserved for RNUR |
+| **9** | `FC000–FDFFF` | Constructed scripts by FontStruct users | SPUCE |
+| **10** | `FE000–FEFFF` | Personal reservation | Reserved for @erictom333 |
+| **11** | `FF000–FFEFF` | Symbols | SPUCE |
+| **12** | `FFF00–FFFEF` | Fragments | SPUCE |
+| **13** | `FFFF0–FFFFF` | Specials | SPUCE |
+
+Because SPUCE zoning is provisional and does not cover every code point in a zone, only the space SPUCE leaves unallocated inside its zones stays RNUR territory. Once SPUCE allocates a script, those code points leave the RNUR provisional list in §3.3 and become SPUCE allocations — for example `U+F50F0`–`U+F514F` (Enochian, Litterae Ignotae, and Theban) and `U+FF700`–`U+FF9FF` (Control Pictures Extended-II, soon going to be encoded in Plane 16). Scripts that remain UCSUR-listed keep their UCSUR classification instead of the zone steward.
 
 ## 4. Character Property Protocol
 
