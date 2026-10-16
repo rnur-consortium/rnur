@@ -185,6 +185,26 @@ class ArtifactConsistencyTests(unittest.TestCase):
         self.assertNotIn('??? (EFB0-EFFF)', s1)
         self.assertIn('dissolved into permanent space', spec)
 
+    def test_tier_classification_of_bmp_provisional_gaps(self):
+        """The BMP ??? gaps are Tier B (provisional), never Tier A."""
+        spec = read(os.path.join('core', 'SPECIFICATION.md'))
+        self.assertIn('##### 3.5.3.1', spec)
+        self.assertIn('##### 3.5.3.2', spec)
+        tier_a = spec.split('##### 3.5.3.1', 1)[1].split('##### 3.5.3.2', 1)[0]
+        tier_b = spec.split('##### 3.5.3.2', 1)[1].split('##### 3.5.4', 1)[0]
+        rows = {
+            (validator.parse_hex(r['Start_Code_Point']), validator.parse_hex(r['End_Code_Point'])): r
+            for r in csv_rows(os.path.join('data', 'set1_master.csv'))
+        }
+        for s, e in validator.TIER_B_BMP_PROVISIONAL_RANGES:
+            self.assertNotIn(f"U+{s:04X}", tier_a,
+                             f"Tier A must not claim provisional U+{s:04X}-U+{e:04X}")
+            self.assertIn(f"U+{s:04X}", tier_b,
+                          f"Tier B must name provisional U+{s:04X}-U+{e:04X}")
+            row = rows.get((s, e))
+            self.assertIsNotNone(row, f"CSV missing BMP provisional range U+{s:04X}-U+{e:04X}")
+            self.assertEqual(row['Script_Name'], 'PROVISIONAL_RNUR_OPEN_SLOT')
+
     def test_governance_distinction_is_explicit(self):
         """SPUCE supplies the definitions; RNUR owns Set 1 / Set 2."""
         spec = read(os.path.join('core', 'SPECIFICATION.md'))
@@ -293,6 +313,15 @@ class NegativeDetectionTests(unittest.TestCase):
             self._replace_in_file(tmp, os.path.join('core', 'SPECIFICATION.md'),
                                   'Governance distinction.',
                                   'SPUCE Set 1 note.')
+        self.assertFalse(self._run_quiet(validator.check_migration_invariants, self._mutant(mutate)))
+
+    def test_detects_tier_a_claiming_provisional_gap(self):
+        def mutate(tmp):
+            self._replace_in_file(
+                tmp, os.path.join('core', 'SPECIFICATION.md'),
+                'permanent structural space tracking slots of Plane 16.',
+                'permanent structural space tracking slots of Plane 16 '
+                '(including U+F720-U+F7FF).')
         self.assertFalse(self._run_quiet(validator.check_migration_invariants, self._mutant(mutate)))
 
     def test_detects_overlap_within_set(self):

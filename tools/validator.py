@@ -53,6 +53,15 @@ FORMER_PROVISIONAL_RANGES = [
 PLACEHOLDER_RANGE = (0xF5C0, 0xF71F)
 CONSTANTSCRIPT_RANGE = (0xE000, 0xE81F)
 
+# BMP provisional open slots (PROVISIONAL_RNUR_OPEN_SLOT). These are defensive
+# ??? territory eligible for clean Set 2 relocation routing, so they are Tier B
+# by definition (Tier A is "Non-Provisional"). The specification must never
+# re-list them under Tier A, or the classification contradiction returns.
+TIER_B_BMP_PROVISIONAL_RANGES = [
+    (0xF720, 0xF7FF),
+    (0xF820, 0xF87F),
+]
+
 def parse_hex(hex_str):
     """Converts a Unicode code point string (e.g., 'U+EE00', 'EE00', '0xEE00') into an integer."""
     clean_str = hex_str.upper().replace('U+', '').replace('0X', '').strip()
@@ -345,6 +354,24 @@ def check_migration_invariants(base_dir):
         fail("core/SPECIFICATION.md still lists the former ??? reservations as active")
     if 'dissolved into permanent space' not in spec:
         fail("core/SPECIFICATION.md does not document the permanent-space migration rule")
+
+    # --- (10b) Tier A/B classification of the BMP ??? gaps ---
+    # Tier A covers non-provisional ranges only. The BMP PROVISIONAL_RNUR_OPEN_SLOT
+    # gaps are provisional ??? territory (Tier B) and must never be claimed by
+    # Tier A; otherwise the specification silently contradicts the CSV/Blocks data.
+    if '##### 3.5.3.1' in spec and '##### 3.5.3.2' in spec:
+        tier_a_sec = spec.split('##### 3.5.3.1', 1)[1].split('##### 3.5.3.2', 1)[0]
+        tier_b_sec = spec.split('##### 3.5.3.2', 1)[1].split('##### 3.5.4', 1)[0]
+    else:
+        fail("core/SPECIFICATION.md is missing the §3.5.3.1/§3.5.3.2 tier sections")
+        tier_a_sec = tier_b_sec = ''
+    for prov_s, prov_e in TIER_B_BMP_PROVISIONAL_RANGES:
+        if f"{prov_s:04X}" in tier_a_sec:
+            fail(f"core/SPECIFICATION.md Tier A (§3.5.3.1) wrongly claims the "
+                 f"Tier B provisional range U+{prov_s:04X}-U+{prov_e:04X}")
+        if f"U+{prov_s:04X}" not in tier_b_sec:
+            fail(f"core/SPECIFICATION.md Tier B (§3.5.3.2) does not name the "
+                 f"provisional range U+{prov_s:04X}-U+{prov_e:04X}")
 
     # --- (11) governance distinction: SPUCE supplies definitions, RNUR owns sets ---
     if 'SPUCE does not use RNUR' not in spec:
