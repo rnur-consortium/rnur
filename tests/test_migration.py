@@ -205,6 +205,14 @@ class ArtifactConsistencyTests(unittest.TestCase):
             self.assertIsNotNone(row, f"CSV missing BMP provisional range U+{s:04X}-U+{e:04X}")
             self.assertEqual(row['Script_Name'], 'PROVISIONAL_RNUR_OPEN_SLOT')
 
+    def test_provisional_bmp_cells_carry_question_marks(self):
+        """Tier B BMP gaps must render as ??? cells, never bare ranges."""
+        s1 = read(os.path.join('S1', 'Roadmap', 'bmp_pua_roadmap.md'))
+        for s, e in validator.TIER_B_BMP_PROVISIONAL_RANGES:
+            bare = f"({s:04X}-{e:04X})"
+            self.assertTrue(f"??? {bare}" in s1 or f"???{bare}" in s1,
+                            f"S1 roadmap missing ??? marker for {bare}")
+
     def test_governance_distinction_is_explicit(self):
         """SPUCE supplies the definitions; RNUR owns Set 1 / Set 2."""
         spec = read(os.path.join('core', 'SPECIFICATION.md'))
@@ -322,6 +330,13 @@ class NegativeDetectionTests(unittest.TestCase):
                 'permanent structural space tracking slots of Plane 16.',
                 'permanent structural space tracking slots of Plane 16 '
                 '(including U+F720-U+F7FF).')
+        self.assertFalse(self._run_quiet(validator.check_migration_invariants, self._mutant(mutate)))
+
+    def test_detects_provisional_cell_missing_question_marks(self):
+        def mutate(tmp):
+            self._replace_in_file(tmp, os.path.join('S1', 'Roadmap', 'bmp_pua_roadmap.md'),
+                                  '??? (F820-F87F)',
+                                  '(F820-F87F)')
         self.assertFalse(self._run_quiet(validator.check_migration_invariants, self._mutant(mutate)))
 
     def test_detects_overlap_within_set(self):

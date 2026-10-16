@@ -373,6 +373,15 @@ def check_migration_invariants(base_dir):
             fail(f"core/SPECIFICATION.md Tier B (§3.5.3.2) does not name the "
                  f"provisional range U+{prov_s:04X}-U+{prov_e:04X}")
 
+    # --- (10c) ??? markers on the provisional BMP roadmap cells ---
+    # Each Tier B (provisional) BMP gap must be rendered as ??? territory in the
+    # Set 1 BMP roadmap. A bare "(F820-F87F)" cell reads like a finalised gap and
+    # hides the provisional status of the range.
+    for (s, e) in TIER_B_BMP_PROVISIONAL_RANGES:
+        bare = f"({s:04X}-{e:04X})"
+        if f"??? {bare}" not in s1_roadmap and f"???{bare}" not in s1_roadmap:
+            fail(f"S1 BMP roadmap cell for U+{s:04X}-U+{e:04X} is missing the ??? marker")
+
     # --- (11) governance distinction: SPUCE supplies definitions, RNUR owns sets ---
     if 'SPUCE does not use RNUR' not in spec:
         fail("core/SPECIFICATION.md does not state the SPUCE/RNUR governance distinction")
