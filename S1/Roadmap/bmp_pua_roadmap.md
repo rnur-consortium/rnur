@@ -189,12 +189,12 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     <tr>
       <td align="center"><b>F7xx</b></td>
       <td colspan="3" align="center">🟧 Placeholder (F700-F71F)</td>
-      <td colspan="13" align="center">???(F720-F7FF)</td>
+      <td colspan="13" align="center">??? (F720-F7FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F8xx</b></td>
       <td colspan="2" align="center">🟥 Corporate Symbols (F800-F81F)</td>
-      <td colspan="6" align="center">(F820-F87F)</td>
+      <td colspan="6" align="center">??? (F820-F87F)</td>
       <td colspan="2" align="center">🟥 Font Specifics (F880-F89F)</td>
       <td colspan="3" align="center">🟪 Aiha (F8A0-F8CF)</td>
       <td colspan="3" align="center">🟪 Klingon (F8D0-F8FF)</td>
