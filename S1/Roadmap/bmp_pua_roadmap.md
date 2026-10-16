@@ -140,18 +140,19 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
     <tr>
       <td align="center"><b>EExx</b></td>
-      <td colspan="1" align="center">🟧 Benjamin Franklin's Phonetic Additions (EE00-EE0F)</td>
-      <td colspan="5" align="center">🟧 Loopiform (EE10-EE5F)</td>
-      <td colspan="3" align="center">??? (EE60-EE8F)</td>
-      <td colspan="5" align="center">🟧 Sulat Hiligaynon (EE90-EEDF)</td>
-      <td colspan="2" align="center">🟧 Western Script (EEE0-EEFF)</td>
+      <td colspan="3" align="center">🟥 Vulcan (EE00-EE2F)</td>
+      <td colspan="3" align="center">🟥 Gallifreyan (EE30-EE5F)</td>
+      <td colspan="3" align="center">🟥 Atlantean (EE60-EE8F)</td>
+      <td colspan="3" align="center">🟥 Valyrian (EE90-EEBF)</td>
+      <td colspan="3" align="center">🟥 Dovahzul (EEC0-EEEF)</td>
+      <td colspan="1" align="center">🟥 Utopian (EEF0-EEFF)</td>
     </tr>
     <tr>
       <td align="center"><b>EFxx</b></td>
-      <td colspan="3" align="center">🟧 Western Script (EF00-EF2F)</td>
-      <td colspan="4" align="center">🟧 Zurjon (EF30-EF6F)</td>
-      <td colspan="4" align="center">🟧 Foldian (EF70-EFAF)</td>
-      <td colspan="5" align="center">??? (EFB0-EFFF)</td>
+      <td colspan="1" align="center">🟥 Utopian (EF00-EF0F)</td>
+      <td colspan="3" align="center">🟥 Global Alphabet (EF10-EF3F)</td>
+      <td colspan="3" align="center">🟥 Ditema (EF40-EF6F)</td>
+      <td colspan="9" align="center">🟥 Quốc âm tân tự (EF70-EFFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F0xx</b></td>
@@ -212,11 +213,11 @@ To ensure predictable layout boundaries for secondary forks and peer registry co
 | Registry State | Visual Notation | Global Technical Implementation & Developer Impact |
 | :--- | :--- | :--- |
 | **Truly Unassigned** | *Empty / Unallocated Space* | **Permanent RNUR Set 1 Sandbox Territory.** This space is permanently explicitly preserved as open, neutral territory within the global Set 1 framework. Because no defensive fences are built or temporary scripts mapped here, it serves as a permanent sanctuary for external custom font forks or uncoordinated local scripts. |
-| **Reserved Space** | `???` | **Provisional RNUR Set 1 Lease Territory.** This space functions as a defensive block structurally locked down by RNUR Set 1 to prevent internal overlap while awaiting upstream specification. It remains an open encoding vacuum from a network perspective, operating under a provisional lease paradigm until official upstream authorities (**UCSUR** or **SPUCE**) declare a structural allocation within these ranges. This specifically governs the U+EE00–U+EFFF range as Provisional Open Slots.|
+| **Reserved Space** | `???` | **Provisional RNUR Set 1 Lease Territory.** This space functions as a defensive block structurally locked down by RNUR Set 1 to prevent internal overlap while awaiting upstream specification. It remains an open encoding vacuum from a network perspective, operating under a provisional lease paradigm until official upstream authorities (**UCSUR** or **SPUCE**) declare a structural allocation within these ranges. Since the Set 1 → Set 2 migration, the BMP interval **`U+EE00–U+EFFF` is no longer `???` territory**: it is fully allocated to the nine SPUCE scripts charted above. The `???` marker still governs the remaining provisional ranges (e.g. `U+F720–U+F7FF`, `U+F820–U+F87F` and the Plane 15/16 provisional blocks).|
 
 ### 2. Micro-Level Breakdown: Why the `???` Range is "Provisional RNUR / Unencoded (U)CSUR/SPUCE"
 
-The fragmented and extended ranges spanning the Basic Multilingual Plane (BMP)—specifically **`U+EE00–U+EFFF`**, **`U+F720–F7FF`** and **`U+F820–U+F87F`**—are classified collectively under the `???` territory due to three core structural boundaries:
+The fragmented and extended ranges spanning the Basic Multilingual Plane (BMP)—specifically **`U+F720–F7FF`** and **`U+F820–U+F87F`**—are classified collectively under the `???` territory due to three core structural boundaries:
 
 * **Provisional RNUR Stewardship:** This real estate functions explicitly as **RNUR Set 1 space for now**. It is actively tracked and defended by the registry to anchor incoming community scripts, operating under a temporary lease paradigm.
 * **Upstream Vacuum:** While under RNUR stewardship, this space remains an open layout vacuum from the perspective of peer networks. It lacks an abstract character repertoire or formal upstream tracking, remaining designated as available real estate until **UCSUR** or **SPUCE** steps forward to claim an allocation within its boundaries.
@@ -228,4 +229,22 @@ Because the `???` territory is provisionally staked inside an unmapped zone of t
 
 * **Upstream Authority:** UCSUR and SPUCE reserve absolute historical priority over PUA layout structures.
 * **The Eviction Clause:** If an active script project is provisionally assigned to a specific block within the `???` territory by RNUR, and UCSUR or SPUCE subsequently ratifies/encodes a different, conflicting script into those exact code points, the RNUR script will undergo an automatic **Set 2 Eviction**.
-* **Set 2 Relocation Routing:** To preserve complete upstream alignment and prevent dirty runtime clashing or font rendering script pollution, the overridden internal script will be cleanly compiled out of Set 1 and reassigned to **RNUR Set 2** (Plane 16 or designated fallback overflow tables).
+* **Set 2 Relocation Routing:** To preserve complete upstream alignment and prevent dirty runtime clashing or font rendering script pollution, the overridden internal script will be cleanly compiled out of Set 1 and reassigned to **RNUR Set 2** (the Set 2 sandbox layer — designated fallback overflow tables, beginning immediately after ConstantScript).
+* **Permanent-Space Dissolution of `???` Reservations:** When migrating from the Set 1 compatibility layer into the Set 2 sandbox layer, any `???` reservation encountered is dissolved into permanent space: the provisional RNUR reservation record is removed from the active migration result, no Set 2 destination is assigned to it, and it is not recreated as a Set 2 open slot, placeholder, or provisional reservation. The code points themselves are never deleted — they simply cease to be tracked as RNUR `???` reservations.
+
+#### 3.1 Executed RNUR Set 1 → Set 2 Migration (SPUCE-Supplied Allocations Represented in RNUR Set 1)
+
+> **Governance distinction.** SPUCE does not use RNUR's Set 1 / Set 2 architecture. SPUCE supplied the nine allocation definitions that now occupy `U+EE00–U+EFFF`; RNUR defines how those definitions are represented within its own Set 1 layer and how the displaced RNUR scripts were migrated into RNUR Set 2.
+
+The eviction and dissolution rules above were applied to the `U+EE00–U+EFFF` interval. The nine SPUCE-supplied allocations now occupy the entire interval in RNUR Set 1 (see the grid above and `data/set1_master.csv`), and the six displaced RNUR scripts were relocated into Set 2 as contiguous ranges beginning at `U+E820` (see `S2/Roadmap/bmp_pua_roadmap.md` and `data/set2_sandbox.csv`):
+
+| Script | Former Set 1 range | Set 2 range | Size |
+| :--- | :--- | :--- | ---: |
+| Benjamin Franklin's Phonetic Additions | `EE00–EE0F` | `E820–E82F` | 16 |
+| Loopiform | `EE10–EE5F` | `E830–E87F` | 80 |
+| Sulat Hiligaynon | `EE90–EEDF` | `E880–E8CF` | 80 |
+| Western Script | `EEE0–EF2F` | `E8D0–E91F` | 80 |
+| Zurjon | `EF30–EF6F` | `E920–E95F` | 64 |
+| Foldian | `EF70–EFAF` | `E960–E99F` | 64 |
+
+ConstantScript remains unchanged at `U+E000–U+E81F`. The two former Set 1 `???` reservations inside this interval (`U+EE60–U+EE8F` and `U+EFB0–U+EFFF`) were **not** relocated to Set 2: they were dissolved into permanent space, and their addresses in Set 1 are now covered by the Atlantean and Quốc âm tân tự SPUCE allocations respectively. The named RNUR allocation `Placeholder` (`U+F5C0–U+F71F`) and the remaining `???` ranges outside this interval are unaffected by this migration.

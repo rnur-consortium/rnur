@@ -27,7 +27,8 @@ When proposing modifications, your pull requests must target the exact directory
   * `set1_master.csv`: The primary, verified database tracking finalized allocations.
   * `set2_sandbox.csv`: The staging environment for experimental, pending, or unverified script layouts.
 * **`tools/`**: Contains Python scripts and verification utilities used to process data tables and analyze font-mapping metrics.
-  * `validator.py`: The core validation script responsible for parsing `.csv` files, checking matrix bounds, and identifying code point collisions.
+  * `validator.py`: The core validation script responsible for parsing `.csv` files, checking matrix bounds, identifying code point collisions, and enforcing the Set 1 → Set 2 migration invariants.
+* **`tests/`**: Regression tests for the registry, including the representation of the SPUCE-supplied allocations in RNUR Set 1 and the RNUR Set 2 relocations (`test_migration.py`).
 
 ---
 
@@ -52,6 +53,8 @@ If you are modifying automated tooling in `tools/` or contributing documentation
 Every pull request submitted to this repository automatically triggers our GitHub Actions integration pipeline running `.github/workflows/registry_check.yml`. This workflow directly executes `tools/validator.py` to:
 1. Verify that all modified `.csv` data formatting perfectly aligns with `core/SPECIFICATION.md`.
 2. Scan all code points to ensure zero overlaps between `data/set1_master.csv` and active sandbox entries.
+3. Enforce the RNUR Set 1 → Set 2 migration invariants: exact SPUCE-supplied coverage of `U+EE00–U+EFFF` (SPUCE supplies the definitions; RNUR represents them in its own sets), the six contiguous Set 2 relocations from `U+E820`, the unchanged ConstantScript block, and the removal of the former `???` reservations.
+4. Confirm that the CSVs, `UNIDATA/*/Blocks.txt`, the roadmaps, and `core/SPECIFICATION.md` agree; the pipeline also runs the regression suite in `tests/` (`python -m unittest discover -s tests`).
 
 **Important:** Your pull request *will not be merged* if the automated registry check fails. You can run `python tools/validator.py` locally to test your data matrices prior to pushing your changes.
 

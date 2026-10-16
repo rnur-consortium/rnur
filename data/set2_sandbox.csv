@@ -1,5 +1,11 @@
 Set_Number,Start_Code_Point,End_Code_Point,Project_Name,Owner,Status,Description
 2,U+E000,U+E81F,Constantscript,u/Constant_Ad_5890 (_4olhos) & Discord Server,Active,Maintained by the Constantscript Discord server. Issue initiated by u/Fyteria (Abytherus).
-2,U+E820,U+F8FF,OPEN_SANDBOX,NONE,Waiting for Submissions,Parallel BMP Private Use Area layer. Remaining open sandbox real estate.
+2,U+E820,U+E82F,Benjamin Franklin's Phonetic Additions,Benjamin Franklin,Provisional Lease / Pending Upstream Ratification,"Set 2 relocation of the former Set 1 allocation U+EE00-U+EE0F (16 code points). Evicted under the Set 1 to Set 2 migration when the SPUCE allocation map took over U+EE00-U+EFFF in Set 1."
+2,U+E830,U+E87F,Loopiform,Filipe Dos Reis,Provisional Lease / Pending Upstream Ratification,"Set 2 relocation of the former Set 1 allocation U+EE10-U+EE5F (80 code points). Evicted under the Set 1 to Set 2 migration when the SPUCE allocation map took over U+EE00-U+EFFF in Set 1."
+2,U+E880,U+E8CF,Sulat Hiligaynon,Julius Dalum,Provisional Lease / Pending Upstream Ratification,"Set 2 relocation of the former Set 1 allocation U+EE90-U+EEDF (80 code points). Evicted under the Set 1 to Set 2 migration when the SPUCE allocation map took over U+EE00-U+EFFF in Set 1."
+2,U+E8D0,U+E91F,Western Script,Julius Dalum,Provisional Lease / Pending Upstream Ratification,"Set 2 relocation of the former Set 1 allocation U+EEE0-U+EF2F (80 code points). Evicted under the Set 1 to Set 2 migration when the SPUCE allocation map took over U+EE00-U+EFFF in Set 1."
+2,U+E920,U+E95F,Zurjon,u/Willing_Squirrel_741,Provisional Lease / Pending Upstream Ratification,"Set 2 relocation of the former Set 1 allocation U+EF30-U+EF6F (64 code points). Evicted under the Set 1 to Set 2 migration when the SPUCE allocation map took over U+EE00-U+EFFF in Set 1."
+2,U+E960,U+E99F,Foldian,u/Willing_Squirrel_741,Provisional Lease / Pending Upstream Ratification,"Set 2 relocation of the former Set 1 allocation U+EF70-U+EFAF (64 code points). Evicted under the Set 1 to Set 2 migration when the SPUCE allocation map took over U+EE00-U+EFFF in Set 1."
+2,U+E9A0,U+F8FF,OPEN_SANDBOX,NONE,Waiting for Submissions,Parallel BMP Private Use Area layer. Remaining open sandbox real estate after the Set 1 to Set 2 relocations.
 2,U+F0000,U+FFFFF,OPEN_SANDBOX,NONE,Waiting for Submissions,Parallel Plane 15 SPUA-A layer. Available for isolated testing.
 2,U+100000,U+10FFFF,OPEN_SANDBOX,NONE,Waiting for Submissions,Parallel Plane 16 SPUA-B layer. Available for isolated testing.

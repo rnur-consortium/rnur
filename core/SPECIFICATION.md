@@ -39,7 +39,7 @@ Set 2 (Sandbox)    [ U+E000 ] [ U+E001 ] [ U+E002 ] ... Application-Specific
                        │
 Set 1 (Global)     [ U+EE00 ] [ U+EE10 ] [ U+EE11 ] ... Global Permanent Mappings
                        └─┬────┘   └─┬─────────────────┘
-                 Franklin Range   Xaini / Community
+                  Vulcan Range   SPUCE / Community
 ```
 
 ### 2.1 Set Layer Classification
@@ -60,17 +60,56 @@ To preserve memory space within Plane 0 (the Basic Multilingual Plane) while ens
 
 Reserved exclusively for low-payload, stable alphabets (such as simple featural, phonetic, or segmented writing systems) under Set 1 allocations.
 
-* **U+EE00–U+EE0F**: Franklin Phonetic Alphabet (Benjamin Franklin).
-* **U+EE10–U+EE5F**: Loopiform (Filipe Dos Reis).
-* **U+EE60–U+EE8F**: PROVISIONAL_RNUR_OPEN_SLOT.
-* **U+EE90–U+EEDF**: Sulat Hiligaynon (Julius Dalum).
-* **U+EEE0–U+EF2F**: Western Script (Julius Dalum).
-* **U+EF30–U+EF6F**: Zurjon (u/Willing_Squirrel_741).
-* **U+EF70–U+EFAF**: Foldian (u/Willing_Squirrel_741).
-* **U+EFB0–U+EFFF**: PROVISIONAL_RNUR_OPEN_SLOT.
-* **U+F5C0–U+F71F**: Placeholder (English cipher script; RNUR Set 1 allocation).
+#### 3.1.1 SPUCE-Supplied Allocation Map for `U+EE00–U+EFFF` (Represented in RNUR Set 1)
+
+> **Governance distinction.** SPUCE does not use RNUR's Set 1 / Set 2 architecture; the set names in this document refer exclusively to RNUR's internal organization. SPUCE supplies the incoming allocation definitions listed below. RNUR defines how those definitions are represented within RNUR's own Set 1 layer, and how RNUR scripts displaced by them migrate into RNUR Set 2.
+
+The entire RNUR Set 1 BMP PUA interval `U+EE00–U+EFFF` is represented by nine SPUCE-supplied script allocations. These nine ranges cover the interval exactly, with no gaps and no overlaps (inclusive sizes in code points):
+
+| Script | Range | Size |
+| :--- | :--- | ---: |
+| Vulcan | `U+EE00`–`U+EE2F` | 48 |
+| Gallifreyan | `U+EE30`–`U+EE5F` | 48 |
+| Atlantean | `U+EE60`–`U+EE8F` | 48 |
+| Valyrian | `U+EE90`–`U+EEBF` | 48 |
+| Dovahzul | `U+EEC0`–`U+EEEF` | 48 |
+| Utopian | `U+EEF0`–`U+EF0F` | 32 |
+| Global Alphabet | `U+EF10`–`U+EF3F` | 48 |
+| Ditema | `U+EF40`–`U+EF6F` | 48 |
+| Quốc âm tân tự | `U+EF70`–`U+EFFF` | 144 |
+
+These records are tracked in `data/set1_master.csv` (flag `SPUCE`) and `UNIDATA/S1/Blocks.txt`. **Provenance note:** this repository implements the supplied SPUCE allocation map for the BMP PUA; the records are declared as SPUCE allocations owned by SPUCE, and this specification does not assert an independent RNUR verification of the upstream SPUCE publication or formal ratification of this map beyond the SPUCE source agreement recorded in `UNIDATA/S1/Sources.txt`.
+
+#### 3.1.2 Former Set 1 RNUR Allocations Relocated to Set 2
+
+No displaced RNUR script remains an active Set 1 allocation inside `U+EE00–U+EFFF`. The six named RNUR scripts formerly allocated there were evicted to the Set 2 sandbox layer, occupying contiguous ranges that begin immediately after ConstantScript (`U+E000–U+E81F`):
+
+| Script | Former Set 1 range | Set 2 range | Size |
+| :--- | :--- | :--- | ---: |
+| Benjamin Franklin's Phonetic Additions | `U+EE00`–`U+EE0F` | `U+E820`–`U+E82F` | 16 |
+| Loopiform | `U+EE10`–`U+EE5F` | `U+E830`–`U+E87F` | 80 |
+| Sulat Hiligaynon | `U+EE90`–`U+EEDF` | `U+E880`–`U+E8CF` | 80 |
+| Western Script | `U+EEE0`–`U+EF2F` | `U+E8D0`–`U+E91F` | 80 |
+| Zurjon | `U+EF30`–`U+EF6F` | `U+E920`–`U+E95F` | 64 |
+| Foldian | `U+EF70`–`U+EFAF` | `U+E960`–`U+E99F` | 64 |
+
+The destinations are contiguous, non-overlapping, preserve the original order and inclusive sizes, and cover `U+E820–U+E99F` exactly. `U+E9A0–U+F8FF` remains open Set 2 sandbox space.
+
+#### 3.1.3 Other Set 1 BMP Allocations (Unaffected)
+
+* **U+F5C0–U+F71F**: Placeholder (English cipher script; RNUR Set 1 allocation — a named allocation, not a `???` reservation).
 * **U+F720–U+F7FF**: PROVISIONAL_RNUR_OPEN_SLOT.
 * **U+F820–U+F87F**: PROVISIONAL_RNUR_OPEN_SLOT.
+
+#### 3.1.4 Permanent-Space Migration Rule for `???` Reservations
+
+**When migrating from the Set 1 compatibility layer into the Set 2 sandbox layer, any `???` reservation encountered is dissolved into permanent space.** Concretely:
+
+* The provisional RNUR reservation record is removed from the active migration result.
+* No Set 2 destination is assigned to it; it is not recreated as a Set 2 open slot, placeholder, or provisional reservation, and it is not renamed to an invented script.
+* The Unicode code points themselves are never deleted.
+
+The two former Set 1 `???` reservations inside the SPUCE interval — `U+EE60–U+EE8F` and `U+EFB0–U+EFFF` — were removed by this rule and were **not** carried into Set 2. Their addresses nevertheless belong to SPUCE in the final Set 1 map because the nine SPUCE allocations replace the entire `U+EE00–U+EFFF` interval: `U+EE60–U+EE8F` is now part of Atlantean and `U+EFB0–U+EFFF` is part of Quốc âm tân tự. The permanent-space conversion describes how the provisional reservations were treated during migration; it does not override or erase the final RNUR Set 1 representation of the SPUCE-supplied allocations. The named `Placeholder` allocation (`U+F5C0–U+F71F`) and `???` ranges outside the migrated interval are untouched by this rule.
 
 ---
 
@@ -78,9 +117,10 @@ Reserved exclusively for low-payload, stable alphabets (such as simple featural,
 
 To prevent clashing layout telemetry within rendering engines, dedicated structural placeholders are assigned as empty characters strictly under **Set 1** specifications. No active scripts or symbols are mapped to these coordinates:
 
-* **BMP Sector:** `U+EFD0`–`U+EFFF`
 * **Plane 15 Sector (SPUA-A Hints/Specials):** `U+FFF00`–`U+FFFFF`
 * **Plane 16 Sector (SPUA-B Hints/Specials):** `U+10FFF0`–`U+10FFFF`
+
+> **Correction (Set 1 → Set 2 migration):** the former BMP empty-character sector `U+EFD0`–`U+EFFF` is superseded by the SPUCE allocation map for `U+EE00–U+EFFF` described in §3.1.1. Because the nine SPUCE allocations replace the whole interval, those code points now belong to the Quốc âm tân tự allocation and can no longer be tracked as an empty-character sector. The Plane 15 and Plane 16 empty-character sectors are unaffected.
 
 ---
 
@@ -94,7 +134,7 @@ The following blocks represent unallocated space (`OPEN_SLOT`) and defensively z
 * `U+FC000`–`U+FDFFF` | `U+FF200`–`U+FF27F` | `U+FF2A0`–`U+FF2BF`
 * `U+FFE00`–`U+FFEFF`
 
-> **Note on Provisional Eviction:** All ranges designated as `PROVISIONAL_RNUR_OPEN_SLOT` are held via defensive zoning under an active upstream vacuum. These are subject to the absolute Upstream Authority hierarchy and the Eviction Clause. If conflicting native allocations emerge upstream, these slots face automatic clean relocation routing to Set 2+ execution layers to prevent string parsing pollution.
+> **Note on Provisional Eviction:** All ranges designated as `PROVISIONAL_RNUR_OPEN_SLOT` are held via defensive zoning under an active upstream vacuum. These are subject to the absolute Upstream Authority hierarchy and the Eviction Clause. If conflicting native allocations emerge upstream, these slots face automatic clean relocation routing to Set 2+ execution layers to prevent string parsing pollution. The former BMP provisional reservations `U+EE60–U+EE8F` and `U+EFB0–U+EFFF` are no longer part of this list: they were dissolved into permanent space during the Set 1 → Set 2 migration (see §3.1.4) and their addresses are now SPUCE allocations.
 
 #### Plane 16 (SPUA-B)
 * `U+100000`–`U+10FFEF`
@@ -112,6 +152,8 @@ Sets 2+ are completely exempt from structural block categories, provisional trac
 * **Plane 16 Sector (SPUA-B):** `U+100000`–`U+10FFFF`
 
 This unrestricted total allocation model allows Sets 2+ to accommodate broad-spectrum fallback routing, high-density character transcoding, and custom font mapping overflows without polluting active Set 1 layout tracks.
+
+As of the Set 1 → Set 2 migration, the active Set 2 BMP allocations are: ConstantScript (`U+E000`–`U+E81F`, unchanged) followed by the six relocated RNUR scripts (`U+E820`–`U+E99F`, see §3.1.2), with `U+E9A0`–`U+F8FF` remaining open sandbox space. The dissolved `???` reservations from Set 1 are deliberately absent: no Set 2 record represents them as allocations or reservations.
 
 ---
 
@@ -141,6 +183,8 @@ This tier applies to sectors explicitly designated as Provisional RNUR Territory
 1. **Dynamic Database Migration:** The registry master pipeline executes an automated offline database migration, shifting the displaced script's records away from the collision zone and into the first available, unassigned tracking ranges at the base of the Set 2 sandbox layer.
 2. **Metric Refactoring:** Font compilation tools rebuild and refactor the underlying glyph metrics and code point mappings to align cleanly with the new sandbox target plane destination.
 3. **Upstream Compliance:** The vacated Set 1 coordinate pair $(1, C)$ is updated in the master database to mirror the native upstream allocation, completely clearing out runtime font rendering pollution.
+
+> **Migration note (BMP `???` dissolution):** The former BMP provisional blocks `U+EE60–U+EE8F` and `U+EFB0–U+EFFF` no longer exist as RNUR provisional reservations. During the Set 1 → Set 2 migration they were dissolved into permanent space per §3.1.4 — no Set 2 destinations were assigned to them — and their Set 1 addresses now belong to the SPUCE Atlantean and Quốc âm tân tự allocations. Tier B routing no longer applies to those ranges. The remaining BMP provisional blocks (`U+F720–U+F7FF`, `U+F820–U+F87F`) keep their existing classification.
 
 ##### 3.5.4 RNUR Embassy Space in SPUCE (Shared Private Use Character Encoding)
 To maintain permanent, collision-safe visibility for active Set 1 scripts within the shared SPUCE registry, RNUR holds a dedicated embassy layer inside SPUCE territory. SPUCE has formally reserved the `U+F9000`–`U+F9FFF` and `U+FB000`–`U+FBFFF` sectors for RNUR, making these ranges **permanent Tier A slots owned by RNUR** and not subject to the eviction vectors defined in §3.5.3.

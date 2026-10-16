@@ -1,5 +1,5 @@
 # Blocks-RNUR.txt
-# Date: 2026-06-17, 20:20:00
+# Date: 2026-10-16, 12:00:00
 #
 # Reddit Neographical Unicode Registry Character Database
 # Maintained by Registry Architecture / Nexus Tribarixa
@@ -106,6 +106,15 @@ F2830..F289F; ¿Shaleian?
 F2900..F295F; ¿Visible Speech Extended?
 
 # --- SPUCE Project Allocations (🟥) ---
+EE00..EE2F; Vulcan
+EE30..EE5F; Gallifreyan
+EE60..EE8F; Atlantean
+EE90..EEBF; Valyrian
+EEC0..EEEF; Dovahzul
+EEF0..EF0F; Utopian
+EF10..EF3F; Global Alphabet
+EF40..EF6F; Ditema
+EF70..EFFF; Quốc âm tân tự
 F000..F0FF; Stylistic Variant Forms
 F100..F1FF; Phonetic Extensions-I
 F200..F2FF; Latin Extended-I
@@ -173,12 +182,11 @@ FEF40..FEF8F; African Transitional
 FEF90..FEFFF; Layout Sandbox Space (erictom333 Reserved)
 
 # --- RNUR Set 1 Allocations (🟧) ---
-EE00..EE0F; Benjamin Franklin's Phonetic Additions
-EE10..EE5F; Loopiform
-EE90..EEDF; Sulat Hiligaynon
-EEE0..EF2F; Western Script
-EF30..EF6F; Zurjon
-EF70..EFAF; Foldian
+# NOTE: The former Set 1 allocations in U+EE00..U+EFFF (Benjamin Franklin's
+# Phonetic Additions, Loopiform, Sulat Hiligaynon, Western Script, Zurjon,
+# Foldian) were relocated to Set 2 (U+E820..U+E99F) during the Set 1 to Set 2
+# migration; that interval is now fully allocated to SPUCE-supplied scripts
+# represented in RNUR Set 1 (see above).
 F5C0..F71F; Placeholder
 
 # --- RNUR Embassy Space in SPUCE (Shared Private Use Character Encoding) ---
@@ -202,8 +210,10 @@ FB000..FB12F; OPEN_SLOT
 FB1B0..FBFFF; OPEN_SLOT
 
 # --- Provisional RNUR Open Blocks (PROVISIONAL_RNUR_OPEN_SLOT) ---
-EE60..EE8F; PROVISIONAL_RNUR_OPEN_SLOT
-EFB0..EFFF; PROVISIONAL_RNUR_OPEN_SLOT
+# NOTE: U+EE60..U+EE8F and U+EFB0..U+EFFF were former ??? reservations here.
+# Under the permanent-space migration rule they were dissolved into permanent
+# space (no Set 2 destination); their addresses are now part of the SPUCE
+# Atlantean and Quốc âm tân tự allocations above.
 F720..F7FF; PROVISIONAL_RNUR_OPEN_SLOT
 F820..F87F; PROVISIONAL_RNUR_OPEN_SLOT
 100000..10FFEF; PROVISIONAL_RNUR_OPEN_SLOT

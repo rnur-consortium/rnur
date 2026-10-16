@@ -1,5 +1,5 @@
 # Blocks-RNUR.txt
-# Date: 2026-06-22, 12:05:00
+# Date: 2026-10-16, 12:00:00
 #
 # Reddit Neographical Unicode Registry Character Database
 # Maintained by Registry Architecture / Nexus Tribarixa
@@ -19,13 +19,26 @@
 
 # --- RNUR Set 2 Allocations (🟧) ---
 E000..E81F; Constantscript
+# Set 1 to Set 2 migration: the six scripts displaced from U+EE00..U+EFFF by
+# the incoming SPUCE-supplied allocation map, relocated contiguously after
+# ConstantScript. (SPUCE supplies the definitions; RNUR owns the sets.)
+E820..E82F; Benjamin Franklin's Phonetic Additions
+E830..E87F; Loopiform
+E880..E8CF; Sulat Hiligaynon
+E8D0..E91F; Western Script
+E920..E95F; Zurjon
+E960..E99F; Foldian
 
 # ================================================
 # ARCHITECTURAL OPEN Real Estate / Tracking
 # ================================================
 
 # --- Standard Unallocated Sandbox Space (OPEN_SLOT) ---
-E820..F8FF; OPEN_SLOT
+# NOTE: The former ??? reservations U+EE60..U+EE8F and U+EFB0..U+EFFF were
+# dissolved into permanent space during the Set 1 to Set 2 migration. They are
+# deliberately NOT carried over into Set 2 as slots or reservations; the code
+# points below simply remain unallocated sandbox space.
+E9A0..F8FF; OPEN_SLOT
 F0000..10FFFF; OPEN_SLOT
 
 # EOF

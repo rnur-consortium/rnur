@@ -64,11 +64,17 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     <tr>
       <td align="center"><b>E8xx</b></td>
       <td colspan="2" align="center">🟧 Constantscript (E800-E81F)</td>
-      <td colspan="14" align="center">(E820-E8FF)</td>
+      <td colspan="1" align="center">🟧 Benjamin Franklin's Phonetic Additions (E820-E82F)</td>
+      <td colspan="5" align="center">🟧 Loopiform (E830-E87F)</td>
+      <td colspan="5" align="center">🟧 Sulat Hiligaynon (E880-E8CF)</td>
+      <td colspan="3" align="center">🟧 Western Script (E8D0-E8FF)</td>
     </tr>
     <tr>
       <td align="center"><b>E9xx</b></td>
-      <td colspan="16" align="center">(E900-E9FF)</td>
+      <td colspan="2" align="center">🟧 Western Script (E900-E91F)</td>
+      <td colspan="4" align="center">🟧 Zurjon (E920-E95F)</td>
+      <td colspan="4" align="center">🟧 Foldian (E960-E99F)</td>
+      <td colspan="6" align="center">(E9A0-E9FF)</td>
     </tr>
     <tr>
       <td align="center"><b>EAxx</b></td>
@@ -132,3 +138,22 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     </tr>
   </tbody>
 </table>
+
+---
+
+## Set 1 → Set 2 Migration Notes
+
+The six named RNUR scripts below were evicted from their former Set 1 ranges in `U+EE00–U+EFFF` (now fully allocated to the nine SPUCE scripts) and relocated to contiguous Set 2 ranges beginning immediately after ConstantScript. Inclusive sizes are preserved from their Set 1 allocations, and the original order is retained:
+
+| Script | Former Set 1 range | Set 2 range | Size |
+| :--- | :--- | :--- | ---: |
+| Benjamin Franklin's Phonetic Additions | `EE00–EE0F` | `E820–E82F` | 16 |
+| Loopiform | `EE10–EE5F` | `E830–E87F` | 80 |
+| Sulat Hiligaynon | `EE90–EEDF` | `E880–E8CF` | 80 |
+| Western Script | `EEE0–EF2F` | `E8D0–E91F` | 80 |
+| Zurjon | `EF30–EF6F` | `E920–E95F` | 64 |
+| Foldian | `EF70–EFAF` | `E960–E99F` | 64 |
+
+* **ConstantScript is unchanged** at `U+E000–U+E81F`.
+* The six destination ranges are contiguous, non-overlapping, and cover `U+E820–U+E99F` exactly; `U+E9A0–U+F8FF` remains open sandbox space (`OPEN_SANDBOX` in `data/set2_sandbox.csv`, `OPEN_SLOT` in `UNIDATA/S2/Blocks.txt`).
+* The former Set 1 `???` provisional reservations at `U+EE60–U+EE8F` and `U+EFB0–U+EFFF` were **dissolved into permanent space** during this migration. They were not migrated into Set 2 and are not recreated here as open slots, placeholders, or provisional reservations; in Set 1 those addresses are now part of the Atlantean and Quốc âm tân tự SPUCE allocations.

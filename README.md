@@ -23,18 +23,35 @@ With no arguments, the validator scans both CSV files, parses the set and
 hexadecimal ranges, and reports malformed rows and overlapping ranges within
 the same set. It skips rows marked `Waiting for Submissions`,
 `Provisional Allocation / Open for Submission`, or
-`Permanent Allocation / Open for Submission`.
+`Permanent Allocation / Open for Submission`. It then verifies the
+Set 1 → Set 2 migration invariants: the nine SPUCE-supplied allocations
+represented in RNUR Set 1 covering
+`U+EE00–U+EFFF` exactly, the six RNUR relocations into Set 2 starting at
+`U+E820`, the unchanged ConstantScript block at `U+E000–U+E81F`, the removal of
+the former `???` provisional reservations, and agreement between the CSVs,
+`UNIDATA/*/Blocks.txt`, the roadmaps, and `core/SPECIFICATION.md`.
 
-To check a proposed range against one local set:
+To check a proposed range against one local set (use a range you believe is
+still open, such as the RNUR embassy space):
 
 ```powershell
-py tools/validator.py 1 U+EE00 U+EE0F
-py tools/validator.py 2 U+E820 U+E82F
+py tools/validator.py 1 U+F9060 U+F908F
+py tools/validator.py 2 U+E9A0 U+E9BF
 ```
 
 The command accepts set 1 or 2, start, and end; it reports overlap but does
 not reserve or write an allocation. It does not query upstream registries,
 build fonts, or perform an eviction/migration.
+
+## Migration regression tests
+
+The repository ships regression tests for the SPUCE-supplied allocations
+represented in RNUR Set 1, the six Set 2
+relocations, and the permanent-space handling of the former `???` ranges:
+
+```powershell
+py -m unittest discover -s tests -v
+```
 
 ## Status and limits
 
@@ -57,7 +74,8 @@ authority.
 - `S1/`, `S2/` — set-specific roadmaps and supporting documents.
 - `core/` — registry specifications.
 - `UNIDATA/` — mirrored Unicode data and provenance.
-- `tools/validator.py` — command-line collision and format check.
+- `tools/validator.py` — command-line collision, format, and migration check.
+- `tests/test_migration.py` — regression tests for the Set 1 → Set 2 migration.
 - `.github/workflows/registry_check.yml` — push/pull-request matrix check.
 
 The authoritative review process and status definitions are documented in

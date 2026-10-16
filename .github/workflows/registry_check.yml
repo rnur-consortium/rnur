@@ -71,3 +71,9 @@ jobs:
 
         validate_rnur_matrix()
         EOF
+
+    - name: Run RNUR Registry & Migration Validator
+      run: python tools/validator.py
+
+    - name: Run Migration Regression Tests
+      run: python -m unittest discover -s tests -v
