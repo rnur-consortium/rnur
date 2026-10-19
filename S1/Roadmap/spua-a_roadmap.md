@@ -8,6 +8,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
   * 🟨 = **SPUCE Project Allocations (Reserved for SPUCE Admin and FontStruct user @erictom333)** (Yellow)
 * 🟧 = **RNUR Set 1 Allocations** (Orange)
 * ⬛ = **Unconfirmed by UCSUR** (Black) → *Formatted as ¿Script Name?*
+* `???` = **Provisional RNUR Open Slot** (`PROVISIONAL_RNUR_OPEN_SLOT`) → *Provisional RNUR Set 1 Lease Territory: defensive `???` space held under RNUR stewardship pending upstream ratification*
 
 ---
 
@@ -28,8 +29,10 @@ Plane 15 is provisionally zoned by SPUCE into the thirteen sectors below. Two of
 | **9** | `FC000–FDFFF` | Constructed scripts by FontStruct users | 🟥 SPUCE |
 | **10** | `FE000–FEFFF` | Personal reservation | 🟨 Reserved for @erictom333 |
 | **11** | `FF000–FFEFF` | Symbols | 🟥 SPUCE |
-| **12** | `FFF00–FFFEF` | Fragments | 🟥 SPUCE |
+| **12** | `FFFC0–FFFEF` | Fragments | 🟥 SPUCE |
 | **13** | `FFFF0–FFFFF` | Specials | 🟥 SPUCE |
+
+> **Note (SPUCE Fragments reduction, 2026-10-19):** Zone 12's Fragments allocation was reduced to `FFFC0–FFFEF`. The released range `FFF00–FFFBF` is tracked by RNUR in Set 1 as a `PROVISIONAL_RNUR_OPEN_SLOT` (charted as `???` territory below) — it is neither a SPUCE allocation nor confirmed UCSUR space.
 
 ---
 
@@ -228,14 +231,14 @@ Plane 15 is provisionally zoned by SPUCE into the thirteen sectors below. Two of
     </tr>
     <tr>
       <td align="center"><b>F28xx</b></td>
-      <td colspan="3" align="center">⬛ ¿Liparxe? (F2800–F282F)</td>
-      <td colspan="7" align="center">⬛ ¿Shaleian? (F2830–F289F)</td>
+      <td colspan="3" align="center">🟩 Liparxe (F2800–F282F)</td>
+      <td colspan="7" align="center">🟩 Shaleian (F2830–F289F)</td>
       <td colspan="4" align="center">🟩 Zbalermorna (F28A0–F28DF)</td>
       <td colspan="2" align="center">??? (F28E0–F28FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F29xx</b></td>
-      <td colspan="6" align="center">⬛ ¿Visible Speech Extended? (F2900–F295F)</td>
+      <td colspan="6" align="center">🟥 Visible Speech Extended (F2900–F295F)</td>
       <td colspan="10" align="center">??? (F2960–F29FF)</td>
     </tr>
     <tr>
@@ -1135,7 +1138,8 @@ Plane 15 is provisionally zoned by SPUCE into the thirteen sectors below. Two of
     </tr>
     <tr>
       <td align="center"><b>FFFxx</b></td>
-      <td colspan="15" align="center">🟥 Fragments (FFF00–FFFEF)</td>
+      <td colspan="12" align="center">??? (FFF00–FFFBF)</td>
+      <td colspan="3" align="center">🟥 Fragments (FFFC0–FFFEF)</td>
       <td colspan="1" align="center">🟥 Plane 15 Specials (FFFF0–FFFFF)</td>
     </tr>
   </tbody>
@@ -1156,12 +1160,12 @@ To ensure predictable layout boundaries for secondary forks and peer registry co
 
 ### 2. Micro-Level Breakdown: Why the `???` Range is "Provisional RNUR / Unencoded (U)CSUR/SPUCE"
 
-The fragmented and extended ranges spanning **`F1D00–F1EFF`**, **`F26B0–F26FF`**, **`F28E0–F28FF`**, **`F2960–F29FF`**, **`F3400–F4DFF`**, **`F5150–F7FFF`**, **`F81B0–F8FFF`**, **`FA000–FAFFF`**, **`FC000–FDFFF`**, **`FF200–FF27F`**, **`FF2A0–FF2BF`**, and **`FFE00–FFEFF`** are classified collectively under the `???` territory due to three core structural boundaries:
+The fragmented and extended ranges spanning **`F1D00–F1EFF`**, **`F26B0–F26FF`**, **`F28E0–F28FF`**, **`F2960–F29FF`**, **`F3400–F4DFF`**, **`F5150–F7FFF`**, **`F81B0–F8FFF`**, **`FA000–FAFFF`**, **`FC000–FDFFF`**, **`FF200–FF27F`**, **`FF2A0–FF2BF`**, **`FFE00–FFEFF`**, and **`FFF00–FFFBF`** are classified collectively under the `???` territory due to three core structural boundaries:
 
 * **Provisional RNUR Ownership:** This real estate functions explicitly as **RNUR Set 1 space for now**. It is actively tracked and defended by the registry to anchor incoming community scripts, operating under a temporary lease paradigm.
 * **Upstream Vacuum:** While under RNUR stewardship, this space remains an open layout vacuum from the perspective of peer networks. It lacks an abstract character repertoire or formal upstream tracking, remaining designated as available real estate until **UCSUR** or **SPUCE** steps forward to claim an allocation within its boundaries.
 * **Allocation vs. Encoding Boundaries:** Macro-allocation handles defensive zoning (securing real estate borders on the layout grid). Micro-encoding handles the internal asset engineering (character logic inside those borders). The `???` marker denotes a completed macro-allocation that is waiting for an upcoming script specification to undergo character translation.
-* **SPUCE Encoded vs. RNUR Vacancy:** Only the space SPUCE leaves unallocated inside its zones stays `???` territory. As soon as SPUCE allocates a script, those code points leave the RNUR provisional list and become SPUCE allocations — for example `FF700–FF9FF` (Control Pictures Extended-II, soon going to be encoded in Plane 16), `F50F0–F514F` (Enochian, Litterae Ignotae, and Theban), and `F92C0–F941F` (Placeholder). Conversely, the sectors SPUCE reserved for RNUR (`F9000–F9FFF`, `FB000–FBFFF`) are Tier A embassy slots and are never `???` territory.
+* **SPUCE Encoded vs. RNUR Vacancy:** Only the space SPUCE leaves unallocated inside its zones stays `???` territory. As soon as SPUCE allocates a script, those code points leave the RNUR provisional list and become SPUCE allocations — for example `FF700–FF9FF` (Control Pictures Extended-II, soon going to be encoded in Plane 16), `F50F0–F514F` (Enochian, Litterae Ignotae, and Theban), and `F92C0–F941F` (Placeholder). Conversely, when SPUCE reduces an allocation, the released range returns to RNUR as `???` territory — the 2026-10-19 Fragments reduction returned `FFF00–FFFBF`, while the remaining SPUCE Fragments allocation stays `FFFC0–FFFEF`. By contrast, the sectors SPUCE reserved for RNUR (`F9000–F9FFF`, `FB000–FBFFF`) are Tier A embassy slots and are never `???` territory.
 
 ### 3. Upstream Collision & Set 2 Eviction Protocol
 

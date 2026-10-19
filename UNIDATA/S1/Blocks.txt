@@ -1,5 +1,5 @@
 # Blocks-RNUR.txt
-# Date: 2026-10-16, 12:00:00
+# Date: 2026-10-19, 12:00:00
 #
 # Reddit Neographical Unicode Registry Character Database
 # Maintained by Registry Architecture / Nexus Tribarixa
@@ -94,6 +94,8 @@ F1C40..F1C7F; Titi Pula
 F1C80..F1C9F; Sitelen Pona Radicals
 F1CA0..F1CFF; Yapiri
 F2000..F267F; Sadalian
+F2800..F282F; Liparxe
+F2830..F289F; Shaleian
 F28A0..F28DF; Zbalermorna
 
 # --- Unconfirmed by UCSUR (⬛) ---
@@ -101,9 +103,6 @@ F1A00..F1AFF; ¿Sitelen Pona Extended-A?
 F1F00..F1FFF; ¿Sitelen Pona Extended-B?
 F2680..F26AF; ¿Quikscript?
 F2700..F27FF; ¿Hacm?
-F2800..F282F; ¿Liparxe?
-F2830..F289F; ¿Shaleian?
-F2900..F295F; ¿Visible Speech Extended?
 
 # --- SPUCE Project Allocations (🟥) ---
 EE00..EE2F; Vulcan
@@ -124,6 +123,7 @@ F400..F4BF; Symbols and Punctuation Extended-I
 F4F0..F5BF; Number Forms Extended-I
 F800..F81F; Corporate Symbols
 F880..F89F; Font Specifics
+F2900..F295F; Visible Speech Extended
 F2A00..F2FFF; Phonetic Extensions-II
 F3000..F33FF; Latin Extended-II
 F4E00..F4FFF; Halfwidth and Fullwidth Forms Extended-I
@@ -158,7 +158,7 @@ FFAC0..FFBFF; Chess Symbols Extended-I
 FFC00..FFC2F; Arrows Extended-II
 FFC30..FFC4F; Rayalaka Color Symbols
 FFC50..FFDFF; Symbols for Legacy Computing Extended-I
-FFF00..FFFEF; Fragments
+FFFC0..FFFEF; Fragments
 FFFF0..FFFFF; Plane 15 Specials
 10FFF0..10FFFF; Plane 16 Specials
 
@@ -214,6 +214,8 @@ FB1B0..FBFFF; OPEN_SLOT
 # Under the permanent-space migration rule they were dissolved into permanent
 # space (no Set 2 destination); their addresses are now part of the SPUCE
 # Atlantean and Quốc âm tân tự allocations above.
+# NOTE: U+FFF00..U+FFFBF was released by the SPUCE Fragments reduction of
+# 2026-10-19; the remaining SPUCE Fragments allocation is U+FFFC0..U+FFFEF.
 F720..F7FF; PROVISIONAL_RNUR_OPEN_SLOT
 F820..F87F; PROVISIONAL_RNUR_OPEN_SLOT
 100000..10FFEF; PROVISIONAL_RNUR_OPEN_SLOT
@@ -229,5 +231,6 @@ FC000..FDFFF; PROVISIONAL_RNUR_OPEN_SLOT
 FF200..FF27F; PROVISIONAL_RNUR_OPEN_SLOT
 FF2A0..FF2BF; PROVISIONAL_RNUR_OPEN_SLOT
 FFE00..FFEFF; PROVISIONAL_RNUR_OPEN_SLOT
+FFF00..FFFBF; PROVISIONAL_RNUR_OPEN_SLOT
 
 # EOF
