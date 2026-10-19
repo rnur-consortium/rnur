@@ -64,6 +64,11 @@ F0E70..F16AF; Pikto
 # (reserved ranges) and the SPUCE Plane 15 Roadmap names the same ranges:
 # that overlap is provenance, not SPUCE ownership. See
 # core/SPECIFICATION.md §3.5.5.
+# A name written as ¿Script Name? denotes a UCSUR-included script whose
+# detailed proposal has not yet been written. It is a proposal-completeness
+# marker, not an "unconfirmed by UCSUR" status; such scripts stay in this
+# UCSUR-Only (🟩) class. It is unrelated to the ??? Provisional RNUR Open
+# Slot (PROVISIONAL_RNUR_OPEN_SLOT).
 E650..E67F; Sylabica
 E6D0..E6EF; Amlin
 E6F0..E73F; Unifon Extended
@@ -95,21 +100,19 @@ F16B0..F16DF; Derani
 F16E0..F16FF; Braille Supplement
 F1700..F18FF; Semtog
 F1900..F19FF; Sitelen Pona
+F1A00..F1AFF; ¿Sitelen Pona Extended-A?
 F1B00..F1C3F; Shidinn
 F1C40..F1C7F; Titi Pula
 F1C80..F1C9F; Sitelen Pona Radicals
 F1CA0..F1CFF; Yapiri
+F1F00..F1FFF; ¿Sitelen Pona Extended-B?
 F2000..F267F; Sadalian
+F2680..F26AF; ¿Quikscript?
 F2700..F27FF; Hacm
 F2800..F282F; Liparxe
 F2830..F289F; Shaleian
 F28A0..F28DF; Zbalermorna
 F2900..F295F; Visible Speech Extended-I
-
-# --- Unconfirmed by UCSUR (⬛) ---
-F1A00..F1AFF; ¿Sitelen Pona Extended-A?
-F1F00..F1FFF; ¿Sitelen Pona Extended-B?
-F2680..F26AF; ¿Quikscript?
 
 # --- SPUCE Project Allocations (🟥) ---
 EE00..EE2F; Vulcan

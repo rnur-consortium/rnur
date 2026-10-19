@@ -237,8 +237,10 @@ class ArtifactConsistencyTests(unittest.TestCase):
 class Plane15October2026Tests(unittest.TestCase):
     """The 2026-10-19 Plane 15 reconciliation: the Fragments reduction, the
     UCSUR-origin classification of Hacm, Liparxe, Shaleian, and Visible Speech
-    Extended-I, and the withdrawal of L8, with the three genuinely unconfirmed
-    scripts preserved."""
+    Extended-I, and the withdrawal of L8, with the three UCSUR-included scripts
+    whose detailed proposals are not yet written (Sitelen Pona Extended-A,
+    Sitelen Pona Extended-B, Quikscript) charted as `¿...?` inside the
+    UCSUR-Only (🟩) class."""
 
     def setUp(self):
         self.blocks = validator.load_blocks(
@@ -277,9 +279,6 @@ class Plane15October2026Tests(unittest.TestCase):
     def test_blocks_sections_reflect_ownership(self):
         green = self.blocks_text.split(
             '# --- UCSUR-Only Allocations (🟩) ---', 1)[1].split(
-            '# --- Unconfirmed by UCSUR (⬛) ---', 1)[0]
-        unconfirmed = self.blocks_text.split(
-            '# --- Unconfirmed by UCSUR (⬛) ---', 1)[1].split(
             '# --- SPUCE Project Allocations (🟥) ---', 1)[0]
         spuce = self.blocks_text.split(
             '# --- SPUCE Project Allocations (🟥) ---', 1)[1].split(
@@ -288,10 +287,14 @@ class Plane15October2026Tests(unittest.TestCase):
         for name in ('Hacm', 'Liparxe', 'Shaleian', 'Visible Speech Extended-I',
                      'Zbalermorna'):
             self.assertIn(name, green)
-            self.assertNotIn(name, unconfirmed)
             self.assertNotIn(name, spuce)
-        for name in ('Sitelen Pona Extended-A', 'Sitelen Pona Extended-B', 'Quikscript'):
-            self.assertIn(name, unconfirmed)
+        # The `¿...?` scripts are UCSUR-included, so they are charted in the
+        # same UCSUR-Only (🟩) class -- not in a separate "unconfirmed" section.
+        for name in ('¿Sitelen Pona Extended-A?', '¿Sitelen Pona Extended-B?',
+                     '¿Quikscript?'):
+            self.assertIn(name, green)
+            self.assertNotIn(name, spuce)
+        self.assertNotIn('Unconfirmed by UCSUR', self.blocks_text)
 
     def test_roadmap_cells_use_reconciled_colors(self):
         for cell in (
@@ -300,9 +303,9 @@ class Plane15October2026Tests(unittest.TestCase):
             '🟩 Shaleian (F2830–F289F)',
             '🟩 Visible Speech Extended-I (F2900–F295F)',
             '🟩 Zbalermorna (F28A0–F28DF)',
-            '⬛ ¿Sitelen Pona Extended-A? (F1A00–F1AFF)',
-            '⬛ ¿Sitelen Pona Extended-B? (F1F00–F1FFF)',
-            '⬛ ¿Quikscript? (F2680–F26AF)',
+            '🟩 ¿Sitelen Pona Extended-A? (F1A00–F1AFF)',
+            '🟩 ¿Sitelen Pona Extended-B? (F1F00–F1FFF)',
+            '🟩 ¿Quikscript? (F2680–F26AF)',
         ):
             self.assertIn(cell, self.roadmap)
 
@@ -346,6 +349,53 @@ class Plane15October2026Tests(unittest.TestCase):
             self.assertNotIn(cell, self.roadmap)
         self.assertIn('🟨 Layout Sandbox Space (FE780–FE7FF)', self.roadmap)
         self.assertIn('FED80–FEDAF', self.roadmap)  # unrelated FEDxx Gerudo kept
+
+    def test_question_mark_notation_means_missing_detailed_proposal(self):
+        # `¿Script Name?` marks a UCSUR-included script whose detailed proposal
+        # has not yet been written. It is a proposal-completeness marker and is
+        # NOT an "unconfirmed by UCSUR" flag.
+        for block in ((0xF1A00, 0xF1AFF, '¿Sitelen Pona Extended-A?'),
+                      (0xF1F00, 0xF1FFF, '¿Sitelen Pona Extended-B?'),
+                      (0xF2680, 0xF26AF, '¿Quikscript?')):
+            self.assertIn(block, self.blocks)
+        for text in (self.spec, self.roadmap):
+            self.assertIn(
+                'UCSUR-included script whose detailed proposal has not yet '
+                'been written', text)
+        self.assertIn('proposal-completeness marker', self.spec)
+
+    def test_affected_scripts_are_not_marked_unconfirmed(self):
+        self.assertNotIn('Unconfirmed by UCSUR', self.blocks_text)
+        self.assertNotIn('Unconfirmed by UCSUR', self.roadmap)
+        for old_cell in ('⬛ ¿Sitelen Pona Extended-A? (F1A00–F1AFF)',
+                         '⬛ ¿Sitelen Pona Extended-B? (F1F00–F1FFF)',
+                         '⬛ ¿Quikscript? (F2680–F26AF)'):
+            self.assertNotIn(old_cell, self.roadmap)
+
+    def test_question_mark_allocations_unchanged(self):
+        # The semantics correction must not move, resize, or reassign ranges.
+        expected = {
+            (0xF1A00, 0xF1AFF, '¿Sitelen Pona Extended-A?'): 256,
+            (0xF1F00, 0xF1FFF, '¿Sitelen Pona Extended-B?'): 256,
+            (0xF2680, 0xF26AF, '¿Quikscript?'): 48,
+        }
+        for block, size in expected.items():
+            self.assertIn(block, self.blocks)
+            self.assertEqual(block[1] - block[0] + 1, size)
+
+    def test_provisional_slot_notation_stays_distinct(self):
+        # `???` continues to mean the Provisional RNUR Open Slot and must not be
+        # merged with the `¿...?` proposal-completeness marker.
+        self.assertIn((0xFFF00, 0xFFFBF, 'PROVISIONAL_RNUR_OPEN_SLOT'),
+                      self.blocks)
+        self.assertIn('??? (FFF00–FFFBF)', self.roadmap)
+        self.assertIn('Provisional RNUR Open Slot', self.roadmap)
+        self.assertIn('PROVISIONAL_RNUR_OPEN_SLOT', self.spec)
+        provisional = {n for _, _, n in self.blocks
+                       if n == 'PROVISIONAL_RNUR_OPEN_SLOT'}
+        for name in ('¿Sitelen Pona Extended-A?', '¿Sitelen Pona Extended-B?',
+                     '¿Quikscript?'):
+            self.assertNotIn(name, provisional)
 
 
 class NegativeDetectionTests(unittest.TestCase):

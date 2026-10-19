@@ -8,7 +8,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
 * 🟥 = **SPUCE Project Allocations** (Red)
   * 🟨 = **SPUCE Project Allocations (Reserved for SPUCE Admin and FontStruct user @erictom333)** (Yellow)
 * 🟧 = **RNUR Set 1 Allocations** (Orange)
-* ⬛ = **Unconfirmed by UCSUR** (Black) → *Formatted as ¿Script Name?*
+* `¿Script Name?` = **UCSUR-included script whose detailed proposal has not yet been written** → *a proposal-completeness marker; such scripts stay in the UCSUR-Only (🟩) class and are distinct from the `???` Provisional RNUR Open Slot below*
 * `???` = **Provisional RNUR Open Slot** (`PROVISIONAL_RNUR_OPEN_SLOT`) → *Provisional RNUR Set 1 Lease Territory: defensive `???` space held under RNUR stewardship pending upstream ratification*
 
 ---
@@ -35,7 +35,7 @@ Plane 15 is provisionally zoned by SPUCE into the thirteen sectors below. Two of
 
 > **Note (SPUCE Fragments reduction, 2026-10-19):** Zone 12's Fragments allocation was reduced to `FFFC0–FFFEF`. The released range `FFF00–FFFBF` is tracked by RNUR in Set 1 as a `PROVISIONAL_RNUR_OPEN_SLOT` (charted as `???` territory below) — it is neither a SPUCE allocation nor confirmed UCSUR space.
 
-> **Note (Plane 15 status reconciliation, 2026-10-19):** `Hacm`, `Liparxe`, `Shaleian`, and `Visible Speech Extended-I` are charted as UCSUR-only allocations (🟩). Their ranges originate in UCSUR — UCSUR reserves them, and “UCSUR-only” here means allocated in UCSUR rather than CSUR, not that SPUCE has never named the range. The SPUCE Plane 15 Roadmap names the same four ranges; that overlap is recorded as provenance (see `core/SPECIFICATION.md` §3.5.5), not as SPUCE ownership. Fairfax HD maps Hacm, Liparxe, and Shaleian completely and lists Visible Speech Extended as planned; that is observed font usage, not a UCSUR registration. `Zbalermorna` is a named UCSUR proposal and also stays UCSUR-only (🟩). `Sitelen Pona Extended-A`, `Sitelen Pona Extended-B`, and `Quikscript` remain unconfirmed by UCSUR (⬛).
+> **Note (Plane 15 status reconciliation, 2026-10-19):** `Hacm`, `Liparxe`, `Shaleian`, and `Visible Speech Extended-I` are charted as UCSUR-only allocations (🟩). Their ranges originate in UCSUR — UCSUR reserves them, and “UCSUR-only” here means allocated in UCSUR rather than CSUR, not that SPUCE has never named the range. The SPUCE Plane 15 Roadmap names the same four ranges; that overlap is recorded as provenance (see `core/SPECIFICATION.md` §3.5.5), not as SPUCE ownership. Fairfax HD maps Hacm, Liparxe, and Shaleian completely and lists Visible Speech Extended as planned; that is observed font usage, not a UCSUR registration. `Zbalermorna` is a named UCSUR proposal and also stays UCSUR-only (🟩). `Sitelen Pona Extended-A`, `Sitelen Pona Extended-B`, and `Quikscript` are UCSUR-included scripts whose detailed proposals have not yet been written; they carry the `¿...?` proposal-completeness marker and therefore stay in the UCSUR-Only (🟩) class rather than a separate "unconfirmed" class.
 
 ---
 
@@ -173,7 +173,7 @@ Plane 15 is provisionally zoned by SPUCE into the thirteen sectors below. Two of
     </tr>
     <tr>
       <td align="center"><b>F1Axx</b></td>
-      <td colspan="16" align="center">⬛ ¿Sitelen Pona Extended-A? (F1A00–F1AFF)</td>
+      <td colspan="16" align="center">🟩 ¿Sitelen Pona Extended-A? (F1A00–F1AFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F1Bxx</b></td>
@@ -196,7 +196,7 @@ Plane 15 is provisionally zoned by SPUCE into the thirteen sectors below. Two of
     </tr>
     <tr>
       <td align="center"><b>F1Fxx</b></td>
-      <td colspan="16" align="center">⬛ ¿Sitelen Pona Extended-B? (F1F00–F1FFF)</td>
+      <td colspan="16" align="center">🟩 ¿Sitelen Pona Extended-B? (F1F00–F1FFF)</td>
     </tr>
     <tr>
       <td align="center"><b>F20xx</b></td>
@@ -225,7 +225,7 @@ Plane 15 is provisionally zoned by SPUCE into the thirteen sectors below. Two of
     <tr>
       <td align="center"><b>F26xx</b></td>
       <td colspan="8" align="center">🟩 Sadalian (F2600–F267F)</td>
-      <td colspan="3" align="center">⬛ ¿Quikscript? (F2680–F26AF)</td>
+      <td colspan="3" align="center">🟩 ¿Quikscript? (F2680–F26AF)</td>
       <td colspan="5" align="center">??? (F26B0–F26FF)</td>
     </tr>
     <tr>
