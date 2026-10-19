@@ -117,7 +117,7 @@ The two former Set 1 `???` reservations inside the SPUCE interval — `U+EE60–
 
 To prevent clashing layout telemetry within rendering engines, dedicated structural placeholders are assigned as empty characters strictly under **Set 1** specifications. No active scripts or symbols are mapped to these coordinates:
 
-* **Plane 15 Sector (SPUA-A Hints/Specials):** `U+FFF00`–`U+FFFFF`
+* **Plane 15 Sector (SPUA-A Hints/Specials):** `U+FFFF0`–`U+FFFFF` (the preceding `U+FFF00`–`U+FFFBF` provisional space and `U+FFFC0`–`U+FFFEF` Fragments allocation are tracked separately in §3.3 and §3.5.5)
 * **Plane 16 Sector (SPUA-B Hints/Specials):** `U+10FFF0`–`U+10FFFF`
 
 > **Correction (Set 1 → Set 2 migration):** the former BMP empty-character sector `U+EFD0`–`U+EFFF` is superseded by the SPUCE allocation map for `U+EE00–U+EFFF` described in §3.1.1. Because the nine SPUCE allocations replace the whole interval, those code points now belong to the Quốc âm tân tự allocation and can no longer be tracked as an empty-character sector. The Plane 15 and Plane 16 empty-character sectors are unaffected.
@@ -219,6 +219,10 @@ SPUCE provisionally partitions Plane 15 (SPUA-A) into thirteen zones. Two of the
 | **13** | `FFFF0–FFFFF` | Specials | SPUCE |
 
 > **Note (SPUCE Fragments reduction, 2026-10-19):** SPUCE reduced the Zone 12 Fragments allocation to `U+FFFC0`–`U+FFFEF`, leaving `U+FFF00`–`U+FFFBF` outside every SPUCE zone. That released range is tracked in Set 1 as `PROVISIONAL_RNUR_OPEN_SLOT` (§3.3) and is not confirmed UCSUR space.
+
+> **Provenance (2026-10-19):** The public SPUCE Plane 15 Roadmap still showed the pre-reduction Fragments zone line and the GS Unicode 3.0 Plane F map listed `FFFxx` as unassigned when this record was reconciled. RNUR follows the maintainer-confirmed reduction to `FFFC0–FFFEF`; `FFF00–FFFBF` remains provisional RNUR space.
+
+> **Note (Plane 15 status reconciliation, 2026-10-19):** UCSUR reserves `U+F2700`–`U+F27FF`, `U+F2800`–`U+F282F`, `U+F2830`–`U+F289F`, and `U+F2900`–`U+F295F`, but its allocation table does not list those scripts as proposals or registrations, and its roadmap still marks them `¿Hacm?`, `¿Liparxe?`, `¿Shaleian?`, and `¿Visible Speech Extended?`. Fairfax HD maps the first three ranges completely and lists the fourth as planned; the SPUCE Plane 15 roadmap names the same four ranges (`Hacm`, `Liparxe`, `Shaleian`, and `Visible Speech Extended-I`). RNUR therefore records all four as SPUCE allocations (🟥), not formal UCSUR confirmations (🟩). The exact RNUR label is `Visible Speech Extended-I`; Fairfax HD and the GS Unicode 3.0 Plane F map use the shorter alias `Visible Speech Extended`. By contrast, `Zbalermorna` (`U+F28A0`–`U+F28DF`) is a named UCSUR proposal and remains a UCSUR-only allocation (🟩). `¿Sitelen Pona Extended-A?` (`U+F1A00`–`U+F1AFF`), `¿Sitelen Pona Extended-B?` (`U+F1F00`–`U+F1FFF`), and `¿Quikscript?` (`U+F2680`–`U+F26AF`) remain unconfirmed by UCSUR; Fairfax HD's complete Quikscript coverage is observed font usage, not a formal UCSUR proposal or registration.
 
 Because SPUCE zoning is provisional and does not cover every code point in a zone, only the space SPUCE leaves unallocated inside its zones stays RNUR territory. Once SPUCE allocates a script, those code points leave the RNUR provisional list in §3.3 and become SPUCE allocations — for example `U+F50F0`–`U+F514F` (Enochian, Litterae Ignotae, and Theban) and `U+FF700`–`U+FF9FF` (Control Pictures Extended-II, soon going to be encoded in Plane 16). Scripts that remain UCSUR-listed keep their UCSUR classification instead of the zone steward.
 

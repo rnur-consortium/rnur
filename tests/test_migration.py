@@ -235,8 +235,9 @@ class ArtifactConsistencyTests(unittest.TestCase):
 
 
 class Plane15October2026Tests(unittest.TestCase):
-    """The 2026-10-19 SPUCE Plane 15 revision: the Fragments reduction and the
-    Liparxe / Shaleian / Visible Speech Extended promotions."""
+    """The 2026-10-19 Plane 15 reconciliation: the Fragments reduction and the
+    UCSUR/SPUCE status split for Hacm, Liparxe, Shaleian, and Visible Speech
+    Extended-I, with the three genuinely unconfirmed scripts preserved."""
 
     def setUp(self):
         self.blocks = validator.load_blocks(
@@ -244,37 +245,97 @@ class Plane15October2026Tests(unittest.TestCase):
         self.blocks_text = read(os.path.join('UNIDATA', 'S1', 'Blocks.txt'))
         self.roadmap = read(os.path.join('S1', 'Roadmap', 'spua-a_roadmap.md'))
         self.spec = read(os.path.join('core', 'SPECIFICATION.md'))
+        self.csv = csv_rows(os.path.join('data', 'set1_master.csv'))
 
     def test_fragments_allocation_reduced(self):
         self.assertIn((0xFFFC0, 0xFFFEF, 'Fragments'), self.blocks)
         self.assertNotIn((0xFFF00, 0xFFFEF, 'Fragments'), self.blocks)
+        self.assertEqual(0xFFFEF - 0xFFFC0 + 1, 48)
 
     def test_released_range_is_provisional_open_slot(self):
         self.assertIn((0xFFF00, 0xFFFBF, 'PROVISIONAL_RNUR_OPEN_SLOT'), self.blocks)
+        self.assertEqual(0xFFFBF - 0xFFF00 + 1, 192)
         self.assertIn('??? (FFF00–FFFBF)', self.roadmap)
         self.assertIn('🟥 Fragments (FFFC0–FFFEF)', self.roadmap)
         self.assertIn('`U+FFF00`–`U+FFFBF`', self.spec)
         self.assertIn('`FFFC0–FFFEF`', self.spec)
 
-    def test_promoted_scripts_are_confirmed(self):
-        self.assertIn((0xF2800, 0xF282F, 'Liparxe'), self.blocks)
-        self.assertIn((0xF2830, 0xF289F, 'Shaleian'), self.blocks)
-        self.assertIn((0xF2900, 0xF295F, 'Visible Speech Extended'), self.blocks)
-        for marker in ('¿Liparxe?', '¿Shaleian?', '¿Visible Speech Extended?'):
+    def test_spuce_plane15_scripts_are_reconciled(self):
+        expected = {
+            (0xF2700, 0xF27FF, 'Hacm'),
+            (0xF2800, 0xF282F, 'Liparxe'),
+            (0xF2830, 0xF289F, 'Shaleian'),
+            (0xF2900, 0xF295F, 'Visible Speech Extended-I'),
+        }
+        for block in expected:
+            self.assertIn(block, self.blocks)
+        for marker in ('¿Hacm?', '¿Liparxe?', '¿Shaleian?', '¿Visible Speech Extended?'):
             self.assertNotIn(marker, self.blocks_text)
             self.assertNotIn(marker, self.roadmap)
 
-    def test_roadmap_cells_use_confirmed_colors(self):
-        self.assertIn('🟩 Liparxe (F2800–F282F)', self.roadmap)
-        self.assertIn('🟩 Shaleian (F2830–F289F)', self.roadmap)
-        self.assertIn('🟥 Visible Speech Extended (F2900–F295F)', self.roadmap)
+    def test_blocks_sections_reflect_ownership(self):
+        green = self.blocks_text.split(
+            '# --- UCSUR-Only Allocations (🟩) ---', 1)[1].split(
+            '# --- Unconfirmed by UCSUR (⬛) ---', 1)[0]
+        unconfirmed = self.blocks_text.split(
+            '# --- Unconfirmed by UCSUR (⬛) ---', 1)[1].split(
+            '# --- SPUCE Project Allocations (🟥) ---', 1)[0]
+        spuce = self.blocks_text.split(
+            '# --- SPUCE Project Allocations (🟥) ---', 1)[1].split(
+            '# --- SPUCE Project Allocations (Reserved for', 1)[0]
+
+        self.assertIn('F28A0..F28DF; Zbalermorna', green)
+        for name in ('Hacm', 'Liparxe', 'Shaleian', 'Visible Speech Extended-I'):
+            self.assertNotIn(name, green)
+            self.assertNotIn(name, unconfirmed)
+            self.assertIn(name, spuce)
+        for name in ('Sitelen Pona Extended-A', 'Sitelen Pona Extended-B', 'Quikscript'):
+            self.assertIn(name, unconfirmed)
+
+    def test_roadmap_cells_use_reconciled_colors(self):
+        for cell in (
+            '🟥 Hacm (F2700–F27FF)',
+            '🟥 Liparxe (F2800–F282F)',
+            '🟥 Shaleian (F2830–F289F)',
+            '🟥 Visible Speech Extended-I (F2900–F295F)',
+            '🟩 Zbalermorna (F28A0–F28DF)',
+            '⬛ ¿Sitelen Pona Extended-A? (F1A00–F1AFF)',
+            '⬛ ¿Sitelen Pona Extended-B? (F1F00–F1FFF)',
+            '⬛ ¿Quikscript? (F2680–F26AF)',
+        ):
+            self.assertIn(cell, self.roadmap)
+
+    def test_csv_tracks_reconciled_allocations(self):
+        by_name = {r['Script_Name']: r for r in self.csv}
+        expected = {
+            'Hacm': (0xF2700, 0xF27FF),
+            'Liparxe': (0xF2800, 0xF282F),
+            'Shaleian': (0xF2830, 0xF289F),
+            'Visible Speech Extended-I': (0xF2900, 0xF295F),
+        }
+        for name, (start, end) in expected.items():
+            self.assertIn(name, by_name)
+            row = by_name[name]
+            self.assertEqual(validator.parse_hex(row['Start_Code_Point']), start)
+            self.assertEqual(validator.parse_hex(row['End_Code_Point']), end)
+            self.assertEqual(row['Status'], 'SPUCE Allocation')
+            self.assertEqual(row['Flags'], 'SPUCE')
+        self.assertNotIn('Visible Speech Extended', by_name)
 
     def test_csv_tracks_released_range(self):
-        rows = [r for r in csv_rows(os.path.join('data', 'set1_master.csv'))
+        rows = [r for r in self.csv
                 if r['Script_Name'] == 'PROVISIONAL_RNUR_OPEN_SLOT'
                 and validator.parse_hex(r['End_Code_Point']) == 0xFFFBF]
         self.assertEqual(len(rows), 1)
         self.assertEqual(validator.parse_hex(rows[0]['Start_Code_Point']), 0xFFF00)
+
+    def test_spec_documents_reconciliation(self):
+        self.assertIn('`U+FFFF0`–`U+FFFFF`', self.spec)
+        self.assertNotIn('`U+FFF00`–`U+FFFFF`', self.spec)
+        self.assertIn('Visible Speech Extended-I', self.spec)
+        self.assertIn('SPUCE allocations (🟥)', self.spec)
+        self.assertIn('observed font usage', self.spec)
+        self.assertIn('public SPUCE Plane 15 Roadmap still showed the pre-reduction', self.spec)
 
 
 class NegativeDetectionTests(unittest.TestCase):

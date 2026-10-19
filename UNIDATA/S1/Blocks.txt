@@ -94,15 +94,12 @@ F1C40..F1C7F; Titi Pula
 F1C80..F1C9F; Sitelen Pona Radicals
 F1CA0..F1CFF; Yapiri
 F2000..F267F; Sadalian
-F2800..F282F; Liparxe
-F2830..F289F; Shaleian
 F28A0..F28DF; Zbalermorna
 
 # --- Unconfirmed by UCSUR (⬛) ---
 F1A00..F1AFF; ¿Sitelen Pona Extended-A?
 F1F00..F1FFF; ¿Sitelen Pona Extended-B?
 F2680..F26AF; ¿Quikscript?
-F2700..F27FF; ¿Hacm?
 
 # --- SPUCE Project Allocations (🟥) ---
 EE00..EE2F; Vulcan
@@ -123,7 +120,18 @@ F400..F4BF; Symbols and Punctuation Extended-I
 F4F0..F5BF; Number Forms Extended-I
 F800..F81F; Corporate Symbols
 F880..F89F; Font Specifics
-F2900..F295F; Visible Speech Extended
+
+# NOTE (2026-10-19 reconciliation): Hacm, Liparxe, Shaleian, and
+# Visible Speech Extended-I are SPUCE allocations. UCSUR reserves their
+# ranges, but the UCSUR allocation table does not list the scripts as
+# proposals or registrations, and the UCSUR roadmap still marks them
+# proposed. Fairfax HD maps Hacm/Liparxe/Shaleian completely and lists
+# Visible Speech Extended as planned; that is observed font usage, not
+# formal UCSUR confirmation. See core/SPECIFICATION.md §3.5.5.
+F2700..F27FF; Hacm
+F2800..F282F; Liparxe
+F2830..F289F; Shaleian
+F2900..F295F; Visible Speech Extended-I
 F2A00..F2FFF; Phonetic Extensions-II
 F3000..F33FF; Latin Extended-II
 F4E00..F4FFF; Halfwidth and Fullwidth Forms Extended-I
