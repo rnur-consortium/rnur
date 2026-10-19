@@ -237,10 +237,9 @@ class ArtifactConsistencyTests(unittest.TestCase):
 class Plane15October2026Tests(unittest.TestCase):
     """The 2026-10-19 Plane 15 reconciliation: the Fragments reduction, the
     UCSUR-origin classification of Hacm, Liparxe, Shaleian, and Visible Speech
-    Extended-I, and the withdrawal of L8, with the three UCSUR-included scripts
-    whose detailed proposals are not yet written (Sitelen Pona Extended-A,
-    Sitelen Pona Extended-B, Quikscript) charted as `¿...?` inside the
-    UCSUR-Only (🟩) class."""
+    Extended-I, and the withdrawal of L8, with the seven UCSUR-included Plane 15
+    scripts whose detailed proposals are not yet written charted as `¿...?`
+    inside the UCSUR-Only (🟩) class."""
 
     def setUp(self):
         self.blocks = validator.load_blocks(
@@ -265,16 +264,17 @@ class Plane15October2026Tests(unittest.TestCase):
 
     def test_ucsur_origin_scripts_are_reconciled(self):
         expected = {
-            (0xF2700, 0xF27FF, 'Hacm'),
-            (0xF2800, 0xF282F, 'Liparxe'),
-            (0xF2830, 0xF289F, 'Shaleian'),
-            (0xF2900, 0xF295F, 'Visible Speech Extended-I'),
+            (0xF2700, 0xF27FF, '¿Hacm?'),
+            (0xF2800, 0xF282F, '¿Liparxe?'),
+            (0xF2830, 0xF289F, '¿Shaleian?'),
+            (0xF2900, 0xF295F, '¿Visible Speech Extended-I?'),
         }
         for block in expected:
             self.assertIn(block, self.blocks)
-        for marker in ('¿Hacm?', '¿Liparxe?', '¿Shaleian?', '¿Visible Speech Extended?'):
-            self.assertNotIn(marker, self.blocks_text)
-            self.assertNotIn(marker, self.roadmap)
+        for marker in ('¿Hacm?', '¿Liparxe?', '¿Shaleian?',
+                       '¿Visible Speech Extended-I?'):
+            self.assertIn(marker, self.blocks_text)
+            self.assertIn(marker, self.roadmap)
 
     def test_blocks_sections_reflect_ownership(self):
         green = self.blocks_text.split(
@@ -284,8 +284,8 @@ class Plane15October2026Tests(unittest.TestCase):
             '# --- SPUCE Project Allocations (🟥) ---', 1)[1].split(
             '# --- SPUCE Project Allocations (Reserved for', 1)[0]
 
-        for name in ('Hacm', 'Liparxe', 'Shaleian', 'Visible Speech Extended-I',
-                     'Zbalermorna'):
+        for name in ('¿Hacm?', '¿Liparxe?', '¿Shaleian?',
+                     '¿Visible Speech Extended-I?', 'Zbalermorna'):
             self.assertIn(name, green)
             self.assertNotIn(name, spuce)
         # The `¿...?` scripts are UCSUR-included, so they are charted in the
@@ -298,10 +298,10 @@ class Plane15October2026Tests(unittest.TestCase):
 
     def test_roadmap_cells_use_reconciled_colors(self):
         for cell in (
-            '🟩 Hacm (F2700–F27FF)',
-            '🟩 Liparxe (F2800–F282F)',
-            '🟩 Shaleian (F2830–F289F)',
-            '🟩 Visible Speech Extended-I (F2900–F295F)',
+            '🟩 ¿Hacm? (F2700–F27FF)',
+            '🟩 ¿Liparxe? (F2800–F282F)',
+            '🟩 ¿Shaleian? (F2830–F289F)',
+            '🟩 ¿Visible Speech Extended-I? (F2900–F295F)',
             '🟩 Zbalermorna (F28A0–F28DF)',
             '🟩 ¿Sitelen Pona Extended-A? (F1A00–F1AFF)',
             '🟩 ¿Sitelen Pona Extended-B? (F1F00–F1FFF)',
@@ -354,9 +354,14 @@ class Plane15October2026Tests(unittest.TestCase):
         # `¿Script Name?` marks a UCSUR-included script whose detailed proposal
         # has not yet been written. It is a proposal-completeness marker and is
         # NOT an "unconfirmed by UCSUR" flag.
-        for block in ((0xF1A00, 0xF1AFF, '¿Sitelen Pona Extended-A?'),
-                      (0xF1F00, 0xF1FFF, '¿Sitelen Pona Extended-B?'),
-                      (0xF2680, 0xF26AF, '¿Quikscript?')):
+        seven = ((0xF2700, 0xF27FF, '¿Hacm?'),
+                 (0xF2800, 0xF282F, '¿Liparxe?'),
+                 (0xF2830, 0xF289F, '¿Shaleian?'),
+                 (0xF2900, 0xF295F, '¿Visible Speech Extended-I?'),
+                 (0xF1A00, 0xF1AFF, '¿Sitelen Pona Extended-A?'),
+                 (0xF1F00, 0xF1FFF, '¿Sitelen Pona Extended-B?'),
+                 (0xF2680, 0xF26AF, '¿Quikscript?'))
+        for block in seven:
             self.assertIn(block, self.blocks)
         for text in (self.spec, self.roadmap):
             self.assertIn(
@@ -375,6 +380,10 @@ class Plane15October2026Tests(unittest.TestCase):
     def test_question_mark_allocations_unchanged(self):
         # The semantics correction must not move, resize, or reassign ranges.
         expected = {
+            (0xF2700, 0xF27FF, '¿Hacm?'): 256,
+            (0xF2800, 0xF282F, '¿Liparxe?'): 48,
+            (0xF2830, 0xF289F, '¿Shaleian?'): 112,
+            (0xF2900, 0xF295F, '¿Visible Speech Extended-I?'): 96,
             (0xF1A00, 0xF1AFF, '¿Sitelen Pona Extended-A?'): 256,
             (0xF1F00, 0xF1FFF, '¿Sitelen Pona Extended-B?'): 256,
             (0xF2680, 0xF26AF, '¿Quikscript?'): 48,

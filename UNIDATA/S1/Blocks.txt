@@ -108,11 +108,11 @@ F1CA0..F1CFF; Yapiri
 F1F00..F1FFF; ¿Sitelen Pona Extended-B?
 F2000..F267F; Sadalian
 F2680..F26AF; ¿Quikscript?
-F2700..F27FF; Hacm
-F2800..F282F; Liparxe
-F2830..F289F; Shaleian
+F2700..F27FF; ¿Hacm?
+F2800..F282F; ¿Liparxe?
+F2830..F289F; ¿Shaleian?
 F28A0..F28DF; Zbalermorna
-F2900..F295F; Visible Speech Extended-I
+F2900..F295F; ¿Visible Speech Extended-I?
 
 # --- SPUCE Project Allocations (🟥) ---
 EE00..EE2F; Vulcan

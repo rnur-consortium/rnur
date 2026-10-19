@@ -17,6 +17,13 @@ coverage, SPUCE Plane 15 Roadmap, GS Unicode 3.0 Plane F map).
 > §2, §4, and §5 below reflect the correction; §1 and §6 keep the original reconciliation-pass
 > figures.
 
+> **Revision 3 (2026-10-19):** `¿Hacm?`, `¿Liparxe?`, `¿Shaleian?`, and `¿Visible Speech
+> Extended-I?` now also carry the `¿...?` proposal-completeness marker — they too are
+> UCSUR-included with no detailed proposal yet. All seven Plane 15 scripts without a detailed
+> proposal (those four plus `¿Sitelen Pona Extended-A?`, `¿Sitelen Pona Extended-B?`, and
+> `¿Quikscript?`) are charted in the UCSUR-Only (🟩) class; `Zbalermorna`, a named UCSUR
+> proposal, keeps the unmarked name. No code-point range changed.
+
 ---
 
 ## 1. Files changed
@@ -26,8 +33,8 @@ reconciliation began).
 
 | File | +/- | Summary |
 | --- | --- | --- |
-| `UNIDATA/S1/Blocks.txt` | +9 / −2 | `Hacm`, `Liparxe`, `Shaleian` moved into the UCSUR-Only (🟩) section (Hacm out of the former unconfirmed ⬛ section; Liparxe/Shaleian already green, now annotated); `Visible Speech Extended` → `Visible Speech Extended-I` moved from SPUCE (🟥) into UCSUR-Only (🟩); added the section-header comment defining "UCSUR-Only = allocated in UCSUR rather than CSUR"; `Zbalermorna` unchanged (🟩); `¿Sitelen Pona Extended-A?`, `¿Sitelen Pona Extended-B?`, and `¿Quikscript?` charted in the UCSUR-Only (🟩) class with the `¿...?` proposal-completeness marker (revision 2; the former ⬛ "Unconfirmed by UCSUR" class is retired). |
-| `S1/Roadmap/spua-a_roadmap.md` | +5 / −2 | F27xx cell → `🟩 Hacm (F2700–F27FF)` (was `⬛ ¿Hacm?`); F29xx cell → `🟩 Visible Speech Extended-I (F2900–F295F)` (was red, old name); F28xx cells keep `🟩 Liparxe` / `🟩 Shaleian`, `🟩 Zbalermorna` untouched; legend clarifies what "UCSUR-Only" means; added the Plane 15 status reconciliation note. |
+| `UNIDATA/S1/Blocks.txt` | +9 / −2 | `Hacm`, `Liparxe`, `Shaleian` moved into the UCSUR-Only (🟩) section (Hacm out of the former unconfirmed ⬛ section; Liparxe/Shaleian already green, now annotated); `Visible Speech Extended` → `Visible Speech Extended-I` moved from SPUCE (🟥) into UCSUR-Only (🟩); added the section-header comment defining "UCSUR-Only = allocated in UCSUR rather than CSUR"; `Zbalermorna` unchanged (🟩); `¿Sitelen Pona Extended-A?`, `¿Sitelen Pona Extended-B?`, and `¿Quikscript?` charted in the UCSUR-Only (🟩) class with the `¿...?` proposal-completeness marker (revision 2; the former ⬛ "Unconfirmed by UCSUR" class is retired). Revision 3 applies the same `¿...?` marker to `¿Hacm?`, `¿Liparxe?`, `¿Shaleian?`, and `¿Visible Speech Extended-I?`. |
+| `S1/Roadmap/spua-a_roadmap.md` | +5 / −2 | F27xx/F28xx/F29xx cells → `🟩 ¿Hacm?` / `🟩 ¿Liparxe?` / `🟩 ¿Shaleian?` / `🟩 ¿Visible Speech Extended-I?` (revisions 2–3; VSE-I also renamed from the old red `Visible Speech Extended`); `🟩 Zbalermorna` untouched (no marker); legend defines the `¿...?` proposal-completeness marker and clarifies what "UCSUR-Only" means; added the Plane 15 status reconciliation note. |
 | `core/SPECIFICATION.md` | +6 / −2 | §3.2 SPUA-A Hints/Specials sector corrected from `U+FFF00–U+FFFFF` to `U+FFFF0–U+FFFFF`; added the Fragments provenance note and the Plane 15 status reconciliation note (UCSUR origin, SPUCE naming recorded as provenance, `Visible Speech Extended` → `Visible Speech Extended-I` aliasing); §3.5.5 closing paragraph states why the four keep the UCSUR classification. |
 | `data/set1_master.csv` | 0 / 0 | **Net unchanged vs baseline.** An intermediate pass briefly added 4 `SPUCE Allocation` rows; they were removed again because UCSUR-only allocations are not tracked in `set1_master.csv` (consistent with `Zbalermorna`, which has no row either). A test now asserts their absence. |
 | `tests/test_migration.py` | +63 / −12 | Rewrote `Plane15October2026Tests` (5 → 8 tests): asserts the four ranges exist, question-mark markers are gone, section ownership (four + Zbalermorna + the three `¿...?` scripts in 🟩, none in the retired ⬛ class, none of the four in 🟥), green roadmap cells, **absence** of CSV rows for the UCSUR-only scripts, spec notes (§3.2 correction, UCSUR-origin wording), and Fragments/provisional sizes (48/192). Revision 2 adds regression tests for the corrected `¿...?` semantics. |
@@ -39,10 +46,10 @@ reconciliation began).
 
 | Script | Range | Status | Prior state |
 | --- | --- | --- | --- |
-| Hacm | `U+F2700–U+F27FF` (256) | 🟩 UCSUR-only | ⬛ unconfirmed (`¿Hacm?`) → 🟩 |
-| Liparxe | `U+F2800–U+F282F` (48) | 🟩 UCSUR-only | 🟩 UCSUR-only (kept) |
-| Shaleian | `U+F2830–U+F289F` (112) | 🟩 UCSUR-only | 🟩 UCSUR-only (kept) |
-| Visible Speech Extended-I | `U+F2900–U+F295F` (96) | 🟩 UCSUR-only | 🟥 `Visible Speech Extended` (red, old name) → 🟩 `Visible Speech Extended-I` |
+| Hacm | `U+F2700–U+F27FF` (256) | 🟩 UCSUR-only; detailed proposal not yet written (`¿Hacm?`) | ⬛ unconfirmed → 🟩; `¿...?` marker added (revision 3) |
+| Liparxe | `U+F2800–U+F282F` (48) | 🟩 UCSUR-only; detailed proposal not yet written (`¿Liparxe?`) | 🟩 UCSUR-only (kept); `¿...?` marker added (revision 3) |
+| Shaleian | `U+F2830–U+F289F` (112) | 🟩 UCSUR-only; detailed proposal not yet written (`¿Shaleian?`) | 🟩 UCSUR-only (kept); `¿...?` marker added (revision 3) |
+| Visible Speech Extended-I | `U+F2900–U+F295F` (96) | 🟩 UCSUR-only; detailed proposal not yet written (`¿Visible Speech Extended-I?`) | 🟥 `Visible Speech Extended` (red, old name) → 🟩 `Visible Speech Extended-I`; `¿...?` marker added (revision 3) |
 | Zbalermorna | `U+F28A0–U+F28DF` (64) | 🟩 UCSUR-only | unchanged (named UCSUR proposal) |
 | Quikscript | `U+F2680–U+F26AF` (48) | 🟩 UCSUR-only; detailed proposal not yet written (`¿Quikscript?`) | range unchanged; reclassified, ⬛ unconfirmed → 🟩 |
 | Sitelen Pona Extended-A | `U+F1A00–U+F1AFF` (256) | 🟩 UCSUR-only; detailed proposal not yet written (`¿Sitelen Pona Extended-A?`) | range unchanged; reclassified, ⬛ unconfirmed → 🟩 |
@@ -54,21 +61,24 @@ reconciliation began).
   the UCSUR allocation table does not list Hacm as a registration and the UCSUR roadmap still
   marks it `¿Hacm?`. Fairfax HD provides complete glyph coverage. The SPUCE Plane 15 Roadmap
   also names `Hacm (F2700–F27FF)` — recorded as provenance, not SPUCE ownership. → UCSUR-only
-  (🟩), moved out of the former unconfirmed (⬛) section.
+  (🟩), moved out of the former unconfirmed (⬛) section and written `¿Hacm?` (UCSUR-included;
+  no detailed proposal yet).
 - **Liparxe (F2800–F282F):** UCSUR reserves the range (UCSUR origin) but its allocation table
   does not name the script and its roadmap still marks it `¿Liparxe?`; Fairfax HD coverage is
   complete; the SPUCE Plane 15 Roadmap names `Liparxe (F2800–F282F)` as provenance. Stays
-  UCSUR-only (🟩) as before.
+  UCSUR-only (🟩) and is written `¿Liparxe?` (UCSUR-included; no detailed proposal yet).
 - **Shaleian (F2830–F289F):** Same evidence pattern as Liparxe — UCSUR reserves without
   naming (`¿Shaleian?` in the UCSUR roadmap), Fairfax HD complete, SPUCE Plane 15 Roadmap
-  names `Shaleian (F2830–F289F)` as provenance. Stays UCSUR-only (🟩) as before.
+  names `Shaleian (F2830–F289F)` as provenance. Stays UCSUR-only (🟩) and is written
+  `¿Shaleian?` (UCSUR-included; no detailed proposal yet).
 - **Visible Speech Extended-I (F2900–F295F):** UCSUR reserves the range (UCSUR origin) but
   still marks it `¿Visible Speech Extended?`; Fairfax HD lists `Visible Speech Extended` as
   *planned* (not complete); the SPUCE Plane 15 Roadmap names the F2900–F295F allocation as
   provenance; the GS Unicode 3.0 Plane F map uses the shorter alias `Visible Speech Extended`.
   RNUR preserves the exact name `Visible Speech Extended-I` per SPUCE/task. → UCSUR-only
-  (🟩) with the `-I` rename; this is the one classification change among the four besides
-  Hacm (it was charted red under the short name).
+  (🟩) with the `-I` rename and the `¿...?` marker (`¿Visible Speech Extended-I?`;
+  UCSUR-included, no detailed proposal yet); this is the one classification change among the
+  four besides Hacm (it was charted red under the short name).
 - **Zbalermorna (F28A0–F28DF):** Named UCSUR proposal with a reserved range. Remains
   UCSUR-only (🟩); unchanged throughout.
 - **Quikscript (F2680–F26AF):** Fairfax HD has complete coverage. The range is UCSUR-included,
@@ -85,8 +95,9 @@ reconciliation began).
 UCSUR reserves all four ranges and they **originate in UCSUR** — the ranges predate the SPUCE
 Plane 15 Roadmap naming. In this repository the 🟩 bucket is labeled *UCSUR-Only Allocations*,
 which means *allocated in UCSUR rather than CSUR*, not *never touched by SPUCE*: a range may be
-named by SPUCE without leaving the UCSUR classification. Therefore Hacm, Liparxe, Shaleian, and
-Visible Speech Extended-I are UCSUR-only allocations (🟩), while the SPUCE Plane 15 Roadmap's
+named by SPUCE without leaving the UCSUR classification. Therefore `¿Hacm?`, `¿Liparxe?`,
+`¿Shaleian?`, and `¿Visible Speech Extended-I?` are UCSUR-only allocations (🟩), while the SPUCE
+Plane 15 Roadmap's
 naming of the same four ranges is recorded as provenance (in `Blocks.txt`, the roadmap note,
 and `core/SPECIFICATION.md` §3.5.5), not as SPUCE ownership. Observed font usage (Fairfax HD
 coverage) is additionally treated as **evidence**, not as a formal UCSUR registration — the
@@ -113,10 +124,11 @@ chart (see §4, items 1 and 6).
 
 ## 4. Unresolved discrepancies
 
-1. **UCSUR roadmap/allocation table:** still marks Hacm, Liparxe, Shaleian, and Visible Speech
-   Extended as reserved/proposed (`¿...?`) rather than registered/named. RNUR keeps them in the
-   UCSUR-Only class because the ranges originate in UCSUR, while the SPUCE Plane 15 Roadmap's
-   matching names are recorded only as provenance.
+1. **UCSUR roadmap/allocation table:** marks Hacm, Liparxe, Shaleian, and Visible Speech
+   Extended as reserved/proposed (`¿...?`), i.e. included but without a written detailed
+   proposal. RNUR mirrors this by writing `¿Hacm?`, `¿Liparxe?`, `¿Shaleian?`, and
+   `¿Visible Speech Extended-I?` and keeping them in the UCSUR-Only class, while the SPUCE
+   Plane 15 Roadmap's matching names are recorded only as provenance.
 2. **Fairfax HD name:** lists `Visible Speech Extended` as *planned* — no `-I` suffix and no
    complete coverage.
 3. **GS Unicode 3.0 Plane F map:** uses `Visible Speech Extended` (no `-I`). RNUR preserves
@@ -248,10 +260,12 @@ PR #11, restoring the file to its baseline content.
 Concise per-file summary (vs baseline):
 
 - **`UNIDATA/S1/Blocks.txt`** — Hacm/Liparxe/Shaleian annotated and grouped in the UCSUR-Only
-  section, VSE renamed to `-I` and moved from 🟥 to 🟩, section-header comment added; no range
-  value changed for any script.
-- **`S1/Roadmap/spua-a_roadmap.md`** — Hacm cell black→green, VSE-I cell red→green + rename,
-  legend clarified, one added note.
+  section, VSE renamed to `-I` and moved from 🟥 to 🟩, section-header comment added; all four
+  written with the `¿...?` proposal-completeness marker (revision 3); no range value changed
+  for any script.
+- **`S1/Roadmap/spua-a_roadmap.md`** — Hacm cell black→green; all four Plane 15 UCSUR cells
+  written `🟩 ¿...?`; VSE-I cell red→green + rename; legend clarified (defines `¿...?`, retires
+  ⬛); notes added.
 - **`core/SPECIFICATION.md`** — §3.2 corrected range plus two added notes in §3.5.5.
 - **`data/set1_master.csv`** — no net change (4 rows added and removed in the interim).
 - **`tests/test_migration.py`** — `Plane15October2026Tests` rewritten (8 tests, up from 5) to
