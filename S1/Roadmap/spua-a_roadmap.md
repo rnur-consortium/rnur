@@ -1026,9 +1026,7 @@ Plane 15 is provisionally zoned by SPUCE into the thirteen sectors below. Two of
     <tr>
       <td align="center"><b>FE7xx</b></td>
       <td colspan="8" align="center">🟨 Hylian (FE700–FE77F)</td>
-      <td colspan="2" align="center">🟨 Gerudo (FE780–FE79F)</td>
-      <td colspan="4" align="center">🟨 Gerudo Presentation Forms (FE7A0–FE7DF)</td>
-      <td colspan="2" align="center">🟨 L8 (FE7E0–FE7FF)</td>
+      <td colspan="8" align="center">🟨 Layout Sandbox Space (FE780–FE7FF)</td>
     </tr>
     <tr>
       <td align="center"><b>FE8xx</b></td>

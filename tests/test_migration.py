@@ -235,9 +235,10 @@ class ArtifactConsistencyTests(unittest.TestCase):
 
 
 class Plane15October2026Tests(unittest.TestCase):
-    """The 2026-10-19 Plane 15 reconciliation: the Fragments reduction and the
+    """The 2026-10-19 Plane 15 reconciliation: the Fragments reduction, the
     UCSUR-origin classification of Hacm, Liparxe, Shaleian, and Visible Speech
-    Extended-I, with the three genuinely unconfirmed scripts preserved."""
+    Extended-I, and the withdrawal of L8, with the three genuinely unconfirmed
+    scripts preserved."""
 
     def setUp(self):
         self.blocks = validator.load_blocks(
@@ -326,6 +327,25 @@ class Plane15October2026Tests(unittest.TestCase):
         self.assertIn('allocated in UCSUR rather than CSUR', self.spec)
         self.assertIn('observed font usage', self.spec)
         self.assertIn('public SPUCE Plane 15 Roadmap still showed the pre-reduction', self.spec)
+
+    def test_withdrawn_plane15_allocations_removed(self):
+        # L8 (FE7E0–FE7FF) was withdrawn by its creator, and the current public
+        # SPUCE Plane 15 Roadmap renders the whole FE780–FE7FF tail as blank
+        # erictom333-reserved space (Gerudo/Gerudo Presentation Forms no longer
+        # appear in the FE7xx row there either).
+        self.assertIn((0xFE780, 0xFE7FF, 'Layout Sandbox Space (erictom333 Reserved)'),
+                      self.blocks)
+        for block in ((0xFE780, 0xFE79F, 'Gerudo'),
+                      (0xFE7A0, 0xFE7DF, 'Gerudo Presentation Forms'),
+                      (0xFE7E0, 0xFE7FF, 'L8')):
+            self.assertNotIn(block, self.blocks)
+        self.assertNotIn('L8', self.blocks_text)
+        for cell in ('🟨 L8 (FE7E0–FE7FF)',
+                     '🟨 Gerudo (FE780–FE79F)',
+                     '🟨 Gerudo Presentation Forms (FE7A0–FE7DF)'):
+            self.assertNotIn(cell, self.roadmap)
+        self.assertIn('🟨 Layout Sandbox Space (FE780–FE7FF)', self.roadmap)
+        self.assertIn('FED80–FEDAF', self.roadmap)  # unrelated FEDxx Gerudo kept
 
 
 class NegativeDetectionTests(unittest.TestCase):
