@@ -174,9 +174,7 @@ FE000..FE3FF; Layout Sandbox Space (erictom333 Reserved)
 FE400..FE41F; Minecraftian Supplement
 FE420..FE6FF; Minecraftian
 FE700..FE77F; Hylian
-FE780..FE79F; Gerudo
-FE7A0..FE7DF; Gerudo Presentation Forms
-FE7E0..FE7FF; L8
+FE780..FE7FF; Layout Sandbox Space (erictom333 Reserved)
 FE800..FECFF; Layout Sandbox Space (erictom333 Reserved)
 FED00..FED5F; Tatar
 FED60..FED7F; Interscript (erictom333 Reserved)
