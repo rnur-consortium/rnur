@@ -234,6 +234,49 @@ class ArtifactConsistencyTests(unittest.TestCase):
             self.assertTrue(validator.run_full_database_scan(BASE_DIR))
 
 
+class Plane15October2026Tests(unittest.TestCase):
+    """The 2026-10-19 SPUCE Plane 15 revision: the Fragments reduction and the
+    Liparxe / Shaleian / Visible Speech Extended promotions."""
+
+    def setUp(self):
+        self.blocks = validator.load_blocks(
+            os.path.join(BASE_DIR, 'UNIDATA', 'S1', 'Blocks.txt'))
+        self.blocks_text = read(os.path.join('UNIDATA', 'S1', 'Blocks.txt'))
+        self.roadmap = read(os.path.join('S1', 'Roadmap', 'spua-a_roadmap.md'))
+        self.spec = read(os.path.join('core', 'SPECIFICATION.md'))
+
+    def test_fragments_allocation_reduced(self):
+        self.assertIn((0xFFFC0, 0xFFFEF, 'Fragments'), self.blocks)
+        self.assertNotIn((0xFFF00, 0xFFFEF, 'Fragments'), self.blocks)
+
+    def test_released_range_is_provisional_open_slot(self):
+        self.assertIn((0xFFF00, 0xFFFBF, 'PROVISIONAL_RNUR_OPEN_SLOT'), self.blocks)
+        self.assertIn('??? (FFF00–FFFBF)', self.roadmap)
+        self.assertIn('🟥 Fragments (FFFC0–FFFEF)', self.roadmap)
+        self.assertIn('`U+FFF00`–`U+FFFBF`', self.spec)
+        self.assertIn('`FFFC0–FFFEF`', self.spec)
+
+    def test_promoted_scripts_are_confirmed(self):
+        self.assertIn((0xF2800, 0xF282F, 'Liparxe'), self.blocks)
+        self.assertIn((0xF2830, 0xF289F, 'Shaleian'), self.blocks)
+        self.assertIn((0xF2900, 0xF295F, 'Visible Speech Extended'), self.blocks)
+        for marker in ('¿Liparxe?', '¿Shaleian?', '¿Visible Speech Extended?'):
+            self.assertNotIn(marker, self.blocks_text)
+            self.assertNotIn(marker, self.roadmap)
+
+    def test_roadmap_cells_use_confirmed_colors(self):
+        self.assertIn('🟩 Liparxe (F2800–F282F)', self.roadmap)
+        self.assertIn('🟩 Shaleian (F2830–F289F)', self.roadmap)
+        self.assertIn('🟥 Visible Speech Extended (F2900–F295F)', self.roadmap)
+
+    def test_csv_tracks_released_range(self):
+        rows = [r for r in csv_rows(os.path.join('data', 'set1_master.csv'))
+                if r['Script_Name'] == 'PROVISIONAL_RNUR_OPEN_SLOT'
+                and validator.parse_hex(r['End_Code_Point']) == 0xFFFBF]
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(validator.parse_hex(rows[0]['Start_Code_Point']), 0xFFF00)
+
+
 class NegativeDetectionTests(unittest.TestCase):
     """The validators must actually fail on regressions (mutant repositories)."""
 

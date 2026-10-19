@@ -132,7 +132,9 @@ The following blocks represent unallocated space (`OPEN_SLOT`) and defensively z
 * `U+F1D00`–`U+F1EFF` | `U+F26B0`–`U+F26FF` | `U+F28E0`–`U+F28FF` | `U+F2960`–`U+F29FF`
 * `U+F3400`–`U+F4DFF` | `U+F5150`–`U+F7FFF` | `U+F81B0`–`U+F8FFF` | `U+FA000`–`U+FAFFF`
 * `U+FC000`–`U+FDFFF` | `U+FF200`–`U+FF27F` | `U+FF2A0`–`U+FF2BF`
-* `U+FFE00`–`U+FFEFF`
+* `U+FFE00`–`U+FFEFF` | `U+FFF00`–`U+FFFBF`
+
+> **Note (SPUCE Fragments reduction, 2026-10-19):** SPUCE reduced its Zone 12 Fragments allocation from `U+FFF00`–`U+FFFEF` to `U+FFFC0`–`U+FFFEF`. The remaining Fragments allocation is therefore exactly `U+FFFC0`–`U+FFFEF`, and the released range `U+FFF00`–`U+FFFBF` is tracked in Set 1 as `PROVISIONAL_RNUR_OPEN_SLOT` (charted as `???` territory in `S1/Roadmap/spua-a_roadmap.md`). The released range is neither a SPUCE allocation nor confirmed UCSUR space.
 
 > **Note on Provisional Eviction:** All ranges designated as `PROVISIONAL_RNUR_OPEN_SLOT` are held via defensive zoning under an active upstream vacuum. These are subject to the absolute Upstream Authority hierarchy and the Eviction Clause. If conflicting native allocations emerge upstream, these slots face automatic clean relocation routing to Set 2+ execution layers to prevent string parsing pollution. The former BMP provisional reservations `U+EE60–U+EE8F` and `U+EFB0–U+EFFF` are no longer part of this list: they were dissolved into permanent space during the Set 1 → Set 2 migration (see §3.1.4) and their addresses are now SPUCE allocations.
 
@@ -213,8 +215,10 @@ SPUCE provisionally partitions Plane 15 (SPUA-A) into thirteen zones. Two of the
 | **9** | `FC000–FDFFF` | Constructed scripts by FontStruct users | SPUCE |
 | **10** | `FE000–FEFFF` | Personal reservation | Reserved for @erictom333 |
 | **11** | `FF000–FFEFF` | Symbols | SPUCE |
-| **12** | `FFF00–FFFEF` | Fragments | SPUCE |
+| **12** | `FFFC0–FFFEF` | Fragments | SPUCE |
 | **13** | `FFFF0–FFFFF` | Specials | SPUCE |
+
+> **Note (SPUCE Fragments reduction, 2026-10-19):** SPUCE reduced the Zone 12 Fragments allocation to `U+FFFC0`–`U+FFFEF`, leaving `U+FFF00`–`U+FFFBF` outside every SPUCE zone. That released range is tracked in Set 1 as `PROVISIONAL_RNUR_OPEN_SLOT` (§3.3) and is not confirmed UCSUR space.
 
 Because SPUCE zoning is provisional and does not cover every code point in a zone, only the space SPUCE leaves unallocated inside its zones stays RNUR territory. Once SPUCE allocates a script, those code points leave the RNUR provisional list in §3.3 and become SPUCE allocations — for example `U+F50F0`–`U+F514F` (Enochian, Litterae Ignotae, and Theban) and `U+FF700`–`U+FF9FF` (Control Pictures Extended-II, soon going to be encoded in Plane 16). Scripts that remain UCSUR-listed keep their UCSUR classification instead of the zone steward.
 
