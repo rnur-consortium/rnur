@@ -4,6 +4,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
 
 * 🟪 = **Core CSUR / Shared Allocations** (Purple)
 * 🟩 = **UCSUR-Only Allocations** (Green)
+  * “UCSUR-Only” = allocated in UCSUR rather than CSUR; a range may also be named by SPUCE without leaving this class (see the reconciliation note below).
 * 🟥 = **SPUCE Project Allocations** (Red)
   * 🟨 = **SPUCE Project Allocations (Reserved for SPUCE Admin and FontStruct user @erictom333)** (Yellow)
 * 🟧 = **RNUR Set 1 Allocations** (Orange)
@@ -34,7 +35,7 @@ Plane 15 is provisionally zoned by SPUCE into the thirteen sectors below. Two of
 
 > **Note (SPUCE Fragments reduction, 2026-10-19):** Zone 12's Fragments allocation was reduced to `FFFC0–FFFEF`. The released range `FFF00–FFFBF` is tracked by RNUR in Set 1 as a `PROVISIONAL_RNUR_OPEN_SLOT` (charted as `???` territory below) — it is neither a SPUCE allocation nor confirmed UCSUR space.
 
-> **Note (Plane 15 status reconciliation, 2026-10-19):** `Hacm`, `Liparxe`, `Shaleian`, and `Visible Speech Extended-I` are charted as SPUCE allocations (🟥). UCSUR reserves their ranges, but its allocation table does not list the scripts as proposals or registrations and its roadmap still marks them proposed. Fairfax HD maps Hacm, Liparxe, and Shaleian completely and lists Visible Speech Extended as planned; that is observed font usage, not formal UCSUR confirmation. `Zbalermorna` remains a UCSUR-only allocation (🟩) because it is a named UCSUR proposal. `Sitelen Pona Extended-A`, `Sitelen Pona Extended-B`, and `Quikscript` remain unconfirmed by UCSUR (⬛).
+> **Note (Plane 15 status reconciliation, 2026-10-19):** `Hacm`, `Liparxe`, `Shaleian`, and `Visible Speech Extended-I` are charted as UCSUR-only allocations (🟩). Their ranges originate in UCSUR — UCSUR reserves them, and “UCSUR-only” here means allocated in UCSUR rather than CSUR, not that SPUCE has never named the range. The SPUCE Plane 15 Roadmap names the same four ranges; that overlap is recorded as provenance (see `core/SPECIFICATION.md` §3.5.5), not as SPUCE ownership. Fairfax HD maps Hacm, Liparxe, and Shaleian completely and lists Visible Speech Extended as planned; that is observed font usage, not a UCSUR registration. `Zbalermorna` is a named UCSUR proposal and also stays UCSUR-only (🟩). `Sitelen Pona Extended-A`, `Sitelen Pona Extended-B`, and `Quikscript` remain unconfirmed by UCSUR (⬛).
 
 ---
 
@@ -229,18 +230,18 @@ Plane 15 is provisionally zoned by SPUCE into the thirteen sectors below. Two of
     </tr>
     <tr>
       <td align="center"><b>F27xx</b></td>
-      <td colspan="16" align="center">🟥 Hacm (F2700–F27FF)</td>
+      <td colspan="16" align="center">🟩 Hacm (F2700–F27FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F28xx</b></td>
-      <td colspan="3" align="center">🟥 Liparxe (F2800–F282F)</td>
-      <td colspan="7" align="center">🟥 Shaleian (F2830–F289F)</td>
+      <td colspan="3" align="center">🟩 Liparxe (F2800–F282F)</td>
+      <td colspan="7" align="center">🟩 Shaleian (F2830–F289F)</td>
       <td colspan="4" align="center">🟩 Zbalermorna (F28A0–F28DF)</td>
       <td colspan="2" align="center">??? (F28E0–F28FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F29xx</b></td>
-      <td colspan="6" align="center">🟥 Visible Speech Extended-I (F2900–F295F)</td>
+      <td colspan="6" align="center">🟩 Visible Speech Extended-I (F2900–F295F)</td>
       <td colspan="10" align="center">??? (F2960–F29FF)</td>
     </tr>
     <tr>

@@ -236,7 +236,7 @@ class ArtifactConsistencyTests(unittest.TestCase):
 
 class Plane15October2026Tests(unittest.TestCase):
     """The 2026-10-19 Plane 15 reconciliation: the Fragments reduction and the
-    UCSUR/SPUCE status split for Hacm, Liparxe, Shaleian, and Visible Speech
+    UCSUR-origin classification of Hacm, Liparxe, Shaleian, and Visible Speech
     Extended-I, with the three genuinely unconfirmed scripts preserved."""
 
     def setUp(self):
@@ -260,7 +260,7 @@ class Plane15October2026Tests(unittest.TestCase):
         self.assertIn('`U+FFF00`–`U+FFFBF`', self.spec)
         self.assertIn('`FFFC0–FFFEF`', self.spec)
 
-    def test_spuce_plane15_scripts_are_reconciled(self):
+    def test_ucsur_origin_scripts_are_reconciled(self):
         expected = {
             (0xF2700, 0xF27FF, 'Hacm'),
             (0xF2800, 0xF282F, 'Liparxe'),
@@ -284,20 +284,20 @@ class Plane15October2026Tests(unittest.TestCase):
             '# --- SPUCE Project Allocations (🟥) ---', 1)[1].split(
             '# --- SPUCE Project Allocations (Reserved for', 1)[0]
 
-        self.assertIn('F28A0..F28DF; Zbalermorna', green)
-        for name in ('Hacm', 'Liparxe', 'Shaleian', 'Visible Speech Extended-I'):
-            self.assertNotIn(name, green)
+        for name in ('Hacm', 'Liparxe', 'Shaleian', 'Visible Speech Extended-I',
+                     'Zbalermorna'):
+            self.assertIn(name, green)
             self.assertNotIn(name, unconfirmed)
-            self.assertIn(name, spuce)
+            self.assertNotIn(name, spuce)
         for name in ('Sitelen Pona Extended-A', 'Sitelen Pona Extended-B', 'Quikscript'):
             self.assertIn(name, unconfirmed)
 
     def test_roadmap_cells_use_reconciled_colors(self):
         for cell in (
-            '🟥 Hacm (F2700–F27FF)',
-            '🟥 Liparxe (F2800–F282F)',
-            '🟥 Shaleian (F2830–F289F)',
-            '🟥 Visible Speech Extended-I (F2900–F295F)',
+            '🟩 Hacm (F2700–F27FF)',
+            '🟩 Liparxe (F2800–F282F)',
+            '🟩 Shaleian (F2830–F289F)',
+            '🟩 Visible Speech Extended-I (F2900–F295F)',
             '🟩 Zbalermorna (F28A0–F28DF)',
             '⬛ ¿Sitelen Pona Extended-A? (F1A00–F1AFF)',
             '⬛ ¿Sitelen Pona Extended-B? (F1F00–F1FFF)',
@@ -305,22 +305,11 @@ class Plane15October2026Tests(unittest.TestCase):
         ):
             self.assertIn(cell, self.roadmap)
 
-    def test_csv_tracks_reconciled_allocations(self):
-        by_name = {r['Script_Name']: r for r in self.csv}
-        expected = {
-            'Hacm': (0xF2700, 0xF27FF),
-            'Liparxe': (0xF2800, 0xF282F),
-            'Shaleian': (0xF2830, 0xF289F),
-            'Visible Speech Extended-I': (0xF2900, 0xF295F),
-        }
-        for name, (start, end) in expected.items():
-            self.assertIn(name, by_name)
-            row = by_name[name]
-            self.assertEqual(validator.parse_hex(row['Start_Code_Point']), start)
-            self.assertEqual(validator.parse_hex(row['End_Code_Point']), end)
-            self.assertEqual(row['Status'], 'SPUCE Allocation')
-            self.assertEqual(row['Flags'], 'SPUCE')
-        self.assertNotIn('Visible Speech Extended', by_name)
+    def test_csv_does_not_track_ucsur_allocations(self):
+        by_name = {r['Script_Name'] for r in self.csv}
+        for name in ('Hacm', 'Liparxe', 'Shaleian', 'Visible Speech Extended-I',
+                     'Visible Speech Extended', 'Zbalermorna'):
+            self.assertNotIn(name, by_name)
 
     def test_csv_tracks_released_range(self):
         rows = [r for r in self.csv
@@ -333,7 +322,8 @@ class Plane15October2026Tests(unittest.TestCase):
         self.assertIn('`U+FFFF0`–`U+FFFFF`', self.spec)
         self.assertNotIn('`U+FFF00`–`U+FFFFF`', self.spec)
         self.assertIn('Visible Speech Extended-I', self.spec)
-        self.assertIn('SPUCE allocations (🟥)', self.spec)
+        self.assertIn('UCSUR-only allocations (🟩)', self.spec)
+        self.assertIn('allocated in UCSUR rather than CSUR', self.spec)
         self.assertIn('observed font usage', self.spec)
         self.assertIn('public SPUCE Plane 15 Roadmap still showed the pre-reduction', self.spec)
 

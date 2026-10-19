@@ -1,6 +1,7 @@
 # Plane 15 Status Reconciliation — 2026-10-19
 
-**Branch:** `plane15-status-reconciliation-2026-10-19`
+**Baseline:** `918af67` (state before this reconciliation) · **Supersedes:** PR #11
+(`4681a79`, which charted the four as 🟥; see the revision note in §2)
 **Scope:** RNUR Plane 15 (SPUA-A) records for Hacm, Liparxe, Shaleian, Visible Speech
 Extended-I, Zbalermorna, Quikscript, Sitelen Pona Extended-A, and Sitelen Pona Extended-B,
 reconciled against current evidence (UCSUR reserved ranges, UCSUR roadmap markers, Fairfax HD
@@ -10,13 +11,17 @@ coverage, SPUCE Plane 15 Roadmap, GS Unicode 3.0 Plane F map).
 
 ## 1. Files changed
 
+Diffs below are relative to the pre-reconciliation baseline `918af67` (the commit before this
+reconciliation began).
+
 | File | +/- | Summary |
 | --- | --- | --- |
-| `UNIDATA/S1/Blocks.txt` | +12 / −4 | Moved `Hacm`, `Liparxe`, `Shaleian` out of the UCSUR/unconfirmed sections into the SPUCE (🟥) section; renamed `Visible Speech Extended` → `Visible Speech Extended-I` in the SPUCE section; added a reconciliation provenance comment; `Zbalermorna` stays UCSUR-only (🟩); unconfirmed (⬛) section now contains only `¿Sitelen Pona Extended-A?`, `¿Sitelen Pona Extended-B?`, `¿Quikscript?`. |
-| `S1/Roadmap/spua-a_roadmap.md` | +6 / −4 | F27xx cell → `🟥 Hacm (F2700–F27FF)` (was `⬛ ¿Hacm?`); F28xx cells → `🟥 Liparxe (F2800–F282F)` / `🟥 Shaleian (F2830–F289F)` (both were 🟩), `🟩 Zbalermorna (F28A0–F28DF)` unchanged; F29xx cell → `🟥 Visible Speech Extended-I (F2900–F295F)`; added a Plane 15 status reconciliation note. |
-| `core/SPECIFICATION.md` | +5 / −1 | §3.2 SPUA-A Hints/Specials sector corrected from `U+FFF00–U+FFFFF` to `U+FFFF0–U+FFFFF` (separating the provisional `U+FFF00–U+FFFBF` slot and `U+FFFC0–U+FFFEF` Fragments allocation); added a Fragments provenance note and a detailed Plane 15 status reconciliation note documenting evidence and the `Visible Speech Extended` → `Visible Speech Extended-I` aliasing. |
-| `data/set1_master.csv` | +4 / −0 | Added 4 `SPUCE Allocation` rows: Hacm `U+F2700–U+F27FF`, Liparxe `U+F2800–U+F282F`, Shaleian `U+F2830–U+F289F`, Visible Speech Extended-I `U+F2900–U+F295F` (each description records the UCSUR-reserved-but-not-named evidence and Fairfax HD coverage/planned status). |
-| `tests/test_migration.py` | +73 / −12 | Rewrote `Plane15October2026Tests`: asserts reconciled block ranges/colors, section ownership (four in SPUCE section, Zbalermorna in 🟩, three in ⬛), roadmap cells, CSV rows (status `SPUCE Allocation`, flags `SPUCE`, no short-alias row), spec notes (§3.2 correction, provenance, reconciliation note), and Fragments/provisional sizes (48/192). |
+| `UNIDATA/S1/Blocks.txt` | +9 / −2 | `Hacm`, `Liparxe`, `Shaleian` moved into the UCSUR-Only (🟩) section (Hacm out of the unconfirmed ⬛ section; Liparxe/Shaleian already green, now annotated); `Visible Speech Extended` → `Visible Speech Extended-I` moved from SPUCE (🟥) into UCSUR-Only (🟩); added the section-header comment defining "UCSUR-Only = allocated in UCSUR rather than CSUR"; `Zbalermorna` unchanged (🟩); unconfirmed (⬛) section holds only the three required scripts. |
+| `S1/Roadmap/spua-a_roadmap.md` | +5 / −2 | F27xx cell → `🟩 Hacm (F2700–F27FF)` (was `⬛ ¿Hacm?`); F29xx cell → `🟩 Visible Speech Extended-I (F2900–F295F)` (was red, old name); F28xx cells keep `🟩 Liparxe` / `🟩 Shaleian`, `🟩 Zbalermorna` untouched; legend clarifies what "UCSUR-Only" means; added the Plane 15 status reconciliation note. |
+| `core/SPECIFICATION.md` | +6 / −2 | §3.2 SPUA-A Hints/Specials sector corrected from `U+FFF00–U+FFFFF` to `U+FFFF0–U+FFFFF`; added the Fragments provenance note and the Plane 15 status reconciliation note (UCSUR origin, SPUCE naming recorded as provenance, `Visible Speech Extended` → `Visible Speech Extended-I` aliasing); §3.5.5 closing paragraph states why the four keep the UCSUR classification. |
+| `data/set1_master.csv` | 0 / 0 | **Net unchanged vs baseline.** An intermediate pass briefly added 4 `SPUCE Allocation` rows; they were removed again because UCSUR-only allocations are not tracked in `set1_master.csv` (consistent with `Zbalermorna`, which has no row either). A test now asserts their absence. |
+| `tests/test_migration.py` | +63 / −12 | Rewrote `Plane15October2026Tests` (5 → 8 tests): asserts the four ranges exist, question-mark markers are gone, section ownership (four + Zbalermorna in 🟩, three in ⬛, none of the four in 🟥), green roadmap cells, **absence** of CSV rows for the UCSUR-only scripts, spec notes (§3.2 correction, UCSUR-origin wording), and Fragments/provisional sizes (48/192). |
+| `docs/PLANE15_RECONCILIATION_2026-10-19.md` | +221 | New: this report. |
 
 ---
 
@@ -24,10 +29,10 @@ coverage, SPUCE Plane 15 Roadmap, GS Unicode 3.0 Plane F map).
 
 | Script | Range | Status | Prior state |
 | --- | --- | --- | --- |
-| Hacm | `U+F2700–U+F27FF` (256) | 🟥 SPUCE allocation | ⬛ unconfirmed (`¿Hacm?`) → 🟥 |
-| Liparxe | `U+F2800–U+F282F` (48) | 🟥 SPUCE allocation | 🟩 UCSUR-only → 🟥 |
-| Shaleian | `U+F2830–U+F289F` (112) | 🟥 SPUCE allocation | 🟩 UCSUR-only → 🟥 |
-| Visible Speech Extended-I | `U+F2900–U+F295F` (96) | 🟥 SPUCE allocation | 🟥 remains red; renamed from `Visible Speech Extended` (now recorded as alias) |
+| Hacm | `U+F2700–U+F27FF` (256) | 🟩 UCSUR-only | ⬛ unconfirmed (`¿Hacm?`) → 🟩 |
+| Liparxe | `U+F2800–U+F282F` (48) | 🟩 UCSUR-only | 🟩 UCSUR-only (kept) |
+| Shaleian | `U+F2830–U+F289F` (112) | 🟩 UCSUR-only | 🟩 UCSUR-only (kept) |
+| Visible Speech Extended-I | `U+F2900–U+F295F` (96) | 🟩 UCSUR-only | 🟥 `Visible Speech Extended` (red, old name) → 🟩 `Visible Speech Extended-I` |
 | Zbalermorna | `U+F28A0–U+F28DF` (64) | 🟩 UCSUR-only | unchanged (named UCSUR proposal) |
 | Quikscript | `U+F2680–U+F26AF` (48) | ⬛ unconfirmed (`¿Quikscript?`) | unchanged |
 | Sitelen Pona Extended-A | `U+F1A00–U+F1AFF` (256) | ⬛ unconfirmed (`¿Sitelen Pona Extended-A?`) | unchanged |
@@ -35,22 +40,25 @@ coverage, SPUCE Plane 15 Roadmap, GS Unicode 3.0 Plane F map).
 
 ### Evidence per script
 
-- **Hacm (F2700–F27FF):** UCSUR reserves the range, but the UCSUR allocation table does not
-  list Hacm as a proposal or registration and the UCSUR roadmap still marks it `¿Hacm?`.
-  Fairfax HD provides complete glyph coverage. The SPUCE Plane 15 Roadmap names and allocates
-  `Hacm (F2700–F27FF)`. → SPUCE allocation (🟥), moved from the unconfirmed (⬛) section.
-- **Liparxe (F2800–F282F):** UCSUR reserves the range but its allocation table does not name
-  the script and its roadmap still marks it `¿Liparxe?`; Fairfax HD coverage is complete; the
-  SPUCE Plane 15 Roadmap names `Liparxe (F2800–F282F)`. → SPUCE allocation (🟥), moved from
-  UCSUR-only (🟩).
+- **Hacm (F2700–F27FF):** UCSUR reserves the range, and the range originates in UCSUR, but
+  the UCSUR allocation table does not list Hacm as a registration and the UCSUR roadmap still
+  marks it `¿Hacm?`. Fairfax HD provides complete glyph coverage. The SPUCE Plane 15 Roadmap
+  also names `Hacm (F2700–F27FF)` — recorded as provenance, not SPUCE ownership. → UCSUR-only
+  (🟩), moved from the unconfirmed (⬛) section.
+- **Liparxe (F2800–F282F):** UCSUR reserves the range (UCSUR origin) but its allocation table
+  does not name the script and its roadmap still marks it `¿Liparxe?`; Fairfax HD coverage is
+  complete; the SPUCE Plane 15 Roadmap names `Liparxe (F2800–F282F)` as provenance. Stays
+  UCSUR-only (🟩) as before.
 - **Shaleian (F2830–F289F):** Same evidence pattern as Liparxe — UCSUR reserves without
   naming (`¿Shaleian?` in the UCSUR roadmap), Fairfax HD complete, SPUCE Plane 15 Roadmap
-  names `Shaleian (F2830–F289F)`. → SPUCE allocation (🟥), moved from UCSUR-only (🟩).
-- **Visible Speech Extended-I (F2900–F295F):** UCSUR reserves the range but still marks it
-  `¿Visible Speech Extended?`; Fairfax HD lists `Visible Speech Extended` as *planned* (not
-  complete); the SPUCE Plane 15 Roadmap names the F2900–F295F allocation; the GS Unicode 3.0
-  Plane F map uses the shorter alias `Visible Speech Extended`. RNUR preserves the exact name
-  `Visible Speech Extended-I` per SPUCE/task. Remains a SPUCE allocation (🟥); renamed only.
+  names `Shaleian (F2830–F289F)` as provenance. Stays UCSUR-only (🟩) as before.
+- **Visible Speech Extended-I (F2900–F295F):** UCSUR reserves the range (UCSUR origin) but
+  still marks it `¿Visible Speech Extended?`; Fairfax HD lists `Visible Speech Extended` as
+  *planned* (not complete); the SPUCE Plane 15 Roadmap names the F2900–F295F allocation as
+  provenance; the GS Unicode 3.0 Plane F map uses the shorter alias `Visible Speech Extended`.
+  RNUR preserves the exact name `Visible Speech Extended-I` per SPUCE/task. → UCSUR-only
+  (🟩) with the `-I` rename; this is the one classification change among the four besides
+  Hacm (it was charted red under the short name).
 - **Zbalermorna (F28A0–F28DF):** Named UCSUR proposal with a reserved range. Remains
   UCSUR-only (🟩); unchanged throughout.
 - **Quikscript (F2680–F26AF):** Fairfax HD has complete coverage, but there is no UCSUR
@@ -62,11 +70,22 @@ coverage, SPUCE Plane 15 Roadmap, GS Unicode 3.0 Plane F map).
 
 ### Classification rationale
 
-Observed font usage (Fairfax HD coverage) is treated as **evidence**, not as formal UCSUR
-confirmation. UCSUR reserves the four ranges but does not list the scripts as proposals or
-registrations, and its roadmap still marks them proposed (`¿...?`). The SPUCE Plane 15
-Roadmap names and allocates all four ranges. Therefore Hacm, Liparxe, Shaleian, and Visible
-Speech Extended-I are recorded as SPUCE allocations (🟥), not formal UCSUR confirmations (🟩).
+UCSUR reserves all four ranges and they **originate in UCSUR** — the ranges predate the SPUCE
+Plane 15 Roadmap naming. In this repository the 🟩 bucket is labeled *UCSUR-Only Allocations*,
+which means *allocated in UCSUR rather than CSUR*, not *never touched by SPUCE*: a range may be
+named by SPUCE without leaving the UCSUR classification. Therefore Hacm, Liparxe, Shaleian, and
+Visible Speech Extended-I are UCSUR-only allocations (🟩), while the SPUCE Plane 15 Roadmap's
+naming of the same four ranges is recorded as provenance (in `Blocks.txt`, the roadmap note,
+and `core/SPECIFICATION.md` §3.5.5), not as SPUCE ownership. Observed font usage (Fairfax HD
+coverage) is additionally treated as **evidence**, not as a formal UCSUR registration — the
+green classification asserts allocation-level UCSUR origin, not a published UCSUR character
+chart (see §4, items 1 and 6).
+
+> **Revision note:** an earlier pass of this reconciliation (PR #11) charted the four as SPUCE
+> allocations (🟥) on the reading that the current naming authority sets the color. That was
+> superseded: because UCSUR had the ranges first and "UCSUR-Only" is defined against CSUR, the
+> four are UCSUR-only (🟩) and the SPUCE naming is provenance. This report and the artifacts
+> reflect the corrected classification.
 
 ---
 
@@ -83,8 +102,9 @@ Speech Extended-I are recorded as SPUCE allocations (🟥), not formal UCSUR con
 ## 4. Unresolved discrepancies
 
 1. **UCSUR roadmap/allocation table:** still marks Hacm, Liparxe, Shaleian, and Visible Speech
-   Extended as reserved/proposed (`¿...?`) rather than registered/named. RNUR records them as
-   SPUCE allocations on the strength of the SPUCE Plane 15 Roadmap + Fairfax HD evidence.
+   Extended as reserved/proposed (`¿...?`) rather than registered/named. RNUR keeps them in the
+   UCSUR-Only class because the ranges originate in UCSUR, while the SPUCE Plane 15 Roadmap's
+   matching names are recorded only as provenance.
 2. **Fairfax HD name:** lists `Visible Speech Extended` as *planned* — no `-I` suffix and no
    complete coverage.
 3. **GS Unicode 3.0 Plane F map:** uses `Visible Speech Extended` (no `-I`). RNUR preserves
@@ -154,13 +174,13 @@ test_detects_tier_a_claiming_provisional_gap (test_migration.NegativeDetectionTe
 test_detects_wrong_relocation_destination (test_migration.NegativeDetectionTests.test_detects_wrong_relocation_destination) ... ok
 test_invalid_inclusive_range_detected (test_migration.NegativeDetectionTests.test_invalid_inclusive_range_detected) ... ok
 test_blocks_sections_reflect_ownership (test_migration.Plane15October2026Tests.test_blocks_sections_reflect_ownership) ... ok
-test_csv_tracks_reconciled_allocations (test_migration.Plane15October2026Tests.test_csv_tracks_reconciled_allocations) ... ok
+test_csv_does_not_track_ucsur_allocations (test_migration.Plane15October2026Tests.test_csv_does_not_track_ucsur_allocations) ... ok
 test_csv_tracks_released_range (test_migration.Plane15October2026Tests.test_csv_tracks_released_range) ... ok
 test_fragments_allocation_reduced (test_migration.Plane15October2026Tests.test_fragments_allocation_reduced) ... ok
 test_released_range_is_provisional_open_slot (test_migration.Plane15October2026Tests.test_released_range_is_provisional_open_slot) ... ok
 test_roadmap_cells_use_reconciled_colors (test_migration.Plane15October2026Tests.test_roadmap_cells_use_reconciled_colors) ... ok
 test_spec_documents_reconciliation (test_migration.Plane15October2026Tests.test_spec_documents_reconciliation) ... ok
-test_spuce_plane15_scripts_are_reconciled (test_migration.Plane15October2026Tests.test_spuce_plane15_scripts_are_reconciled) ... ok
+test_ucsur_origin_scripts_are_reconciled (test_migration.Plane15October2026Tests.test_ucsur_origin_scripts_are_reconciled) ... ok
 test_constantscript_unchanged (test_migration.RegistryDataTests.test_constantscript_unchanged) ... ok
 test_former_provisional_reservations_removed (test_migration.RegistryDataTests.test_former_provisional_reservations_removed) ... ok
 test_named_placeholder_allocation_preserved (test_migration.RegistryDataTests.test_named_placeholder_allocation_preserved) ... ok
@@ -171,7 +191,7 @@ test_set2_open_sandbox_begins_after_relocations (test_migration.RegistryDataTest
 test_set2_relocations_exact (test_migration.RegistryDataTests.test_set2_relocations_exact) ... ok
 
 ----------------------------------------------------------------------
-Ran 40 tests in 2.062s
+Ran 40 tests in 2.230s
 
 OK
 ```
@@ -180,34 +200,40 @@ OK
 
 ## 6. Diff summary
 
-`git diff --stat` (5 tracked files; this report is a new untracked file):
+`git diff 918af67 --stat` — net change from the pre-reconciliation baseline (this report
+included; `data/set1_master.csv` does not appear because it is back to its baseline content):
 
 ```
- S1/Roadmap/spua-a_roadmap.md | 10 +++---
- UNIDATA/S1/Blocks.txt        | 16 ++++++---
- core/SPECIFICATION.md        |  6 +++-
- data/set1_master.csv         |  4 +++
- tests/test_migration.py      | 85 +++++++++++++++++++++++++++++++++++++-------
- 5 files changed, 100 insertions(+), 21 deletions(-)
+ S1/Roadmap/spua-a_roadmap.md              |   7 +-
+ UNIDATA/S1/Blocks.txt                     |  11 +-
+ core/SPECIFICATION.md                     |   8 +-
+ docs/PLANE15_RECONCILIATION_2026-10-19.md | 232 ++++++++++++++++++++++++++++++
+ tests/test_migration.py                   |  75 ++++++++--
+ 5 files changed, 315 insertions(+), 18 deletions(-)
 ```
 
-Per-file insertions/deletions (`git diff --numstat`):
+Per-file insertions/deletions (`git diff 918af67 --numstat`):
 
 ```
-6	4	S1/Roadmap/spua-a_roadmap.md
-12	4	UNIDATA/S1/Blocks.txt
-5	1	core/SPECIFICATION.md
-4	0	data/set1_master.csv
-73	12	tests/test_migration.py
+5	2	S1/Roadmap/spua-a_roadmap.md
+9	2	UNIDATA/S1/Blocks.txt
+6	2	core/SPECIFICATION.md
+232	0	docs/PLANE15_RECONCILIATION_2026-10-19.md
+63	12	tests/test_migration.py
 ```
 
-Concise per-file summary:
+Working tree vs `HEAD` (`4681a79`, the PR #11 state) additionally shows
+`data/set1_master.csv | 4 ---` — the removal of the four `SPUCE Allocation` rows added by
+PR #11, restoring the file to its baseline content.
 
-- **`UNIDATA/S1/Blocks.txt`** — section moves + rename + provenance comment; no range values
-  changed for any script.
-- **`S1/Roadmap/spua-a_roadmap.md`** — three cell color changes, one question-mark removal
-  (Hacm), one rename (VSE-I), one added note.
-- **`core/SPECIFICATION.md`** — one corrected range in §3.2 plus two added notes in §3.5.5.
-- **`data/set1_master.csv`** — 4 appended rows, nothing else touched.
+Concise per-file summary (vs baseline):
+
+- **`UNIDATA/S1/Blocks.txt`** — Hacm/Liparxe/Shaleian annotated and grouped in the UCSUR-Only
+  section, VSE renamed to `-I` and moved from 🟥 to 🟩, section-header comment added; no range
+  value changed for any script.
+- **`S1/Roadmap/spua-a_roadmap.md`** — Hacm cell black→green, VSE-I cell red→green + rename,
+  legend clarified, one added note.
+- **`core/SPECIFICATION.md`** — §3.2 corrected range plus two added notes in §3.5.5.
+- **`data/set1_master.csv`** — no net change (4 rows added and removed in the interim).
 - **`tests/test_migration.py`** — `Plane15October2026Tests` rewritten (8 tests, up from 5) to
-  lock in the reconciled state.
+  lock in the UCSUR-only classification.
