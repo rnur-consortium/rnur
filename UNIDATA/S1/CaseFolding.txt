@@ -1,5 +1,5 @@
 # CaseFolding-RNUR.txt
-# Date: 2026-07-31, 12:00:00
+# Date: 2026-10-22, 12:00:00
 #
 # Reddit Neographical Unicode Registry Character Database
 # Maintained by Registry Architecture / Nexus Tribarixa
@@ -30,35 +30,6 @@
 # NOTE: RNUR tracks case folding only for its own allocations. Unicode case
 # folding data is intentionally excluded and will be populated as each block's
 # repertoire is finalized.
-#
-# --- Placeholder (F5C0..F71F) ---
-# Uppercase letters occupy F5C0..F5D9 and fold to lowercase F5DA..F5F3.
-F5C0; C; F5DA; # PLACEHOLDER-F5C0
-F5C1; C; F5DB; # PLACEHOLDER-F5C1
-F5C2; C; F5DC; # PLACEHOLDER-F5C2
-F5C3; C; F5DD; # PLACEHOLDER-F5C3
-F5C4; C; F5DE; # PLACEHOLDER-F5C4
-F5C5; C; F5DF; # PLACEHOLDER-F5C5
-F5C6; C; F5E0; # PLACEHOLDER-F5C6
-F5C7; C; F5E1; # PLACEHOLDER-F5C7
-F5C8; C; F5E2; # PLACEHOLDER-F5C8
-F5C9; C; F5E3; # PLACEHOLDER-F5C9
-F5CA; C; F5E4; # PLACEHOLDER-F5CA
-F5CB; C; F5E5; # PLACEHOLDER-F5CB
-F5CC; C; F5E6; # PLACEHOLDER-F5CC
-F5CD; C; F5E7; # PLACEHOLDER-F5CD
-F5CE; C; F5E8; # PLACEHOLDER-F5CE
-F5CF; C; F5E9; # PLACEHOLDER-F5CF
-F5D0; C; F5EA; # PLACEHOLDER-F5D0
-F5D1; C; F5EB; # PLACEHOLDER-F5D1
-F5D2; C; F5EC; # PLACEHOLDER-F5D2
-F5D3; C; F5ED; # PLACEHOLDER-F5D3
-F5D4; C; F5EE; # PLACEHOLDER-F5D4
-F5D5; C; F5EF; # PLACEHOLDER-F5D5
-F5D6; C; F5F0; # PLACEHOLDER-F5D6
-F5D7; C; F5F1; # PLACEHOLDER-F5D7
-F5D8; C; F5F2; # PLACEHOLDER-F5D8
-F5D9; C; F5F3; # PLACEHOLDER-F5D9
 #
 # --- Placeholder (SPUCE) (F92C0..F941F) ---
 # Uppercase letters occupy F92C0..F92D9 and fold to lowercase F92DA..F92F3.

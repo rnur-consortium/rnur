@@ -53,7 +53,7 @@ If you are modifying automated tooling in `tools/` or contributing documentation
 Every pull request submitted to this repository automatically triggers our GitHub Actions integration pipeline running `.github/workflows/registry_check.yml`. This workflow directly executes `tools/validator.py` to:
 1. Verify that all modified `.csv` data formatting perfectly aligns with `core/SPECIFICATION.md`.
 2. Scan all code points to ensure zero overlaps between `data/set1_master.csv` and active sandbox entries.
-3. Enforce the RNUR Set 1 → Set 2 migration invariants: exact SPUCE-supplied coverage of `U+EE00–U+EFFF` (SPUCE supplies the definitions; RNUR represents them in its own sets), the six contiguous Set 2 relocations from `U+E820`, the unchanged ConstantScript block, and the removal of the former `???` reservations.
+3. Enforce the RNUR Set 1 → Set 2 migration invariants: exact SPUCE-supplied coverage of `U+EE00–U+EFFF` (SPUCE supplies the definitions; RNUR represents them in its own sets), the six contiguous Set 2 relocations from `U+E820`, the unchanged ConstantScript block, the removal of the former `???` reservations, the relocation of the `Placeholder` allocation from Set 1 `U+F5C0–U+F71F` to Set 2 `U+E9A0–U+EAFF`, and the three-range subdivision (`???` / SPUCE `Miscellaneous Symbols Extended-I` / `???`) of the vacated Set 1 interval.
 4. Confirm that the CSVs, `UNIDATA/*/Blocks.txt`, the roadmaps, and `core/SPECIFICATION.md` agree; the pipeline also runs the regression suite in `tests/` (`python -m unittest discover -s tests`).
 
 **Important:** Your pull request *will not be merged* if the automated registry check fails. You can run `python tools/validator.py` locally to test your data matrices prior to pushing your changes.

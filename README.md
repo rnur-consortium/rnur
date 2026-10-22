@@ -28,15 +28,17 @@ Set 1 → Set 2 migration invariants: the nine SPUCE-supplied allocations
 represented in RNUR Set 1 covering
 `U+EE00–U+EFFF` exactly, the six RNUR relocations into Set 2 starting at
 `U+E820`, the unchanged ConstantScript block at `U+E000–U+E81F`, the removal of
-the former `???` provisional reservations, and agreement between the CSVs,
-`UNIDATA/*/Blocks.txt`, the roadmaps, and `core/SPECIFICATION.md`.
+the former `???` provisional reservations, the relocation of the `Placeholder`
+allocation from Set 1 `U+F5C0–U+F71F` to Set 2 `U+E9A0–U+EAFF` and the
+three-range subdivision of the vacated Set 1 interval, and agreement between the
+CSVs, `UNIDATA/*/Blocks.txt`, the roadmaps, and `core/SPECIFICATION.md`.
 
 To check a proposed range against one local set (use a range you believe is
 still open, such as the RNUR embassy space):
 
 ```powershell
 py tools/validator.py 1 U+F9060 U+F908F
-py tools/validator.py 2 U+E9A0 U+E9BF
+py tools/validator.py 2 U+EB00 U+EBFF
 ```
 
 The command accepts set 1 or 2, start, and end; it reports overlap but does
@@ -47,7 +49,8 @@ build fonts, or perform an eviction/migration.
 
 The repository ships regression tests for the SPUCE-supplied allocations
 represented in RNUR Set 1, the six Set 2
-relocations, and the permanent-space handling of the former `???` ranges:
+relocations, the permanent-space handling of the former `???` ranges, and the
+`Placeholder` relocation into Set 2:
 
 ```powershell
 py -m unittest discover -s tests -v
