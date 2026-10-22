@@ -1,5 +1,5 @@
 # Blocks-RNUR.txt
-# Date: 2026-10-16, 12:00:00
+# Date: 2026-10-22, 12:00:00
 #
 # Reddit Neographical Unicode Registry Character Database
 # Maintained by Registry Architecture / Nexus Tribarixa
@@ -28,6 +28,10 @@ E880..E8CF; Sulat Hiligaynon
 E8D0..E91F; Western Script
 E920..E95F; Zurjon
 E960..E99F; Foldian
+# SPUCE allocation update of 2026-10-22: the Placeholder allocation moved from
+# Set 1 (U+F5C0..U+F71F) to Set 2, immediately after Foldian. (SPUCE supplies
+# the definitions; RNUR owns the sets.)
+E9A0..EAFF; Placeholder
 
 # ================================================
 # ARCHITECTURAL OPEN Real Estate / Tracking
@@ -38,7 +42,10 @@ E960..E99F; Foldian
 # dissolved into permanent space during the Set 1 to Set 2 migration. They are
 # deliberately NOT carried over into Set 2 as slots or reservations; the code
 # points below simply remain unallocated sandbox space.
-E9A0..F8FF; OPEN_SLOT
+# NOTE: U+E9A0..U+EAFF is the Placeholder allocation relocated from Set 1
+# under the SPUCE allocation update of 2026-10-22; the open sandbox space
+# therefore starts immediately after it.
+EB00..F8FF; OPEN_SLOT
 F0000..10FFFF; OPEN_SLOT
 
 # EOF

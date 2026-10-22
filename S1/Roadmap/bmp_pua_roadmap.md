@@ -5,7 +5,7 @@ This matrix maps out allocations visually across the 16-column boundaries of the
 * 🟪 = **Core CSUR / Shared Allocations** (Purple)
 * 🟩 = **UCSUR-Only Allocations** (Green)
 * 🟥 = **SPUCE Project Allocations** (Red)
-* 🟧 = **RNUR Set 1 Allocations** (Orange)
+* 🟧 = **RNUR Set 1 Allocations** (Orange) — the former `Placeholder` allocation (`U+F5C0–U+F71F`) was relocated to Set 2 (`U+E9A0–U+EAFF`) in the 2026-10-22 SPUCE allocation update, so the BMP grid no longer charts an 🟧 cell.
 
 ---
 
@@ -180,16 +180,16 @@ This matrix maps out allocations visually across the 16-column boundaries of the
     <tr>
       <td align="center"><b>F5xx</b></td>
       <td colspan="12" align="center">🟥 Number Forms Extended-I(F500-F5BF)</td>
-      <td colspan="4" align="center">🟧 Placeholder (F5C0-F5FF)</td>
+      <td colspan="4" align="center">??? (F5C0-F5FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F6xx</b></td>
-      <td colspan="16" align="center">🟧 Placeholder (F600-F6FF)</td>
+      <td colspan="16" align="center">🟥 Miscellaneous Symbols Extended-I (F600-F6FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F7xx</b></td>
-      <td colspan="3" align="center">🟧 Placeholder (F700-F71F)</td>
-      <td colspan="13" align="center">??? (F720-F7FF)</td>
+      <td colspan="2" align="center">??? (F700-F71F)</td>
+      <td colspan="14" align="center">??? (F720-F7FF)</td>
     </tr>
     <tr>
       <td align="center"><b>F8xx</b></td>
@@ -213,11 +213,11 @@ To ensure predictable layout boundaries for secondary forks and peer registry co
 | Registry State | Visual Notation | Global Technical Implementation & Developer Impact |
 | :--- | :--- | :--- |
 | **Truly Unassigned** | *Empty / Unallocated Space* | **Permanent RNUR Set 1 Sandbox Territory.** This space is permanently explicitly preserved as open, neutral territory within the global Set 1 framework. Because no defensive fences are built or temporary scripts mapped here, it serves as a permanent sanctuary for external custom font forks or uncoordinated local scripts. |
-| **Reserved Space** | `???` | **Provisional RNUR Set 1 Lease Territory.** This space functions as a defensive block structurally locked down by RNUR Set 1 to prevent internal overlap while awaiting upstream specification. It remains an open encoding vacuum from a network perspective, operating under a provisional lease paradigm until official upstream authorities (**UCSUR** or **SPUCE**) declare a structural allocation within these ranges. Since the Set 1 → Set 2 migration, the BMP interval **`U+EE00–U+EFFF` is no longer `???` territory**: it is fully allocated to the nine SPUCE scripts charted above. The `???` marker still governs the remaining provisional ranges (e.g. `U+F720–U+F7FF`, `U+F820–U+F87F` and the Plane 15/16 provisional blocks).|
+| **Reserved Space** | `???` | **Provisional RNUR Set 1 Lease Territory.** This space functions as a defensive block structurally locked down by RNUR Set 1 to prevent internal overlap while awaiting upstream specification. It remains an open encoding vacuum from a network perspective, operating under a provisional lease paradigm until official upstream authorities (**UCSUR** or **SPUCE**) declare a structural allocation within these ranges. Since the Set 1 → Set 2 migration, the BMP interval **`U+EE00–U+EFFF` is no longer `???` territory**: it is fully allocated to the nine SPUCE scripts charted above. The `???` marker still governs the remaining provisional ranges (e.g. `U+F5C0–U+F5FF`, `U+F700–U+F7FF`, `U+F820–U+F87F` and the Plane 15/16 provisional blocks).|
 
 ### 2. Micro-Level Breakdown: Why the `???` Range is "Provisional RNUR / Unencoded (U)CSUR/SPUCE"
 
-The fragmented and extended ranges spanning the Basic Multilingual Plane (BMP)—specifically **`U+F720–F7FF`** and **`U+F820–U+F87F`**—are classified collectively under the `???` territory due to three core structural boundaries:
+The fragmented and extended ranges spanning the Basic Multilingual Plane (BMP)—specifically **`U+F5C0–F5FF`**, **`U+F700–F71F`**, **`U+F720–F7FF`** and **`U+F820–U+F87F`**—are classified collectively under the `???` territory due to three core structural boundaries:
 
 * **Provisional RNUR Stewardship:** This real estate functions explicitly as **RNUR Set 1 space for now**. It is actively tracked and defended by the registry to anchor incoming community scripts, operating under a temporary lease paradigm.
 * **Upstream Vacuum:** While under RNUR stewardship, this space remains an open layout vacuum from the perspective of peer networks. It lacks an abstract character repertoire or formal upstream tracking, remaining designated as available real estate until **UCSUR** or **SPUCE** steps forward to claim an allocation within its boundaries.
@@ -247,4 +247,25 @@ The eviction and dissolution rules above were applied to the `U+EE00–U+EFFF` i
 | Zurjon | `EF30–EF6F` | `E920–E95F` | 64 |
 | Foldian | `EF70–EFAF` | `E960–E99F` | 64 |
 
-ConstantScript remains unchanged at `U+E000–U+E81F`. The two former Set 1 `???` reservations inside this interval (`U+EE60–U+EE8F` and `U+EFB0–U+EFFF`) were **not** relocated to Set 2: they were dissolved into permanent space, and their addresses in Set 1 are now covered by the Atlantean and Quốc âm tân tự SPUCE allocations respectively. The named RNUR allocation `Placeholder` (`U+F5C0–U+F71F`) and the remaining `???` ranges outside this interval are unaffected by this migration.
+ConstantScript remains unchanged at `U+E000–U+E81F`. The two former Set 1 `???` reservations inside this interval (`U+EE60–U+EE8F` and `U+EFB0–U+EFFF`) were **not** relocated to Set 2: they were dissolved into permanent space, and their addresses in Set 1 are now covered by the Atlantean and Quốc âm tân tự SPUCE allocations respectively. The `???` ranges outside this interval are unaffected by this migration.
+
+#### 3.2 Executed SPUCE Allocation Update of 2026-10-22 (Placeholder Relocated to Set 2)
+
+> **Governance distinction.** SPUCE does not use RNUR's Set 1 / Set 2 architecture. SPUCE supplied the allocation definition that now occupies `U+F600–U+F6FF`; RNUR defines how that definition is represented within its own Set 1 layer, and how the displaced RNUR allocation was relocated into RNUR Set 2.
+
+The SPUCE allocation update moved the named RNUR allocation `Placeholder` out of Set 1 and into the Set 2 sandbox layer, immediately after Foldian. The vacated Set 1 range is not left empty: it is subdivided into three contiguous, non-overlapping ranges that cover `U+F5C0–U+F71F` exactly.
+
+| Set 1 range | Status | Description |
+| :--- | :--- | :--- |
+| `U+F5C0–U+F5FF` | `???` | Provisional RNUR open slot — SPUCE has not assigned this range to another block yet. |
+| `U+F600–U+F6FF` | SPUCE allocation | Miscellaneous Symbols Extended-I. |
+| `U+F700–U+F71F` | `???` | Provisional RNUR open slot — SPUCE has not assigned this range to another block yet. |
+
+| Script | Former Set 1 range | Set 2 range | Size |
+| :--- | :--- | :--- | ---: |
+| Placeholder | `F5C0–F71F` | `E9A0–EAFF` | 352 |
+
+* The Set 2 destination begins immediately after Foldian (`U+E960–U+E99F`), which is unchanged.
+* The `???` ranges are provisional because SPUCE has not assigned them to another block yet; they carry no name, no allocation, and no character repertoire.
+* `Miscellaneous Symbols Extended-I` is a SPUCE allocation: SPUCE supplies the definition, and RNUR represents it inside its own Set 1 layer. Like the other SPUCE allocations, it carries no encoded repertoire yet.
+* The SPUCE allocation of `U+F92C0–U+F941F` (Placeholder, Plane 15) is a separate SPUCE allocation and is unaffected by this update.

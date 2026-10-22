@@ -50,14 +50,33 @@ FORMER_PROVISIONAL_RANGES = [
 ]
 
 # Unrelated allocations that must survive the migration untouched.
-PLACEHOLDER_RANGE = (0xF5C0, 0xF71F)
 CONSTANTSCRIPT_RANGE = (0xE000, 0xE81F)
+
+# The named 'Placeholder' allocation was relocated from Set 1 (U+F5C0-U+F71F)
+# to Set 2 (U+E9A0-U+EAFF) under the SPUCE allocation update of 2026-10-22.
+# Its inclusive size (352 code points) is preserved, and the Set 2 destination
+# begins immediately after Foldian (U+E960-U+E99F).
+PLACEHOLDER_SET2_RANGE = (0xE9A0, 0xEAFF)
+PLACEHOLDER_SET1_RANGE = (0xF5C0, 0xF71F)
+PLACEHOLDER_SIZE = 352
+FOLDIAN_SET2_RANGE = (0xE960, 0xE99F)
+
+# The three Set 1 ranges that replace the vacated Placeholder allocation.
+# They are contiguous, non-overlapping, and cover U+F5C0-U+F71F exactly.
+# The two '???' ranges carry no name and no allocation of their own.
+FORMER_PLACEHOLDER_SUBDIVISION = [
+    (0xF5C0, 0xF5FF, 'PROVISIONAL_RNUR_OPEN_SLOT'),
+    (0xF600, 0xF6FF, 'Miscellaneous Symbols Extended-I'),
+    (0xF700, 0xF71F, 'PROVISIONAL_RNUR_OPEN_SLOT'),
+]
 
 # BMP provisional open slots (PROVISIONAL_RNUR_OPEN_SLOT). These are defensive
 # ??? territory eligible for clean Set 2 relocation routing, so they are Tier B
 # by definition (Tier A is "Non-Provisional"). The specification must never
 # re-list them under Tier A, or the classification contradiction returns.
 TIER_B_BMP_PROVISIONAL_RANGES = [
+    (0xF5C0, 0xF5FF),
+    (0xF700, 0xF71F),
     (0xF720, 0xF7FF),
     (0xF820, 0xF87F),
 ]
@@ -262,13 +281,69 @@ def check_migration_invariants(base_dir):
         if not all(CONSTANTSCRIPT_RANGE[1] < r['_start'] for r in relocated_rows):
             fail("a Set 2 relocation overlaps Constantscript")
 
-    # --- named Placeholder allocation must not be purged ---
-    ph = [r for r in s1 if (r['_start'], r['_end']) == PLACEHOLDER_RANGE]
-    if not any(r['_name'] == 'Placeholder' for r in ph):
-        fail("the named Set 1 'Placeholder' allocation U+F5C0-U+F71F was removed")
-    for r in s2:
-        if r['_name'] == 'Placeholder':
-            fail("'Placeholder' must remain a Set 1 allocation, not a Set 2 record")
+    # --- named Placeholder allocation: relocated from Set 1 to Set 2 ---
+    ph_s2 = [r for r in s2 if r['_name'] == 'Placeholder']
+    if len(ph_s2) != 1:
+        fail(f"Set 2 must contain exactly one 'Placeholder' allocation; found {len(ph_s2)}")
+    else:
+        r = ph_s2[0]
+        if (r['_start'], r['_end']) != PLACEHOLDER_SET2_RANGE:
+            fail(f"Set 2 'Placeholder' range is {r['Start_Code_Point']}-{r['End_Code_Point']}, "
+                 f"expected U+{PLACEHOLDER_SET2_RANGE[0]:04X}-U+{PLACEHOLDER_SET2_RANGE[1]:04X}")
+        if inclusive_size(r['_start'], r['_end']) != PLACEHOLDER_SIZE:
+            fail(f"Set 2 'Placeholder' inclusive size is "
+                 f"{inclusive_size(r['_start'], r['_end'])}, expected {PLACEHOLDER_SIZE}")
+        if inclusive_size(*PLACEHOLDER_SET1_RANGE) != PLACEHOLDER_SIZE:
+            fail(f"former Set 1 'Placeholder' range size is "
+                 f"{inclusive_size(*PLACEHOLDER_SET1_RANGE)}, expected {PLACEHOLDER_SIZE}")
+        if r['_start'] != FOLDIAN_SET2_RANGE[1] + 1:
+            fail("Set 2 'Placeholder' must begin immediately after Foldian "
+                 f"(U+{FOLDIAN_SET2_RANGE[1]:04X})")
+        for other in s2:
+            if other is r:
+                continue
+            if check_overlap(r['_start'], r['_end'], other['_start'], other['_end']):
+                fail(f"Set 2 'Placeholder' overlaps '{other['_name']}' "
+                     f"({other['Start_Code_Point']}-{other['End_Code_Point']})")
+    if any(r['_name'] == 'Placeholder' for r in s1):
+        fail("'Placeholder' must not remain a Set 1 allocation after the relocation")
+    for r in s1:
+        if (r['_start'], r['_end']) == PLACEHOLDER_SET1_RANGE:
+            fail(f"Set 1 still records the vacated 'Placeholder' range "
+                 f"U+{PLACEHOLDER_SET1_RANGE[0]:04X}-U+{PLACEHOLDER_SET1_RANGE[1]:04X}")
+
+    # --- the vacated Set 1 range is subdivided into exactly three ranges ---
+    cursor = PLACEHOLDER_SET1_RANGE[0]
+    for sub_s, sub_e, sub_name in FORMER_PLACEHOLDER_SUBDIVISION:
+        matches = [r for r in s1 if (r['_start'], r['_end']) == (sub_s, sub_e)]
+        if len(matches) != 1:
+            fail(f"Set 1 must contain exactly one '{sub_name}' allocation at "
+                 f"U+{sub_s:04X}-U+{sub_e:04X}; found {len(matches)}")
+        else:
+            row = matches[0]
+            if row['_name'] != sub_name:
+                fail(f"Set 1 range U+{sub_s:04X}-U+{sub_e:04X} is named "
+                     f"'{row['_name']}', expected '{sub_name}'")
+            if sub_name == 'PROVISIONAL_RNUR_OPEN_SLOT':
+                if row.get('Status') != 'Provisional Allocation / Open for Submission':
+                    fail(f"Set 1 '???' range U+{sub_s:04X}-U+{sub_e:04X} has status "
+                         f"'{row.get('Status')}', expected 'Provisional Allocation / Open for Submission'")
+                if 'Placeholder' in (row.get('Description') or ''):
+                    fail(f"Set 1 '???' range U+{sub_s:04X}-U+{sub_e:04X} still carries "
+                         "the former Placeholder description")
+            else:
+                if row.get('Author') != 'SPUCE' or row.get('Status') != 'SPUCE Allocation' \
+                        or row.get('Flags') != 'SPUCE':
+                    fail(f"Set 1 range U+{sub_s:04X}-U+{sub_e:04X} ('{sub_name}') is not "
+                         f"recorded as a SPUCE allocation (author/status/flags: "
+                         f"{row.get('Author')!r}/{row.get('Status')!r}/{row.get('Flags')!r})")
+        if sub_s != cursor:
+            fail(f"Set 1 subdivision gap/overlap at U+{cursor:04X} "
+                 f"(next range starts U+{sub_s:04X})")
+        cursor = sub_e + 1
+    if cursor - 1 != PLACEHOLDER_SET1_RANGE[1]:
+        fail(f"Set 1 subdivision ends at U+{cursor - 1:04X}, expected "
+             f"U+{PLACEHOLDER_SET1_RANGE[1]:04X}")
 
     # --- (10) block files consistent with the CSV registries ---
     s1_blocks_path = os.path.join(base_dir, 'UNIDATA', 'S1', 'Blocks.txt')
@@ -305,11 +380,23 @@ def check_migration_invariants(base_dir):
         fail("UNIDATA/S2/Blocks.txt missing the Constantscript block")
     if any(n == 'OPEN_SLOT' and s == 0xE820 for s, e, n in s2_blocks):
         fail("UNIDATA/S2/Blocks.txt still reports U+E820.. as open space")
-    if (0xE9A0, 0xF8FF, 'OPEN_SLOT') not in s2_blocks:
-        fail("UNIDATA/S2/Blocks.txt should keep U+E9A0..U+F8FF as OPEN_SLOT")
-    if not any(s == PLACEHOLDER_RANGE[0] and e == PLACEHOLDER_RANGE[1] and n == 'Placeholder'
-               for s, e, n in s1_blocks):
-        fail("UNIDATA/S1/Blocks.txt lost the named 'Placeholder' block")
+    if (0xEB00, 0xF8FF, 'OPEN_SLOT') not in s2_blocks:
+        fail("UNIDATA/S2/Blocks.txt should keep U+EB00..U+F8FF as OPEN_SLOT")
+    if (PLACEHOLDER_SET2_RANGE[0], PLACEHOLDER_SET2_RANGE[1], 'Placeholder') not in s2_blocks:
+        fail("UNIDATA/S2/Blocks.txt missing the relocated 'Placeholder' block "
+             f"({PLACEHOLDER_SET2_RANGE[0]:04X}..{PLACEHOLDER_SET2_RANGE[1]:04X})")
+    for s, e, n in s1_blocks:
+        if n == 'Placeholder' and check_overlap(s, e, *PLACEHOLDER_SET1_RANGE):
+            fail("UNIDATA/S1/Blocks.txt still maps a named 'Placeholder' block over "
+                 f"the vacated range ({s:04X}..{e:04X})")
+    if any(s == PLACEHOLDER_SET1_RANGE[0] and e == PLACEHOLDER_SET1_RANGE[1]
+           for s, e, n in s1_blocks):
+        fail("UNIDATA/S1/Blocks.txt still maps the vacated Placeholder range "
+             f"{PLACEHOLDER_SET1_RANGE[0]:04X}..{PLACEHOLDER_SET1_RANGE[1]:04X}")
+    for sub_s, sub_e, sub_name in FORMER_PLACEHOLDER_SUBDIVISION:
+        if (sub_s, sub_e, sub_name) not in s1_blocks:
+            fail(f"UNIDATA/S1/Blocks.txt missing the subdivision block '{sub_name}' "
+                 f"({sub_s:04X}..{sub_e:04X})")
 
     # --- (10) roadmaps and specification consistent with the registries ---
     def read_text(rel_path):
@@ -354,6 +441,33 @@ def check_migration_invariants(base_dir):
         fail("core/SPECIFICATION.md still lists the former ??? reservations as active")
     if 'dissolved into permanent space' not in spec:
         fail("core/SPECIFICATION.md does not document the permanent-space migration rule")
+
+    # --- (10a) Placeholder relocation: roadmaps and specification agree ---
+    # The named 'Placeholder' allocation now lives in Set 2; the Set 1 BMP grid
+    # must chart the vacated range as two ??? cells and one SPUCE cell, and the
+    # Set 2 grid must chart the relocated allocation.
+    if 'Placeholder (F5C0-F71F)' in s1_roadmap:
+        fail("S1 roadmap still charts the relocated 'Placeholder (F5C0-F71F)' cell")
+    for sub_s, sub_e in ((0xF5C0, 0xF5FF), (0xF700, 0xF71F)):
+        cell = f"??? ({sub_s:04X}-{sub_e:04X})"
+        if cell not in s1_roadmap:
+            fail(f"S1 roadmap is missing the ??? cell '{cell}'")
+    if not roadmap_has_range(s1_roadmap, 'Miscellaneous Symbols Extended-I',
+                             0xF600, 0xF6FF):
+        fail("S1 roadmap missing SPUCE entry "
+             "'Miscellaneous Symbols Extended-I (F600-F6FF)'")
+    if not roadmap_has_range(s2_roadmap, 'Placeholder',
+                             PLACEHOLDER_SET2_RANGE[0], PLACEHOLDER_SET2_RANGE[1]):
+        fail("S2 roadmap missing the relocated entry "
+             f"'Placeholder ({PLACEHOLDER_SET2_RANGE[0]:04X}-"
+             f"{PLACEHOLDER_SET2_RANGE[1]:04X})'")
+    if 'Placeholder (F5C0-F71F)' in s2_roadmap:
+        fail("S2 roadmap still charts the former Set 1 'Placeholder (F5C0-F71F)' cell")
+    for exp_s, exp_e in (PLACEHOLDER_SET2_RANGE, (0xF5C0, 0xF5FF),
+                         (0xF600, 0xF6FF), (0xF700, 0xF71F)):
+        range_str = f"`U+{exp_s:04X}`–`U+{exp_e:04X}`"
+        if range_str not in spec:
+            fail(f"core/SPECIFICATION.md missing range {range_str}")
 
     # --- (10b) Tier A/B classification of the BMP ??? gaps ---
     # Tier A covers non-provisional ranges only. The BMP PROVISIONAL_RNUR_OPEN_SLOT

@@ -19,7 +19,7 @@ body:
     id: location
     attributes:
       label: Location of the Issue
-      placeholder: "e.g., tools/validator.py, data/set1_master.csv, Range U+E9A0"
+      placeholder: "e.g., tools/validator.py, data/set1_master.csv, Range U+EB00"
     validations:
       required: true
 

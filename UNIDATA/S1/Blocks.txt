@@ -1,5 +1,5 @@
 # Blocks-RNUR.txt
-# Date: 2026-10-19, 12:00:00
+# Date: 2026-10-22, 12:00:00
 #
 # Reddit Neographical Unicode Registry Character Database
 # Maintained by Registry Architecture / Nexus Tribarixa
@@ -131,6 +131,7 @@ F300..F37F; Greek Extended-I
 F380..F3FF; Cyrillic Extended-I
 F400..F4BF; Symbols and Punctuation Extended-I
 F4F0..F5BF; Number Forms Extended-I
+F600..F6FF; Miscellaneous Symbols Extended-I
 F800..F81F; Corporate Symbols
 F880..F89F; Font Specifics
 
@@ -195,7 +196,12 @@ FEF90..FEFFF; Layout Sandbox Space (erictom333 Reserved)
 # Foldian) were relocated to Set 2 (U+E820..U+E99F) during the Set 1 to Set 2
 # migration; that interval is now fully allocated to SPUCE-supplied scripts
 # represented in RNUR Set 1 (see above).
-F5C0..F71F; Placeholder
+# NOTE: The former Set 1 allocation U+F5C0..U+F71F (Placeholder) was relocated
+# to Set 2 (U+E9A0..U+EAFF) under the SPUCE allocation update of 2026-10-22.
+# The vacated Set 1 range is now split into the two provisional RNUR open
+# slots U+F5C0..U+F5FF and U+F700..U+F71F (charted as ??? territory) and the
+# SPUCE allocation U+F600..U+F6FF (Miscellaneous Symbols Extended-I). No
+# named RNUR Set 1 allocation remains in the BMP PUA.
 
 # --- RNUR Embassy Space in SPUCE (Shared Private Use Character Encoding) ---
 F9000..F900F; Benjamin Franklin's Phonetic Additions (RNUR Embassy Space in SPUCE)
@@ -222,8 +228,13 @@ FB1B0..FBFFF; OPEN_SLOT
 # Under the permanent-space migration rule they were dissolved into permanent
 # space (no Set 2 destination); their addresses are now part of the SPUCE
 # Atlantean and Quốc âm tân tự allocations above.
+# NOTE: U+F5C0..U+F5FF and U+F700..U+F71F were vacated by the relocation of
+# the Placeholder allocation to Set 2 (U+E9A0..U+EAFF); SPUCE has not assigned
+# them to another block yet, so they remain provisional RNUR ??? territory.
 # NOTE: U+FFF00..U+FFFBF was released by the SPUCE Fragments reduction of
 # 2026-10-19; the remaining SPUCE Fragments allocation is U+FFFC0..U+FFFEF.
+F5C0..F5FF; PROVISIONAL_RNUR_OPEN_SLOT
+F700..F71F; PROVISIONAL_RNUR_OPEN_SLOT
 F720..F7FF; PROVISIONAL_RNUR_OPEN_SLOT
 F820..F87F; PROVISIONAL_RNUR_OPEN_SLOT
 100000..10FFEF; PROVISIONAL_RNUR_OPEN_SLOT

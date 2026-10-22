@@ -74,11 +74,11 @@ This matrix maps out allocations visually across the 16-column boundaries of the
       <td colspan="2" align="center">🟧 Western Script (E900-E91F)</td>
       <td colspan="4" align="center">🟧 Zurjon (E920-E95F)</td>
       <td colspan="4" align="center">🟧 Foldian (E960-E99F)</td>
-      <td colspan="6" align="center">(E9A0-E9FF)</td>
+      <td colspan="6" align="center">🟧 Placeholder (E9A0-E9FF)</td>
     </tr>
     <tr>
       <td align="center"><b>EAxx</b></td>
-      <td colspan="16" align="center">(EA00-EAFF)</td>
+      <td colspan="16" align="center">🟧 Placeholder (EA00-EAFF)</td>
     </tr>
     <tr>
       <td align="center"><b>EBxx</b></td>
@@ -155,5 +155,17 @@ The six named RNUR scripts below were evicted from their former Set 1 ranges in 
 | Foldian | `EF70–EFAF` | `E960–E99F` | 64 |
 
 * **ConstantScript is unchanged** at `U+E000–U+E81F`.
-* The six destination ranges are contiguous, non-overlapping, and cover `U+E820–U+E99F` exactly; `U+E9A0–U+F8FF` remains open sandbox space (`OPEN_SANDBOX` in `data/set2_sandbox.csv`, `OPEN_SLOT` in `UNIDATA/S2/Blocks.txt`).
+* The six destination ranges are contiguous, non-overlapping, and cover `U+E820–U+E99F` exactly; `U+EB00–U+F8FF` remains open sandbox space (`OPEN_SANDBOX` in `data/set2_sandbox.csv`, `OPEN_SLOT` in `UNIDATA/S2/Blocks.txt`).
 * The former Set 1 `???` provisional reservations at `U+EE60–U+EE8F` and `U+EFB0–U+EFFF` were **dissolved into permanent space** during this migration. They were not migrated into Set 2 and are not recreated here as open slots, placeholders, or provisional reservations; in Set 1 those addresses are now part of the Atlantean and Quốc âm tân tự SPUCE allocations.
+
+## SPUCE Allocation Update Notes — 2026-10-22
+
+The named RNUR allocation `Placeholder` was relocated from Set 1 to Set 2 under the SPUCE allocation update. Its Set 2 destination begins immediately after Foldian, which is unchanged:
+
+| Script | Former Set 1 range | Set 2 range | Size |
+| :--- | :--- | :--- | ---: |
+| Placeholder | `F5C0–F71F` | `E9A0–EAFF` | 352 |
+
+* The destination is contiguous with, and does not overlap, the six migration destinations above: the Set 2 BMP allocations now cover `U+E000–U+E81F` (ConstantScript), `U+E820–U+E99F` (the six relocated scripts) and `U+E9A0–U+EAFF` (Placeholder).
+* The vacated Set 1 range `U+F5C0–U+F71F` is subdivided into `U+F5C0–U+F5FF` (`???` provisional territory), `U+F600–U+F6FF` (SPUCE allocation: Miscellaneous Symbols Extended-I) and `U+F700–U+F71F` (`???` provisional territory).
+* The open sandbox space therefore starts at `U+EB00` and continues to `U+F8FF`.
